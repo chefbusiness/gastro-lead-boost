@@ -96,7 +96,7 @@ export function HeroSection() {
             variant="outline"
             size="lg"
             onClick={() => document.getElementById('case-studies')?.scrollIntoView({ behavior: 'smooth' })}
-            className="w-full border-slate-300/40 text-white hover:bg-slate-700/50 px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl backdrop-blur-sm"
+            className="w-full border-white/40 bg-white/10 text-white hover:bg-white/20 hover:text-white px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl backdrop-blur-sm"
           >
             <span className="text-sm sm:text-base">Revisar Transformaciones</span>
             <TrendingUp className="ml-2 w-4 sm:w-5 h-4 sm:h-5" />
