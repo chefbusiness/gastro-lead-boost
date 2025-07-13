@@ -52,13 +52,6 @@ export function TestimonialSection() {
 
               {/* Content Side */}
               <div className="p-8 md:p-12 flex flex-col justify-center">
-                <div className="mb-6">
-                  <img
-                    src="/lovable-uploads/d6a46565-6a24-4cb5-8b4c-e8f3f08be265.png"
-                    alt="Restaurante Ikigai"
-                    className="h-12 object-contain"
-                  />
-                </div>
 
                 <h3 className="text-2xl md:text-3xl font-bold mb-2 text-foreground">
                   Restaurante Japonés Ikigai
