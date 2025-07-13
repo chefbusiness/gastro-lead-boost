@@ -70,7 +70,7 @@ export function FloatingCTA() {
           <Button
             size="icon"
             className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-primary hover:bg-primary-dark shadow-primary"
-            onClick={() => window.open('tel:+1234567890', '_blank')}
+            onClick={() => window.open('tel:0034744717942', '_blank')}
           >
             <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
           </Button>

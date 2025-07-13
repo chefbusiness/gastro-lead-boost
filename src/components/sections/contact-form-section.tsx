@@ -272,7 +272,7 @@ export function ContactFormSection() {
                     <Phone className="w-6 h-6 text-accent" />
                     <div>
                       <div className="font-semibold">Teléfono Directo</div>
-                      <div className="text-accent font-bold">+34 912 345 678</div>
+                      <div className="text-accent font-bold">0034 744 717 942</div>
                     </div>
                   </div>
 

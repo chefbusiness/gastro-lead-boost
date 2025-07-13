@@ -108,7 +108,7 @@ export function FooterSection() {
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary" />
                 <div>
-                  <div className="font-medium">+34 912 345 678</div>
+                  <div className="font-medium">0034 744 717 942</div>
                   <div className="text-slate-400 text-sm">Lun-Vie: 9:00-19:00</div>
                 </div>
               </div>
