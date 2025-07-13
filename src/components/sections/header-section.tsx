@@ -11,15 +11,13 @@ export function HeaderSection() {
       <div className="max-w-7xl mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center space-x-3">
             <img
-              src="/gastromaps-logo-full.png"
-              alt="GastroMaps"
-              className="h-12 w-auto"
-              onError={(e) => {
-                e.currentTarget.src = '/placeholder.svg';
-              }}
+              src="/lovable-uploads/d6a46565-6a24-4cb5-8b4c-e8f3f08be265.png"
+              alt="GastroMaps Icon"
+              className="h-10 w-10"
             />
+            <span className="text-xl font-bold text-primary">GastroMaps.pro</span>
           </div>
 
           {/* Navigation */}
