@@ -209,10 +209,10 @@ export function ProcessSection() {
           <Button
             size="lg"
             onClick={scrollToContact}
-            className="bg-gradient-primary hover:bg-primary-dark px-12 py-4 text-lg font-bold rounded-xl shadow-primary group"
+            className="w-full sm:w-auto bg-gradient-primary hover:bg-primary-dark px-6 sm:px-12 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-xl shadow-primary group break-words"
           >
-            EMPEZAR MI TRANSFORMACIÓN AHORA
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <span className="text-sm sm:text-base">EMPEZAR TRANSFORMACIÓN</span>
+            <ArrowRight className="ml-2 w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
       </div>

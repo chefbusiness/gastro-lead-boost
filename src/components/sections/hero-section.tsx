@@ -31,7 +31,7 @@ export function HeroSection() {
         </div>
 
         {/* Main Headline */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in-up">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight animate-fade-in-up px-2">
           DUPLICAMOS TUS
           <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
@@ -45,61 +45,61 @@ export function HeroSection() {
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto font-medium animate-fade-in-up delay-200">
+        <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto font-medium animate-fade-in-up delay-200 px-4">
           Transformamos restaurantes vacíos en espacios llenos de vida. 
-          <br />
+          <br className="hidden sm:block" />
           <span className="text-yellow-300">Compromiso blindado de 90 días</span> con garantía total de reembolso.
         </p>
 
         {/* Pain Point */}
-        <div className="bg-slate-800/80 backdrop-blur-md rounded-2xl p-6 mb-8 max-w-4xl mx-auto border border-slate-600/30 shadow-elegant animate-fade-in-up delay-300">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+        <div className="bg-slate-800/90 backdrop-blur-md rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8 max-w-4xl mx-auto border border-slate-600/40 shadow-elegant animate-fade-in-up delay-300">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 sm:mb-4">
             Las agencias tradicionales están{" "}
             <span className="relative">
               <span className="text-orange-400 line-through font-extrabold">obsoletas</span>
               <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-orange-400"></span>
             </span>
           </h2>
-          <p className="text-xl text-orange-300 font-semibold">
+          <p className="text-base sm:text-lg md:text-xl text-orange-300 font-semibold">
             mientras drenan tu presupuesto sin resultados
           </p>
         </div>
 
         {/* Social Proof Stats */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 mb-12 max-w-4xl mx-auto animate-fade-in-up delay-400">
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">+312%</div>
-            <div className="text-white/80 text-sm">Incremento medio de ocupación</div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12 max-w-4xl mx-auto animate-fade-in-up delay-400 px-4">
+          <div className="text-center bg-slate-800/50 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-slate-600/30">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400 mb-1 sm:mb-2">+312%</div>
+            <div className="text-white/80 text-xs sm:text-sm">Incremento medio de ocupación</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">€18,470</div>
-            <div className="text-white/80 text-sm">Mayor retorno registrado</div>
+          <div className="text-center bg-slate-800/50 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-slate-600/30">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-400 mb-1 sm:mb-2">€18,470</div>
+            <div className="text-white/80 text-xs sm:text-sm">Mayor retorno registrado</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">94</div>
-            <div className="text-white/80 text-sm">Establecimientos reinventados</div>
+          <div className="text-center bg-slate-800/50 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-slate-600/30">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-400 mb-1 sm:mb-2">94</div>
+            <div className="text-white/80 text-xs sm:text-sm">Establecimientos reinventados</div>
           </div>
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col gap-4 justify-center items-center animate-fade-in-up delay-500 max-w-lg mx-auto px-4">
+        <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center animate-fade-in-up delay-500 max-w-md sm:max-w-lg mx-auto px-4">
           <Button
             size="lg"
             onClick={scrollToContact}
-            className="w-full bg-gradient-accent hover:bg-accent/90 text-white px-6 py-4 text-lg font-bold rounded-xl shadow-accent animate-pulse-glow group"
+            className="w-full bg-gradient-accent hover:bg-accent/90 text-white px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-xl shadow-accent animate-pulse-glow group"
           >
-            SOLICITAR ANÁLISIS GRATUITO
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <span className="text-sm sm:text-base">SOLICITAR ANÁLISIS GRATUITO</span>
+            <ArrowRight className="ml-2 w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
           
           <Button
             variant="outline"
             size="lg"
             onClick={() => document.getElementById('case-studies')?.scrollIntoView({ behavior: 'smooth' })}
-            className="w-full border-slate-300/40 text-white hover:bg-slate-700/50 px-6 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm"
+            className="w-full border-slate-300/40 text-white hover:bg-slate-700/50 px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl backdrop-blur-sm"
           >
-            Revisar Transformaciones
-            <TrendingUp className="ml-2 w-5 h-5" />
+            <span className="text-sm sm:text-base">Revisar Transformaciones</span>
+            <TrendingUp className="ml-2 w-4 sm:w-5 h-4 sm:h-5" />
           </Button>
         </div>
 

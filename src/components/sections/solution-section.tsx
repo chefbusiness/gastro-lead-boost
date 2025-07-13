@@ -209,10 +209,10 @@ export function SolutionSection() {
             <Button
               size="lg"
               onClick={scrollToContact}
-              className="bg-white text-primary hover:bg-white/90 px-8 py-4 text-lg font-bold rounded-xl group"
+              className="w-full sm:w-auto bg-white text-primary hover:bg-white/90 px-4 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-xl group break-words"
             >
-              QUIERO ESTA COMBINACIÓN GANADORA
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <span className="text-sm sm:text-base">QUIERO ESTA COMBINACIÓN</span>
+              <ArrowRight className="ml-2 w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </CardContent>
         </Card>
