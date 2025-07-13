@@ -2,10 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, TrendingUp, MapPin } from "lucide-react";
 import chefImage from "@/assets/chef-testimonial.jpg";
-
 export function TestimonialSection() {
-  return (
-    <section className="py-24 bg-background relative overflow-hidden">
+  return <section className="py-24 bg-background relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl"></div>
@@ -29,11 +27,7 @@ export function TestimonialSection() {
             <div className="grid md:grid-cols-2 gap-0">
               {/* Image Side */}
               <div className="relative">
-                <img
-                  src={chefImage}
-                  alt="Chef testimonial"
-                  className="w-full h-full object-cover rounded-l-lg"
-                />
+                <img src={chefImage} alt="Chef testimonial" className="w-full h-full object-cover rounded-l-lg" />
                 <div className="absolute top-4 left-4">
                   <Badge className="bg-success text-white">
                     <MapPin className="w-3 h-3 mr-1" />
@@ -42,9 +36,7 @@ export function TestimonialSection() {
                 </div>
                 <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-3">
                   <div className="flex items-center gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
-                    ))}
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />)}
                   </div>
                   <div className="text-xs text-muted-foreground mt-1">Valoración Google</div>
                 </div>
@@ -72,7 +64,7 @@ export function TestimonialSection() {
                   "Invertí <span className="font-bold text-primary">490€</span> y generé{" "}
                   <span className="font-bold text-success">13.590€</span> en reservas. 
                   No hay ningún proveedor en mi restaurante que me dé ese retorno. 
-                  <span className="font-bold text-accent">Solo GastroMaps.</span>"
+                  <span className="font-bold text-accent"> Solo GastroMaps.</span>"
                 </blockquote>
 
                 <div className="flex items-center">
@@ -127,6 +119,5 @@ export function TestimonialSection() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
