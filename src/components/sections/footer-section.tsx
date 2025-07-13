@@ -32,9 +32,12 @@ export function FooterSection() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <img
-                src={getAssetUrl(ASSETS.logos.gastromapsIcon)}
+                src="/gastromaps-icon.png"
                 alt="GastroMaps Icon"
                 className="w-10 h-10"
+                onError={(e) => {
+                  e.currentTarget.src = '/placeholder.svg';
+                }}
               />
               <div>
                 <h3 className="text-2xl font-bold">GastroMaps.pro</h3>
