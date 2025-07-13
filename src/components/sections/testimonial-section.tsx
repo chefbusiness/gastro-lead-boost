@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, TrendingUp, MapPin } from "lucide-react";
+import chefImage from "@/assets/chef-testimonial.jpg";
 
 export function TestimonialSection() {
   return (
@@ -23,33 +24,40 @@ export function TestimonialSection() {
         </div>
 
         {/* Main Testimonial */}
-        <Card className="max-w-4xl mx-auto shadow-elegant border-0 bg-white/50 backdrop-blur-sm animate-fade-in">
+        <Card className="max-w-5xl mx-auto shadow-elegant border-0 bg-white/50 backdrop-blur-sm animate-fade-in">
           <CardContent className="p-0">
-            <div className="relative">
-              {/* Content Section */}
+            <div className="grid md:grid-cols-2 gap-0">
+              {/* Image Side */}
+              <div className="relative">
+                <img
+                  src={chefImage}
+                  alt="Chef testimonial"
+                  className="w-full h-full object-cover rounded-l-lg"
+                />
+                <div className="absolute top-4 left-4">
+                  <Badge className="bg-success text-white">
+                    <MapPin className="w-3 h-3 mr-1" />
+                    Barcelona
+                  </Badge>
+                </div>
+                <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-3">
+                  <div className="flex items-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
+                    ))}
+                  </div>
+                  <div className="text-xs text-muted-foreground mt-1">Valoración Google</div>
+                </div>
+              </div>
+
+              {/* Content Side */}
               <div className="p-8 md:p-12 flex flex-col justify-center">
-                <div className="flex items-center justify-between mb-6">
-                  <div>
-                    <img
-                      src="/lovable-uploads/d6a46565-6a24-4cb5-8b4c-e8f3f08be265.png"
-                      alt="Restaurante Ikigai"
-                      className="h-12 object-contain"
-                    />
-                  </div>
-                  <div className="flex gap-2">
-                    <Badge className="bg-success text-white">
-                      <MapPin className="w-3 h-3 mr-1" />
-                      Barcelona
-                    </Badge>
-                    <div className="bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2 border">
-                      <div className="flex items-center gap-1">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-3 h-3 text-yellow-500 fill-current" />
-                        ))}
-                      </div>
-                      <div className="text-xs text-muted-foreground text-center mt-1">Google</div>
-                    </div>
-                  </div>
+                <div className="mb-6">
+                  <img
+                    src="/lovable-uploads/d6a46565-6a24-4cb5-8b4c-e8f3f08be265.png"
+                    alt="Restaurante Ikigai"
+                    className="h-12 object-contain"
+                  />
                 </div>
 
                 <h3 className="text-2xl md:text-3xl font-bold mb-2 text-foreground">
