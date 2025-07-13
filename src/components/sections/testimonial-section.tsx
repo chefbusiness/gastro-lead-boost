@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, TrendingUp, MapPin } from "lucide-react";
+import chefImage from "@/assets/chef-testimonial.jpg";
 
 export function TestimonialSection() {
   return (
@@ -23,16 +24,23 @@ export function TestimonialSection() {
         </div>
 
         {/* Main Testimonial */}
-        <Card className="max-w-4xl mx-auto shadow-elegant border-0 bg-white/50 backdrop-blur-sm animate-fade-in">
-          <CardContent className="p-8 md:p-12">
-            <div className="text-center">
-              {/* Location and Rating Badges */}
-              <div className="flex items-center justify-center gap-4 mb-6">
-                <Badge className="bg-success text-white">
-                  <MapPin className="w-3 h-3 mr-1" />
-                  Barcelona
-                </Badge>
-                <div className="bg-white/90 backdrop-blur-sm rounded-lg p-2 border">
+        <Card className="max-w-5xl mx-auto shadow-elegant border-0 bg-white/50 backdrop-blur-sm animate-fade-in">
+          <CardContent className="p-0">
+            <div className="grid md:grid-cols-2 gap-0">
+              {/* Image Side */}
+              <div className="relative">
+                <img
+                  src={chefImage}
+                  alt="Chef testimonial"
+                  className="w-full h-full object-cover rounded-l-lg"
+                />
+                <div className="absolute top-4 left-4">
+                  <Badge className="bg-success text-white">
+                    <MapPin className="w-3 h-3 mr-1" />
+                    Barcelona
+                  </Badge>
+                </div>
+                <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-3">
                   <div className="flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
@@ -42,43 +50,56 @@ export function TestimonialSection() {
                 </div>
               </div>
 
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-foreground">
-                Restaurante Japonés Ikigai
-              </h3>
+              {/* Content Side */}
+              <div className="p-8 md:p-12 flex flex-col justify-center">
+                <div className="mb-6">
+                  <img
+                    src="/lovable-uploads/d6a46565-6a24-4cb5-8b4c-e8f3f08be265.png"
+                    alt="Restaurante Ikigai"
+                    className="h-12 object-contain"
+                  />
+                </div>
 
-              <div className="mb-6">
-                <div className="flex items-center justify-center gap-4 mb-4">
-                  <div className="bg-gradient-success text-white px-4 py-2 rounded-lg font-bold text-lg">
-                    ROI: +2,771%
-                  </div>
-                  <div className="text-2xl font-bold text-accent">
-                    €13,590
+                <h3 className="text-2xl md:text-3xl font-bold mb-2 text-foreground">
+                  Restaurante Japonés Ikigai
+                </h3>
+
+                <div className="mb-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="bg-gradient-success text-white px-4 py-2 rounded-lg font-bold text-lg">
+                      ROI: +2,771%
+                    </div>
+                    <div className="text-2xl font-bold text-accent">
+                      €13,590
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <blockquote className="text-lg md:text-xl text-foreground mb-6 leading-relaxed text-center">
-                "Invertí <span className="font-bold text-primary">490€</span> y generé{" "}
-                <span className="font-bold text-success">13.590€</span> en reservas. 
-                No hay ningún proveedor en mi restaurante que me dé ese retorno. 
-                <span className="font-bold text-accent">Solo GastroMaps.</span>"
-              </blockquote>
+                <blockquote className="text-lg md:text-xl text-foreground mb-6 leading-relaxed">
+                  "Invertí <span className="font-bold text-primary">490€</span> y generé{" "}
+                  <span className="font-bold text-success">13.590€</span> en reservas. 
+                  No hay ningún proveedor en mi restaurante que me dé ese retorno. 
+                  <span className="font-bold text-accent">Solo GastroMaps.</span>"
+                </blockquote>
 
-              <div className="text-center mb-8">
-                <div className="font-bold text-lg">Yong Wu Nagaira</div>
-                <div className="text-muted-foreground">Propietario, Restaurante Ikigai</div>
-              </div>
-
-              {/* Results Breakdown */}
-              <div className="p-4 bg-gradient-to-r from-primary/10 to-accent/10 rounded-lg border border-primary/20">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">490€</div>
-                    <div className="text-sm text-muted-foreground">Inversión inicial</div>
+                <div className="flex items-center">
+                  <div>
+                    <div className="font-bold text-lg">Yong Wu Nagaira</div>
+                    <div className="text-muted-foreground">Propietario, Restaurante Ikigai</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-success">13,590€</div>
-                    <div className="text-sm text-muted-foreground">Ingresos generados</div>
+                </div>
+
+                {/* Results Breakdown */}
+                <div className="mt-8 p-4 bg-gradient-to-r from-primary/10 to-accent/10 rounded-lg border border-primary/20">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <div className="text-2xl font-bold text-primary">490€</div>
+                      <div className="text-sm text-muted-foreground">Inversión inicial</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-success">13,590€</div>
+                      <div className="text-sm text-muted-foreground">Ingresos generados</div>
+                    </div>
                   </div>
                 </div>
               </div>
