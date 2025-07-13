@@ -104,7 +104,7 @@ export function SolutionSection() {
 
             <div className="relative">
               <img
-                src="/src/assets/google-maps-optimization.jpg"
+                src="/google-maps-optimization.jpg"
                 alt="Google Maps optimization"
                 className="w-full h-full object-cover"
               />
@@ -118,7 +118,7 @@ export function SolutionSection() {
           <div className="grid lg:grid-cols-2 gap-0">
             <div className="relative order-2 lg:order-1">
               <img
-                src="/src/assets/geo-targeted-advertising.jpg"
+                src="/geo-targeted-advertising.jpg"
                 alt="Geo-targeted advertising"
                 className="w-full h-full object-cover"
               />
