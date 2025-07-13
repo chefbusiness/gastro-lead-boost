@@ -32,7 +32,7 @@ export function FooterSection() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <img
-                src={getAssetUrl(ASSETS.logos.gastromapsIcon)}
+                src="/lovable-uploads/ed10ffb2-7da6-4633-ac13-3c28ae97ac92.png"
                 alt="GastroMaps Icon"
                 className="w-10 h-10"
               />
