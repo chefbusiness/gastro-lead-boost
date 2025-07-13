@@ -13,10 +13,11 @@ export function HeaderSection() {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img
-              src="/gastromaps-icon-3d.png"
+              src="/lovable-uploads/ed10ffb2-7da6-4633-ac13-3c28ae97ac92.png"
               alt="GastroMaps Icon"
               className="h-10 w-10"
               onError={(e) => {
+                console.log('Error loading header logo');
                 e.currentTarget.src = '/placeholder.svg';
               }}
             />
