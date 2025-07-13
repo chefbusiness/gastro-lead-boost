@@ -13,7 +13,7 @@ export function HeaderSection() {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img
-              src="/lovable-uploads/d6a46565-6a24-4cb5-8b4c-e8f3f08be265.png"
+              src={getAssetUrl(ASSETS.logos.gastromapsIcon)}
               alt="GastroMaps Icon"
               className="h-10 w-10"
             />
