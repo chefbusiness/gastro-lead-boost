@@ -29,6 +29,7 @@ export const ASSETS = {
     chef: 'testimonials/chef-testimonial.jpg',
   },
   logos: {
-    gastromaps: 'logos/gastromaps-logo.png',
+    gastromapsFull: 'logos/gastromaps-full.png',
+    gastromapsIcon: 'logos/gastromaps-icon.png',
   },
 } as const;

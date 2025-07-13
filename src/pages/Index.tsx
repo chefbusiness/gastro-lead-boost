@@ -1,3 +1,4 @@
+import { HeaderSection } from "@/components/sections/header-section";
 import { HeroSection } from "@/components/sections/hero-section";
 import { TestimonialSection } from "@/components/sections/testimonial-section";
 import { SolutionSection } from "@/components/sections/solution-section";
@@ -10,6 +11,7 @@ import { FloatingCTA } from "@/components/ui/floating-cta";
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <HeaderSection />
       <HeroSection />
       <TestimonialSection />
       <SolutionSection />

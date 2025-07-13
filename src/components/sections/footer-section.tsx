@@ -12,6 +12,7 @@ import {
   Star,
   Shield
 } from "lucide-react";
+import { getAssetUrl, ASSETS } from "@/lib/storage";
 
 export function FooterSection() {
   const scrollToTop = () => {
@@ -30,9 +31,11 @@ export function FooterSection() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <MapPin className="w-6 h-6 text-white" />
-              </div>
+              <img
+                src={getAssetUrl(ASSETS.logos.gastromapsIcon)}
+                alt="GastroMaps Icon"
+                className="w-10 h-10"
+              />
               <div>
                 <h3 className="text-2xl font-bold">GastroMaps.pro</h3>
                 <p className="text-slate-300 text-sm">Llenamos tu restaurante de clientes</p>
