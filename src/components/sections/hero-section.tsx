@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Star, TrendingUp, Shield } from "lucide-react";
-import heroImage from "@/assets/restaurant-hero.jpg";
+import { getAssetUrl, ASSETS } from "@/lib/storage";
 
 export function HeroSection() {
   const scrollToContact = () => {
@@ -13,7 +13,7 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src={heroImage}
+          src={getAssetUrl(ASSETS.hero.restaurant)}
           alt="Restaurant success"
           className="w-full h-full object-cover opacity-30"
         />

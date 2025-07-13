@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, TrendingUp, MapPin } from "lucide-react";
-import chefImage from "@/assets/chef-testimonial.jpg";
+import { getAssetUrl, ASSETS } from "@/lib/storage";
 export function TestimonialSection() {
   return <section className="py-24 bg-background relative overflow-hidden">
       {/* Background Pattern */}
@@ -27,7 +27,7 @@ export function TestimonialSection() {
             <div className="grid md:grid-cols-2 gap-0">
               {/* Image Side */}
               <div className="relative">
-                <img src={chefImage} alt="Chef testimonial" className="w-full h-full object-cover rounded-l-lg" />
+                <img src={getAssetUrl(ASSETS.testimonials.chef)} alt="Chef testimonial" className="w-full h-full object-cover rounded-l-lg" />
                 <div className="absolute top-4 left-4">
                   <Badge className="bg-success text-white">
                     <MapPin className="w-3 h-3 mr-1" />

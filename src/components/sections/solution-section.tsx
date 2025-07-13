@@ -12,7 +12,7 @@ import {
   Target,
   ArrowRight
 } from "lucide-react";
-import mapsImage from "@/assets/google-maps-mockup.jpg";
+import { getAssetUrl, ASSETS } from "@/lib/storage";
 
 export function SolutionSection() {
   const scrollToContact = () => {
@@ -104,7 +104,7 @@ export function SolutionSection() {
 
             <div className="relative">
               <img
-                src={mapsImage}
+                src={getAssetUrl(ASSETS.solutions.googleMaps)}
                 alt="Google Maps optimization"
                 className="w-full h-full object-cover"
               />
@@ -118,7 +118,7 @@ export function SolutionSection() {
           <div className="grid lg:grid-cols-2 gap-0">
             <div className="relative order-2 lg:order-1">
               <img
-                src={mapsImage}
+                src={getAssetUrl(ASSETS.solutions.googleMaps)}
                 alt="Geo-targeted advertising"
                 className="w-full h-full object-cover"
               />
