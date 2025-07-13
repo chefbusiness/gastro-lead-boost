@@ -30,6 +30,6 @@ export const ASSETS = {
   },
   logos: {
     gastromapsFull: 'logos/gastromaps-full.png',
-    gastromapsIcon: 'logos/gastromaps-icon-3d.png',
+    gastromapsIcon: 'logos/gastromaps-icon.png',
   },
 } as const;
