@@ -13,9 +13,12 @@ export function HeaderSection() {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img
-              src={getAssetUrl(ASSETS.logos.gastromapsIcon)}
+              src="/gastromaps-icon-3d.png"
               alt="GastroMaps Icon"
               className="h-10 w-10"
+              onError={(e) => {
+                e.currentTarget.src = '/placeholder.svg';
+              }}
             />
             <span className="text-xl font-bold text-primary">GastroMaps.pro</span>
           </div>
