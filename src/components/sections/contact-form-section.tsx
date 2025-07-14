@@ -1,10 +1,15 @@
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import { 
   Phone, 
   Mail, 
@@ -18,46 +23,82 @@ import {
   Gift
 } from "lucide-react";
 
+// Form validation schema
+const formSchema = z.object({
+  name: z.string()
+    .min(2, "El nombre debe tener al menos 2 caracteres")
+    .max(50, "El nombre es demasiado largo"),
+  email: z.string()
+    .email("Introduce un email válido")
+    .min(1, "El email es obligatorio"),
+  phone: z.string()
+    .min(9, "Introduce un teléfono válido")
+    .regex(/^(\+34|0034|34)?[6789]\d{8}$/, "Formato de teléfono español inválido"),
+  restaurant: z.string()
+    .min(2, "El nombre del restaurante debe tener al menos 2 caracteres")
+    .max(100, "El nombre es demasiado largo"),
+  location: z.string()
+    .min(2, "La ciudad debe tener al menos 2 caracteres")
+    .max(50, "El nombre de la ciudad es demasiado largo"),
+  message: z.string()
+    .max(500, "El mensaje es demasiado largo")
+    .optional(),
+});
+
+type FormData = z.infer<typeof formSchema>;
+
 export function ContactFormSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    restaurant: "",
-    location: "",
-    message: ""
-  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    toast({
-      title: "¡Solicitud enviada!",
-      description: "Te contactaremos en menos de 2 horas para diseñar tu estrategia personalizada.",
-    });
-    
-    setFormData({
+  const form = useForm<FormData>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
       name: "",
       email: "",
       phone: "",
       restaurant: "",
       location: "",
-      message: ""
-    });
-    setIsSubmitting(false);
-  };
+      message: "",
+    },
+  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+  const onSubmit = async (data: FormData) => {
+    setIsSubmitting(true);
+    
+    try {
+      // Insert into Supabase
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([{
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          restaurant: data.restaurant,
+          location: data.location,
+          message: data.message || null,
+        }]);
+
+      if (error) {
+        throw error;
+      }
+
+      toast({
+        title: "¡Solicitud enviada correctamente!",
+        description: "Te contactaremos en menos de 2 horas para diseñar tu estrategia personalizada.",
+      });
+
+      form.reset();
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Error al enviar el formulario",
+        description: "Ha ocurrido un error. Por favor, inténtalo de nuevo o llámanos directamente.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -109,107 +150,146 @@ export function ContactFormSection() {
               </div>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Nombre *</label>
-                    <Input
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <FormField
+                      control={form.control}
                       name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="Tu nombre completo"
-                      required
-                      className="border-muted-foreground/20 focus:border-primary"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Nombre *</FormLabel>
+                          <FormControl>
+                            <Input
+                              placeholder="Tu nombre completo"
+                              className="border-muted-foreground/20 focus:border-primary"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
                     />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Email *</label>
-                    <Input
+                    <FormField
+                      control={form.control}
                       name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="tu@email.com"
-                      required
-                      className="border-muted-foreground/20 focus:border-primary"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Email *</FormLabel>
+                          <FormControl>
+                            <Input
+                              type="email"
+                              placeholder="tu@email.com"
+                              className="border-muted-foreground/20 focus:border-primary"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
                     />
                   </div>
-                </div>
 
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Teléfono *</label>
-                    <Input
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <FormField
+                      control={form.control}
                       name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="+34 123 456 789"
-                      required
-                      className="border-muted-foreground/20 focus:border-primary"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Teléfono *</FormLabel>
+                          <FormControl>
+                            <Input
+                              type="tel"
+                              placeholder="+34 123 456 789"
+                              className="border-muted-foreground/20 focus:border-primary"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
                     />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Ciudad *</label>
-                    <Input
+                    <FormField
+                      control={form.control}
                       name="location"
-                      value={formData.location}
-                      onChange={handleChange}
-                      placeholder="Madrid, Barcelona, Valencia..."
-                      required
-                      className="border-muted-foreground/20 focus:border-primary"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Ciudad *</FormLabel>
+                          <FormControl>
+                            <Input
+                              placeholder="Madrid, Barcelona, Valencia..."
+                              className="border-muted-foreground/20 focus:border-primary"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
                     />
                   </div>
-                </div>
 
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Nombre del Restaurante *</label>
-                  <Input
+                  <FormField
+                    control={form.control}
                     name="restaurant"
-                    value={formData.restaurant}
-                    onChange={handleChange}
-                    placeholder="Nombre de tu restaurante"
-                    required
-                    className="border-muted-foreground/20 focus:border-primary"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Nombre del Restaurante *</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Nombre de tu restaurante"
+                            className="border-muted-foreground/20 focus:border-primary"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
                   />
-                </div>
 
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Cuéntanos tu situación (opcional)</label>
-                  <Textarea
+                  <FormField
+                    control={form.control}
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="¿Cuál es tu principal desafío? ¿Pocas reservas? ¿Competencia? ¿Mala reputación online?"
-                    rows={4}
-                    className="border-muted-foreground/20 focus:border-primary"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Cuéntanos tu situación (opcional)</FormLabel>
+                        <FormControl>
+                          <Textarea
+                            placeholder="¿Cuál es tu principal desafío? ¿Pocas reservas? ¿Competencia? ¿Mala reputación online?"
+                            rows={4}
+                            className="border-muted-foreground/20 focus:border-primary"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
                   />
-                </div>
 
-                <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-4 border border-primary/20">
-                  <div className="flex items-start gap-3 mb-3">
-                    <Shield className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-primary">Garantía de Privacidad</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Tus datos están 100% protegidos. No los compartimos con nadie.
-                      </p>
+                  <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-4 border border-primary/20">
+                    <div className="flex items-start gap-3 mb-3">
+                      <Shield className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <h4 className="font-semibold text-primary">Garantía de Privacidad</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Tus datos están 100% protegidos. No los compartimos con nadie.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-accent hover:bg-accent/90 text-white py-4 text-lg font-bold rounded-xl shadow-accent"
-                >
-                  {isSubmitting ? "Enviando..." : "QUIERO MI ANÁLISIS GRATIS"}
-                </Button>
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-accent hover:bg-accent/90 text-white py-4 text-lg font-bold rounded-xl shadow-accent"
+                  >
+                    {isSubmitting ? "Enviando..." : "QUIERO MI ANÁLISIS GRATIS"}
+                  </Button>
 
-                <p className="text-xs text-muted-foreground text-center">
-                  Al enviar este formulario, aceptas que te contactemos para proporcionarte la consulta solicitada.
-                </p>
-              </form>
+                  <p className="text-xs text-muted-foreground text-center">
+                    Al enviar este formulario, aceptas que te contactemos para proporcionarte la consulta solicitada.
+                  </p>
+                </form>
+              </Form>
             </CardContent>
           </Card>
 
