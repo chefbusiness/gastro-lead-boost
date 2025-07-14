@@ -83,6 +83,28 @@ export function ContactFormSection() {
         throw error;
       }
 
+      // Send notification emails
+      try {
+        const { error: emailError } = await supabase.functions.invoke('send-contact-notification', {
+          body: {
+            name: data.name,
+            email: data.email,
+            phone: data.phone,
+            restaurant: data.restaurant,
+            location: data.location,
+            message: data.message,
+          },
+        });
+
+        if (emailError) {
+          console.error('Error sending notification emails:', emailError);
+          // Don't fail the form submission if email fails
+        }
+      } catch (emailError) {
+        console.error('Error calling email function:', emailError);
+        // Don't fail the form submission if email fails
+      }
+
       toast({
         title: "¡Solicitud enviada correctamente!",
         description: "Te contactaremos en menos de 2 horas para diseñar tu estrategia personalizada.",
