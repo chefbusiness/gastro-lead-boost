@@ -6,16 +6,8 @@ import { cn } from "@/lib/utils";
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
-  const [isHidden, setIsHidden] = useState(false);
 
   useEffect(() => {
-    // Check if user has hidden the banner permanently
-    const hiddenState = localStorage.getItem('floating-cta-hidden');
-    if (hiddenState === 'true') {
-      setIsHidden(true);
-      return;
-    }
-
     // Delay initial appearance to be less intrusive
     const timer = setTimeout(() => {
       setIsVisible(true);
@@ -23,11 +15,6 @@ export function FloatingCTA() {
 
     return () => clearTimeout(timer);
   }, []);
-
-  const handleHide = () => {
-    setIsHidden(true);
-    localStorage.setItem('floating-cta-hidden', 'true');
-  };
 
   const handleExpand = () => {
     setIsExpanded(true);
@@ -37,7 +24,11 @@ export function FloatingCTA() {
     }, 10000);
   };
 
-  if (!isVisible || isHidden) return null;
+  const handleCollapse = () => {
+    setIsExpanded(false);
+  };
+
+  if (!isVisible) return null;
 
   return (
     <div className={cn(
@@ -45,17 +36,6 @@ export function FloatingCTA() {
       "sm:bottom-6 sm:right-6",
       "w-fit"
     )}>
-      {/* Collapse button when expanded */}
-      {isExpanded && (
-        <button
-          onClick={handleHide}
-          className="absolute -top-2 -right-2 z-10 w-6 h-6 bg-destructive/80 hover:bg-destructive rounded-full flex items-center justify-center text-white text-xs transition-colors"
-          title="Ocultar permanentemente"
-        >
-          <X className="w-3 h-3" />
-        </button>
-      )}
-
       <div className="flex flex-col gap-2 sm:gap-3">
         {isExpanded && (
           <div className="bg-white rounded-lg shadow-elegant p-3 sm:p-4 max-w-[250px] sm:max-w-[280px] animate-fade-in border border-primary/20">
@@ -64,8 +44,9 @@ export function FloatingCTA() {
                 <MessageCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white" />
               </div>
               <button
-                onClick={() => setIsExpanded(false)}
+                onClick={handleCollapse}
                 className="text-muted-foreground hover:text-foreground transition-colors"
+                title="Cerrar banner"
               >
                 <X className="w-3 h-3 sm:w-4 sm:h-4" />
               </button>
