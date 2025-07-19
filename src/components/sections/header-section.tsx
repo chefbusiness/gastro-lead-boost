@@ -1,9 +1,52 @@
+
 import { Button } from "@/components/ui/button";
-import { getAssetUrl, ASSETS } from "@/lib/storage";
+import { 
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { User, Settings, LogOut } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 export function HeaderSection() {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const checkAuthStatus = () => {
+      const auth = localStorage.getItem("admin_authenticated");
+      setIsLoggedIn(!!auth);
+    };
+
+    checkAuthStatus();
+    // Check auth status when localStorage changes
+    window.addEventListener('storage', checkAuthStatus);
+    return () => window.removeEventListener('storage', checkAuthStatus);
+  }, []);
+
   const scrollToContact = () => {
     document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleLogin = () => {
+    navigate('/admin/login');
+  };
+
+  const handleDashboard = () => {
+    navigate('/admin');
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("admin_authenticated");
+    setIsLoggedIn(false);
+    toast({
+      title: "Sesión cerrada",
+      description: "Has cerrado sesión correctamente",
+    });
   };
 
   return (
@@ -52,13 +95,48 @@ export function HeaderSection() {
             </a>
           </nav>
 
-          {/* CTA Button */}
-          <Button
-            onClick={scrollToContact}
-            className="bg-gradient-accent hover:bg-accent/90 text-white px-6 py-2 font-semibold rounded-lg shadow-accent"
-          >
-            Análisis Gratuito
-          </Button>
+          {/* Right side buttons */}
+          <div className="flex items-center space-x-3">
+            {/* Admin Access */}
+            {isLoggedIn ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="sm" className="flex items-center space-x-2">
+                    <Settings className="h-4 w-4" />
+                    <span className="hidden sm:inline">Admin</span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-48">
+                  <DropdownMenuItem onClick={handleDashboard} className="flex items-center space-x-2">
+                    <Settings className="h-4 w-4" />
+                    <span>Dashboard</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={handleLogout} className="flex items-center space-x-2">
+                    <LogOut className="h-4 w-4" />
+                    <span>Cerrar Sesión</span>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                onClick={handleLogin}
+                className="flex items-center space-x-2 text-muted-foreground hover:text-primary"
+              >
+                <User className="h-4 w-4" />
+                <span className="hidden sm:inline text-xs">Admin</span>
+              </Button>
+            )}
+
+            {/* Main CTA Button */}
+            <Button
+              onClick={scrollToContact}
+              className="bg-gradient-accent hover:bg-accent/90 text-white px-6 py-2 font-semibold rounded-lg shadow-accent"
+            >
+              Análisis Gratuito
+            </Button>
+          </div>
         </div>
       </div>
     </header>
