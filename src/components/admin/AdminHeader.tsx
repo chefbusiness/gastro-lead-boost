@@ -1,7 +1,7 @@
 
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { LogOut, Settings } from "lucide-react";
+import { LogOut, Settings, User } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export function AdminHeader() {
@@ -10,8 +10,10 @@ export function AdminHeader() {
 
   const handleLogout = () => {
     localStorage.removeItem("admin_authenticated");
+    localStorage.removeItem("admin_name");
+    localStorage.removeItem("admin_email");
     toast({
-      title: "Sesión cerrada",
+      title: "Hasta luego John",
       description: "Has cerrado sesión correctamente",
     });
     navigate("/admin/login");
@@ -26,14 +28,23 @@ export function AdminHeader() {
           </div>
           <div>
             <h1 className="text-xl font-bold">Panel de Administración</h1>
-            <p className="text-sm text-muted-foreground">GastroMaps</p>
+            <p className="text-sm text-muted-foreground">GastroMaps - Bienvenido John Guerrero</p>
           </div>
         </div>
-        
-        <Button variant="outline" onClick={handleLogout} className="flex items-center gap-2">
-          <LogOut className="w-4 h-4" />
-          Cerrar Sesión
-        </Button>
+
+        <div className="flex items-center gap-4">
+          <div className="text-right hidden sm:block">
+            <p className="text-sm font-medium">John Guerrero</p>
+            <p className="text-xs text-muted-foreground">john@chefbusiness.co</p>
+          </div>
+          <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
+            <User className="w-4 h-4 text-white" />
+          </div>
+          <Button variant="outline" onClick={handleLogout} className="flex items-center gap-2">
+            <LogOut className="w-4 h-4" />
+            Cerrar Sesión
+          </Button>
+        </div>
       </div>
     </header>
   );

@@ -18,18 +18,20 @@ export default function AdminLogin() {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simple authentication - in production you'd use proper auth
-    if (credentials.username === "admin" && credentials.password === "gastromaps2024") {
+    // Personalized authentication for John Guerrero
+    if (credentials.username === "john@chefbusiness.co" && credentials.password === "ChefBusiness2024!") {
       localStorage.setItem("admin_authenticated", "true");
+      localStorage.setItem("admin_name", "John Guerrero");
+      localStorage.setItem("admin_email", "john@chefbusiness.co");
       toast({
-        title: "Login exitoso",
-        description: "Bienvenido al panel de administración",
+        title: "¡Bienvenido John!",
+        description: "Has accedido al panel de administración de GastroMaps",
       });
       navigate("/admin");
     } else {
       toast({
         title: "Credenciales incorrectas",
-        description: "Usuario o contraseña incorrectos",
+        description: "Email o contraseña incorrectos",
         variant: "destructive",
       });
     }
@@ -47,15 +49,16 @@ export default function AdminLogin() {
             </div>
           </div>
           <CardTitle className="text-2xl">Panel de Administración</CardTitle>
-          <p className="text-muted-foreground">Acceso a GastroMaps</p>
+          <p className="text-muted-foreground">Acceso exclusivo para John Guerrero</p>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleLogin} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="username">Usuario</Label>
+              <Label htmlFor="username">Email</Label>
               <Input
                 id="username"
-                type="text"
+                type="email"
+                placeholder="john@chefbusiness.co"
                 value={credentials.username}
                 onChange={(e) => setCredentials({ ...credentials, username: e.target.value })}
                 required
@@ -72,8 +75,11 @@ export default function AdminLogin() {
               />
             </div>
             <Button type="submit" className="w-full" disabled={isLoading}>
-              {isLoading ? "Iniciando sesión..." : "Iniciar Sesión"}
+              {isLoading ? "Verificando acceso..." : "Acceder al Panel"}
             </Button>
+            <div className="text-center text-xs text-muted-foreground mt-4">
+              Credenciales: john@chefbusiness.co / ChefBusiness2024!
+            </div>
           </form>
         </CardContent>
       </Card>

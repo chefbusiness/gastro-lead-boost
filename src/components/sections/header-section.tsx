@@ -15,11 +15,14 @@ export function HeaderSection() {
   const navigate = useNavigate();
   const { toast } = useToast();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [adminName, setAdminName] = useState("");
 
   useEffect(() => {
     const checkAuthStatus = () => {
       const auth = localStorage.getItem("admin_authenticated");
+      const name = localStorage.getItem("admin_name") || "Admin";
       setIsLoggedIn(!!auth);
+      setAdminName(name);
     };
 
     checkAuthStatus();
@@ -42,9 +45,11 @@ export function HeaderSection() {
 
   const handleLogout = () => {
     localStorage.removeItem("admin_authenticated");
+    localStorage.removeItem("admin_name");
+    localStorage.removeItem("admin_email");
     setIsLoggedIn(false);
     toast({
-      title: "Sesión cerrada",
+      title: "Hasta luego John",
       description: "Has cerrado sesión correctamente",
     });
   };
@@ -103,7 +108,7 @@ export function HeaderSection() {
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" size="sm" className="flex items-center space-x-2">
                     <Settings className="h-4 w-4" />
-                    <span className="hidden sm:inline">Admin</span>
+                    <span className="hidden sm:inline">{adminName}</span>
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="w-48">
