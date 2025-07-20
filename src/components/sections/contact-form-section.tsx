@@ -314,7 +314,7 @@ export function ContactFormSection() {
                             <SelectItem value="sem-pagado">
                               <div className="flex flex-col items-start">
                                 <div className="font-medium">SEM Local Pagado (Publicidad en Google Maps)</div>
-                                <div className="text-sm text-muted-foreground">Anuncios para aparecer al instante en búsquedas de tu zona</div>
+                                <div className="text-sm text-muted-foreground">Anuncios optimizados para aparecer al instante a clientes en búsquedas locales de tu zona</div>
                               </div>
                             </SelectItem>
                             <SelectItem value="ambas-soluciones">
