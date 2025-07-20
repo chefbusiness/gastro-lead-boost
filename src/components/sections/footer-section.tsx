@@ -147,7 +147,7 @@ export function FooterSection() {
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-primary" />
                 <div>
-                  <div className="font-medium">España</div>
+                  <div className="font-medium">Desde España</div>
                   <div className="text-slate-400 text-sm">Servicio nacional</div>
                 </div>
               </div>
