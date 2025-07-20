@@ -6,7 +6,7 @@ import { getCaseStudyImageUrl, ASSETS } from "@/lib/storage";
 const caseStudies = [{
   id: 1,
   restaurant: "Restaurante Mediterráneo",
-  location: "Valencia",
+  location: "Madrid",
   type: "Mediterránea",
   investment: 380,
   revenue: 8420,
@@ -18,7 +18,7 @@ const caseStudies = [{
 }, {
   id: 2,
   restaurant: "Tapas & Vinos",
-  location: "Madrid",
+  location: "Valencia",
   type: "Tapas",
   investment: 450,
   revenue: 12650,
@@ -42,7 +42,7 @@ const caseStudies = [{
 }, {
   id: 4,
   restaurant: "Casa de Mariscos",
-  location: "Barcelona",
+  location: "Vigo",
   type: "Mariscos",
   investment: 600,
   revenue: 15200,
