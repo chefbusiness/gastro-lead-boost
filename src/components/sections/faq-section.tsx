@@ -65,6 +65,12 @@ const faqData = [
     question: "¿Funciona para todos los tipos de restaurantes?",
     answer: "¡Absolutamente! Hemos trabajado con restaurantes de todo tipo: comida rápida, fine dining, pizzerías, bares de tapas, comida étnica, food trucks, cafeterías, pastelerías... Cada tipo de restaurante tiene su estrategia específica. Por ejemplo, para comida rápida enfocamos en pedidos a domicilio, para fine dining en reservas y eventos especiales. Adaptamos la estrategia a tu público objetivo y tipo de negocio.",
     icon: HelpCircle
+  },
+  {
+    id: "cobertura-geografica",
+    question: "¿En qué países y ciudades ofrecen sus servicios?",
+    answer: "Trabajamos desde Madrid pero atendemos restaurantes en toda España (Madrid, Barcelona, Sevilla, Granada, San Sebastián). Tenemos clientes en Portugal (Lisboa, Oporto, Algarve), Francia (Burdeos), Italia (Milán, Venecia), toda América Latina (Ciudad de México, Bogotá, Buenos Aires, Santiago de Chile) y el área hispana de Estados Unidos (Miami, Houston, Texas, San Francisco, Los Ángeles, Nueva York). Ofrecemos nuestros servicios en español, inglés, francés, alemán, italiano y portugués.",
+    icon: MapPin
   }
 ];
 
