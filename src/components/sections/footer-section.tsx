@@ -195,7 +195,7 @@ export function FooterSection() {
         <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
           <div className="text-center lg:text-left">
             <p className="text-slate-300 mb-2">
-              © 2024 GastroMaps.pro - Todos los derechos reservados
+              © 2025 GastroMaps.pro - Todos los derechos reservados
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 text-sm text-slate-400">
               <span>Una marca filial de</span>
@@ -225,13 +225,13 @@ export function FooterSection() {
 
           <div className="flex flex-col sm:flex-row items-center gap-6">
             <div className="flex gap-6 text-sm">
-              <a href="#privacidad" className="text-slate-400 hover:text-white transition-colors">
+              <a href="/privacidad" className="text-slate-400 hover:text-white transition-colors">
                 Política de Privacidad
               </a>
-              <a href="#terminos" className="text-slate-400 hover:text-white transition-colors">
+              <a href="/terminos" className="text-slate-400 hover:text-white transition-colors">
                 Términos de Uso
               </a>
-              <a href="#cookies" className="text-slate-400 hover:text-white transition-colors">
+              <a href="/cookies" className="text-slate-400 hover:text-white transition-colors">
                 Cookies
               </a>
             </div>
@@ -250,4 +250,3 @@ export function FooterSection() {
     </footer>
   );
 }
-
