@@ -71,22 +71,22 @@ export function CookieBanner() {
   if (!showBanner) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 z-50 w-full max-w-sm sm:max-w-md">
+    <div className="fixed bottom-4 left-4 z-50 w-full max-w-xs sm:max-w-lg md:max-w-xl">
       <Card className="bg-white/95 backdrop-blur-sm border border-gray-200 shadow-lg">
-        <div className="p-4">
-          <div className="flex items-start gap-3">
-            <Cookie className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+        <div className="p-3 sm:p-4">
+          <div className="flex items-start gap-2 sm:gap-3">
+            <Cookie className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
             
             <div className="flex-1 min-w-0">
-              <h3 className="text-sm font-semibold mb-1">
+              <h3 className="text-xs sm:text-sm font-semibold mb-1">
                 🍪 Configuración de Cookies
               </h3>
-              <p className="text-xs text-gray-600 mb-3 leading-relaxed">
+              <p className="text-xs text-gray-600 mb-2 sm:mb-3 leading-relaxed">
                 Utilizamos cookies para mejorar tu experiencia. Las necesarias son esenciales, 
                 otras nos ayudan a analizar el tráfico.
               </p>
               
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-col sm:flex-row gap-1 sm:gap-2">
                 <Button 
                   onClick={acceptAll}
                   size="sm"
