@@ -106,25 +106,70 @@ export const ClientsSection = () => {
           </p>
         </div>
 
-        {/* Logos Grid - Optimized for transparent PNGs and perfect centering */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-6 md:gap-8 lg:gap-10 justify-items-center items-center max-w-7xl mx-auto [&>:nth-last-child(-n+4)]:col-start-auto [&>:nth-last-child(-n+4)]:justify-self-center" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', justifyContent: 'center'}}>
-          {clientLogos.map((client, index) => (
-            <div
-              key={client.name}
-              className="flex items-center justify-center w-24 h-20 sm:w-28 sm:h-22 md:w-32 md:h-24 lg:w-36 lg:h-28 xl:w-40 xl:h-32 hover:scale-110 transition-all duration-300 group"
-              style={{
-                animationDelay: `${index * 100}ms`
-              }}
-            >
-              <img
-                src={client.url}
-                alt={client.alt}
-                className="max-w-full max-h-full w-auto h-auto object-contain opacity-75 contrast-125 brightness-110 saturate-110 group-hover:opacity-100 group-hover:contrast-150 group-hover:brightness-125 group-hover:saturate-125 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all duration-300"
-                loading="lazy"
-                onError={handleImageError}
-              />
-            </div>
-          ))}
+        {/* Logos Grid - Distribución uniforme 5-5-4 y centrado perfecto */}
+        <div className="flex flex-col items-center gap-8 md:gap-10 max-w-6xl mx-auto">
+          {/* Primera fila - 5 logos */}
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-10">
+            {clientLogos.slice(0, 5).map((client, index) => (
+              <div
+                key={client.name}
+                className="flex items-center justify-center w-24 h-20 sm:w-28 sm:h-22 md:w-32 md:h-24 lg:w-36 lg:h-28 xl:w-40 xl:h-32 hover:scale-110 transition-all duration-300 group"
+                style={{
+                  animationDelay: `${index * 100}ms`
+                }}
+              >
+                <img
+                  src={client.url}
+                  alt={client.alt}
+                  className="max-w-full max-h-full w-auto h-auto object-contain opacity-75 contrast-125 brightness-110 saturate-110 group-hover:opacity-100 group-hover:contrast-150 group-hover:brightness-125 group-hover:saturate-125 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all duration-300"
+                  loading="lazy"
+                  onError={handleImageError}
+                />
+              </div>
+            ))}
+          </div>
+          
+          {/* Segunda fila - 5 logos */}
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-10">
+            {clientLogos.slice(5, 10).map((client, index) => (
+              <div
+                key={client.name}
+                className="flex items-center justify-center w-24 h-20 sm:w-28 sm:h-22 md:w-32 md:h-24 lg:w-36 lg:h-28 xl:w-40 xl:h-32 hover:scale-110 transition-all duration-300 group"
+                style={{
+                  animationDelay: `${(index + 5) * 100}ms`
+                }}
+              >
+                <img
+                  src={client.url}
+                  alt={client.alt}
+                  className="max-w-full max-h-full w-auto h-auto object-contain opacity-75 contrast-125 brightness-110 saturate-110 group-hover:opacity-100 group-hover:contrast-150 group-hover:brightness-125 group-hover:saturate-125 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all duration-300"
+                  loading="lazy"
+                  onError={handleImageError}
+                />
+              </div>
+            ))}
+          </div>
+          
+          {/* Tercera fila - 4 logos */}
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-10">
+            {clientLogos.slice(10, 14).map((client, index) => (
+              <div
+                key={client.name}
+                className="flex items-center justify-center w-24 h-20 sm:w-28 sm:h-22 md:w-32 md:h-24 lg:w-36 lg:h-28 xl:w-40 xl:h-32 hover:scale-110 transition-all duration-300 group"
+                style={{
+                  animationDelay: `${(index + 10) * 100}ms`
+                }}
+              >
+                <img
+                  src={client.url}
+                  alt={client.alt}
+                  className="max-w-full max-h-full w-auto h-auto object-contain opacity-75 contrast-125 brightness-110 saturate-110 group-hover:opacity-100 group-hover:contrast-150 group-hover:brightness-125 group-hover:saturate-125 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all duration-300"
+                  loading="lazy"
+                  onError={handleImageError}
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Stats */}
