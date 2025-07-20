@@ -67,7 +67,7 @@ export function TestimonialSection() {
 
                 <div className="flex items-center">
                   <div>
-                    <div className="font-bold text-lg">Yong Wu Nagaira</div>
+                    <div className="font-bold text-lg">Takeshi Sato</div>
                     <div className="text-muted-foreground">Propietario, Restaurante Ikigai</div>
                   </div>
                 </div>
