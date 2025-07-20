@@ -202,7 +202,7 @@ export function SolutionSection() {
                 <div className="text-white/80">Visibilidad 24/7 sin pagar por clicks</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <div className="text-3xl font-bold text-green-400 mb-2">Pagado</div>
+                <div className="text-3xl font-bold text-white mb-2">Pagado</div>
                 <div className="text-white/80">Boost inmediato cuando lo necesites</div>
               </div>
             </div>
