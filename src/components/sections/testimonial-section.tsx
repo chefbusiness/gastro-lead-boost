@@ -68,7 +68,7 @@ export function TestimonialSection() {
                 <div className="flex items-center">
                   <div>
                     <div className="font-bold text-lg">Takeshi Sato</div>
-                    <div className="text-muted-foreground">Propietario, Restaurante Ikigai</div>
+                    <div className="text-muted-foreground">Propietario, Restaurante Sakura</div>
                   </div>
                 </div>
 
