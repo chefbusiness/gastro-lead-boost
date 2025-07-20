@@ -304,7 +304,7 @@ export function ContactFormSection() {
                               </SelectValue>
                             </SelectTrigger>
                           </FormControl>
-                          <SelectContent>
+                          <SelectContent className="w-[var(--radix-select-trigger-width)] max-w-[calc(100vw-2rem)]">
                             <SelectItem value="seo-organico">
                               <div className="flex flex-col items-start">
                                 <div className="font-medium">SEO Local Orgánico (Posicionamiento Natural)</div>
