@@ -25,6 +25,13 @@ export function FooterSection() {
     document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const navigateToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-slate-900 text-white">
       {/* Main Footer */}
@@ -91,7 +98,7 @@ export function FooterSection() {
             <h4 className="text-lg font-semibold mb-6">Enlaces Rápidos</h4>
             <div className="space-y-3">
               <button
-                onClick={() => document.getElementById('case-studies')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => navigateToSection('case-studies')}
                 className="block text-slate-300 hover:text-white transition-colors"
               >
                 Casos de Éxito
@@ -102,18 +109,18 @@ export function FooterSection() {
               >
                 Análisis Gratuito
               </button>
-              <a 
-                href="#garantia"
+              <button
+                onClick={() => navigateToSection('solutions')}
                 className="block text-slate-300 hover:text-white transition-colors"
               >
                 Nuestra Garantía
-              </a>
-              <a 
-                href="#proceso"
+              </button>
+              <button
+                onClick={() => navigateToSection('process')}
                 className="block text-slate-300 hover:text-white transition-colors"
               >
                 Cómo Trabajamos
-              </a>
+              </button>
             </div>
           </div>
 
