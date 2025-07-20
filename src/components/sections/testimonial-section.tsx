@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, TrendingUp, MapPin } from "lucide-react";
@@ -31,7 +32,7 @@ export function TestimonialSection() {
                 <div className="absolute top-4 left-4">
                   <Badge className="bg-success text-white">
                     <MapPin className="w-3 h-3 mr-1" />
-                    Barcelona
+                    Valencia
                   </Badge>
                 </div>
                 <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-3">
@@ -46,31 +47,31 @@ export function TestimonialSection() {
               <div className="p-8 md:p-12 flex flex-col justify-center">
 
                 <h3 className="text-2xl md:text-3xl font-bold mb-2 text-foreground">
-                  Restaurante Japonés Ikigai
+                  Restaurante Japonés Sakura
                 </h3>
 
                 <div className="mb-6">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="bg-gradient-success text-white px-4 py-2 rounded-lg font-bold text-lg">
-                      ROI: +2,771%
+                      ROI: +2,400%
                     </div>
                     <div className="text-2xl font-bold text-accent">
-                      €13,590
+                      €16,250
                     </div>
                   </div>
                 </div>
 
                 <blockquote className="text-lg md:text-xl text-foreground mb-6 leading-relaxed">
-                  "Invertí <span className="font-bold text-primary">490€</span> y generé{" "}
-                  <span className="font-bold text-success">13.590€</span> en reservas. 
+                  "Invertí <span className="font-bold text-primary">650€</span> y generé{" "}
+                  <span className="font-bold text-success">16.250€</span> en reservas. 
                   No hay ningún proveedor en mi restaurante que me dé ese retorno. 
-                  <span className="font-bold text-accent"> Solo GastroMaps.</span>"
+                  <span className="font-bold text-accent"> Solo GastroMaps.</span>"
                 </blockquote>
 
                 <div className="flex items-center">
                   <div>
-                    <div className="font-bold text-lg">Yong Wu Nagaira</div>
-                    <div className="text-muted-foreground">Propietario, Restaurante Ikigai</div>
+                    <div className="font-bold text-lg">Hiroshi Tanaka</div>
+                    <div className="text-muted-foreground">Propietario, Restaurante Sakura</div>
                   </div>
                 </div>
 
@@ -78,11 +79,11 @@ export function TestimonialSection() {
                 <div className="mt-8 p-4 bg-gradient-to-r from-primary/10 to-accent/10 rounded-lg border border-primary/20">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <div className="text-2xl font-bold text-primary">490€</div>
+                      <div className="text-2xl font-bold text-primary">650€</div>
                       <div className="text-sm text-muted-foreground">Inversión inicial</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-success">13,590€</div>
+                      <div className="text-2xl font-bold text-success">16,250€</div>
                       <div className="text-sm text-muted-foreground">Ingresos generados</div>
                     </div>
                   </div>
