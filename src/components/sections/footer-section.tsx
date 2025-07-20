@@ -1,54 +1,39 @@
-
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Instagram, 
-  Facebook, 
-  Linkedin,
-  ExternalLink,
-  Star,
-  Shield,
-  Twitter
-} from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Facebook, Linkedin, ExternalLink, Star, Shield, Twitter } from "lucide-react";
 import { getAssetUrl, ASSETS } from "@/lib/storage";
-
 export function FooterSection() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
-
   const scrollToContact = () => {
-    document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('contact-form')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
   const navigateToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <footer className="bg-slate-900 text-white">
+  return <footer className="bg-slate-900 text-white">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <img
-                src="/lovable-uploads/ed10ffb2-7da6-4633-ac13-3c28ae97ac92.png"
-                alt="GastroMaps Icon"
-                className="w-10 h-10"
-                onError={(e) => {
-                  console.log('Error loading footer logo');
-                  e.currentTarget.src = '/placeholder.svg';
-                }}
-              />
+              <img src="/lovable-uploads/ed10ffb2-7da6-4633-ac13-3c28ae97ac92.png" alt="GastroMaps Icon" className="w-10 h-10" onError={e => {
+              console.log('Error loading footer logo');
+              e.currentTarget.src = '/placeholder.svg';
+            }} />
               <div>
                 <h3 className="text-2xl font-bold">GastroMaps.pro</h3>
                 <p className="text-slate-300 text-sm">Llenamos tu restaurante de clientes</p>
@@ -63,12 +48,7 @@ export function FooterSection() {
             {/* Alternative Domain - Responsive text sizing */}
             <div className="mb-6 p-4 bg-slate-800 rounded-lg border border-slate-700">
               <p className="text-slate-300 text-sm mb-2">También nos encuentras en:</p>
-              <a 
-                href="https://masclientesparaturestaurante.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-accent hover:text-accent/90 transition-colors font-semibold flex items-center gap-2 text-sm sm:text-base lg:text-lg break-all sm:break-normal"
-              >
+              <a href="https://masclientesparaturestaurante.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/90 transition-colors font-semibold flex items-center gap-2 text-sm sm:text-base lg:text-lg break-all sm:break-normal">
                 <span className="break-all">MasClientesParaTuRestaurante.com</span>
                 <ExternalLink className="w-4 h-4 flex-shrink-0" />
               </a>
@@ -85,10 +65,7 @@ export function FooterSection() {
               </Badge>
             </div>
 
-            <Button
-              onClick={scrollToContact}
-              className="bg-gradient-accent hover:bg-accent/90 text-white font-bold"
-            >
+            <Button onClick={scrollToContact} className="bg-gradient-accent hover:bg-accent/90 text-white font-bold">
               Empezar Ahora
             </Button>
           </div>
@@ -97,28 +74,16 @@ export function FooterSection() {
           <div>
             <h4 className="text-lg font-semibold mb-6">Enlaces Rápidos</h4>
             <div className="space-y-3">
-              <button
-                onClick={() => navigateToSection('case-studies')}
-                className="block text-slate-300 hover:text-white transition-colors"
-              >
+              <button onClick={() => navigateToSection('case-studies')} className="block text-slate-300 hover:text-white transition-colors">
                 Casos de Éxito
               </button>
-              <button
-                onClick={scrollToContact}
-                className="block text-slate-300 hover:text-white transition-colors"
-              >
+              <button onClick={scrollToContact} className="block text-slate-300 hover:text-white transition-colors">
                 Análisis Gratuito
               </button>
-              <button
-                onClick={() => navigateToSection('solutions')}
-                className="block text-slate-300 hover:text-white transition-colors"
-              >
+              <button onClick={() => navigateToSection('solutions')} className="block text-slate-300 hover:text-white transition-colors">
                 Nuestra Garantía
               </button>
-              <button
-                onClick={() => navigateToSection('process')}
-                className="block text-slate-300 hover:text-white transition-colors"
-              >
+              <button onClick={() => navigateToSection('process')} className="block text-slate-300 hover:text-white transition-colors">
                 Cómo Trabajamos
               </button>
             </div>
@@ -157,36 +122,16 @@ export function FooterSection() {
             <div className="mt-8">
               <h5 className="font-medium mb-4">Síguenos</h5>
               <div className="flex gap-3">
-                <Button
-                  size="icon"
-                  variant="outline"
-                  className="border-slate-600 text-slate-400 hover:bg-primary hover:border-primary hover:text-white transition-all duration-200"
-                  onClick={() => window.open('https://instagram.com', '_blank')}
-                >
+                <Button size="icon" variant="outline" className="border-slate-600 text-slate-400 hover:bg-primary hover:border-primary hover:text-white transition-all duration-200" onClick={() => window.open('https://instagram.com', '_blank')}>
                   <Instagram className="w-4 h-4" />
                 </Button>
-                <Button
-                  size="icon"
-                  variant="outline"
-                  className="border-slate-600 text-slate-400 hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all duration-200"
-                  onClick={() => window.open('https://facebook.com', '_blank')}
-                >
+                <Button size="icon" variant="outline" className="border-slate-600 text-slate-400 hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all duration-200" onClick={() => window.open('https://facebook.com', '_blank')}>
                   <Facebook className="w-4 h-4" />
                 </Button>
-                <Button
-                  size="icon"
-                  variant="outline"
-                  className="border-slate-600 text-slate-400 hover:bg-blue-700 hover:border-blue-700 hover:text-white transition-all duration-200"
-                  onClick={() => window.open('https://linkedin.com', '_blank')}
-                >
+                <Button size="icon" variant="outline" className="border-slate-600 text-slate-400 hover:bg-blue-700 hover:border-blue-700 hover:text-white transition-all duration-200" onClick={() => window.open('https://linkedin.com', '_blank')}>
                   <Linkedin className="w-4 h-4" />
                 </Button>
-                <Button
-                  size="icon"
-                  variant="outline"
-                  className="border-slate-600 text-slate-400 hover:bg-black hover:border-black hover:text-white transition-all duration-200"
-                  onClick={() => window.open('https://x.com', '_blank')}
-                >
+                <Button size="icon" variant="outline" className="border-slate-600 text-slate-400 hover:bg-black hover:border-black hover:text-white transition-all duration-200" onClick={() => window.open('https://x.com', '_blank')}>
                   <Twitter className="w-4 h-4" />
                 </Button>
               </div>
@@ -201,28 +146,16 @@ export function FooterSection() {
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
           <div className="text-center lg:text-left">
-            <p className="text-slate-300 mb-2">
-              © 2025 GastroMaps.pro - Todos los derechos reservados
-            </p>
+            <p className="text-slate-300 mb-2">© 2023 - 2025 GastroMaps.pro - Todos los derechos reservados</p>
             <div className="flex flex-col sm:flex-row items-center gap-4 text-sm text-slate-400">
               <span>Una marca filial de</span>
               <div className="flex items-center gap-2">
-                <a 
-                  href="https://gastroseo.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-primary-light transition-colors font-semibold flex items-center gap-1"
-                >
+                <a href="https://gastroseo.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary-light transition-colors font-semibold flex items-center gap-1">
                   GastroSEO.com
                   <ExternalLink className="w-3 h-3" />
                 </a>
                 <span>by</span>
-                <a 
-                  href="https://chefbusiness.co" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-accent hover:text-accent/90 transition-colors font-semibold flex items-center gap-1"
-                >
+                <a href="https://chefbusiness.co" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/90 transition-colors font-semibold flex items-center gap-1">
                   ChefBusiness.co
                   <ExternalLink className="w-3 h-3" />
                 </a>
@@ -243,17 +176,11 @@ export function FooterSection() {
               </a>
             </div>
 
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={scrollToTop}
-              className="text-slate-400 hover:text-white"
-            >
+            <Button variant="ghost" size="sm" onClick={scrollToTop} className="text-slate-400 hover:text-white">
               Volver Arriba ↑
             </Button>
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 }
