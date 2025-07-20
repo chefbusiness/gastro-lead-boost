@@ -56,7 +56,7 @@ export function FooterSection() {
             </div>
             
             <p className="text-slate-300 mb-6 text-lg leading-relaxed">
-              Somos especialistas en marketing digital para restaurantes. Convertimos búsquedas en reservas 
+              Somos especialistas en marketing digital para restaurantes. Convertimos búsquedas en clientes 
               y garantizamos resultados reales en 90 días o te devolvemos tu dinero.
             </p>
 
