@@ -5,72 +5,72 @@ import { getClientLogoUrl } from "@/lib/storage";
 const clientLogos = [
   {
     name: "Cliente satisfecho 1",
-    url: getClientLogoUrl('logos-clientes-gastromapspro-1.png'),
+    url: getClientLogoUrl('logos-clientes-gastromapspro-1-2.png'),
     alt: "Cliente satisfecho 1"
   },
   {
     name: "Cliente satisfecho 2",
-    url: getClientLogoUrl('logos-clientes-gastromapspro-2.png'),
+    url: getClientLogoUrl('logos-clientes-gastromapspro-2-2.png'),
     alt: "Cliente satisfecho 2"
   },
   {
     name: "Cliente satisfecho 3",
-    url: getClientLogoUrl('logos-clientes-gastromapspro-3.png'),
+    url: getClientLogoUrl('logos-clientes-gastromapspro-3-2.png'),
     alt: "Cliente satisfecho 3"
   },
   {
     name: "Cliente satisfecho 4",
-    url: getClientLogoUrl('logos-clientes-gastromapspro-4.png'),
+    url: getClientLogoUrl('logos-clientes-gastromapspro-4-2.png'),
     alt: "Cliente satisfecho 4"
   },
   {
     name: "Cliente satisfecho 5",
-    url: getClientLogoUrl('logos-clientes-gastromapspro-5.png'),
+    url: getClientLogoUrl('logos-clientes-gastromapspro-5-2.png'),
     alt: "Cliente satisfecho 5"
   },
   {
     name: "Cliente satisfecho 6",
-    url: getClientLogoUrl('logos-clientes-gastromapspro-6.png'),
+    url: getClientLogoUrl('logos-clientes-gastromapspro-6-2.png'),
     alt: "Cliente satisfecho 6"
   },
   {
     name: "Cliente satisfecho 7",
-    url: getClientLogoUrl('logos-clientes-gastromapspro-7.png'),
+    url: getClientLogoUrl('logos-clientes-gastromapspro-7-2.png'),
     alt: "Cliente satisfecho 7"
   },
   {
     name: "Cliente satisfecho 8",
-    url: getClientLogoUrl('logos-clientes-gastromapspro-8.png'),
+    url: getClientLogoUrl('logos-clientes-gastromapspro-8-2.png'),
     alt: "Cliente satisfecho 8"
   },
   {
     name: "Cliente satisfecho 9",
-    url: getClientLogoUrl('logos-clientes-gastromapspro-9.png'),
+    url: getClientLogoUrl('logos-clientes-gastromapspro-9-2.png'),
     alt: "Cliente satisfecho 9"
   },
   {
     name: "Cliente satisfecho 10",
-    url: getClientLogoUrl('logos-clientes-gastromapspro-10.png'),
+    url: getClientLogoUrl('logos-clientes-gastromapspro-10-2.png'),
     alt: "Cliente satisfecho 10"
   },
   {
     name: "Cliente satisfecho 11",
-    url: getClientLogoUrl('logos-clientes-gastromapspro-11.png'),
+    url: getClientLogoUrl('logos-clientes-gastromapspro-11-2.png'),
     alt: "Cliente satisfecho 11"
   },
   {
     name: "Cliente satisfecho 12",
-    url: getClientLogoUrl('logos-clientes-gastromapspro-12.png'),
+    url: getClientLogoUrl('logos-clientes-gastromapspro-12-2.png'),
     alt: "Cliente satisfecho 12"
   },
   {
     name: "Cliente satisfecho 13",
-    url: getClientLogoUrl('logos-clientes-gastromapspro-13.png'),
+    url: getClientLogoUrl('logos-clientes-gastromapspro-13-2.png'),
     alt: "Cliente satisfecho 13"
   },
   {
     name: "Cliente satisfecho 14",
-    url: getClientLogoUrl('logos-clientes-gastromapspro-14.png'),
+    url: getClientLogoUrl('logos-clientes-gastromapspro-14-2.png'),
     alt: "Cliente satisfecho 14"
   }
 ];
