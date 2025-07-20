@@ -369,7 +369,7 @@ export function ContactFormSection() {
                     <div className="flex items-end">
                       <div className="text-sm text-muted-foreground p-3 bg-primary/5 rounded-lg border border-primary/10">
                         <MapPin className="w-4 h-4 inline mr-1" />
-                        Esta información nos ayuda a hacer tu análisis más preciso
+                        Esta información nos ayuda a hacer tu análisis gratis más preciso
                       </div>
                     </div>
                   </div>
