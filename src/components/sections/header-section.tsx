@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 import { 
   DropdownMenu,
@@ -101,7 +102,7 @@ export function HeaderSection() {
           </nav>
 
           {/* Right side buttons */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2 sm:space-x-3">
             {/* Admin Access */}
             {isLoggedIn ? (
               <DropdownMenu>
@@ -130,16 +131,17 @@ export function HeaderSection() {
                 className="flex items-center space-x-2 text-muted-foreground hover:text-primary"
               >
                 <User className="h-4 w-4" />
-                <span className="hidden sm:inline text-xs">Admin</span>
+                <span className="hidden md:inline text-xs">Admin</span>
               </Button>
             )}
 
-            {/* Main CTA Button */}
+            {/* Main CTA Button - Responsive sizing */}
             <Button
               onClick={scrollToContact}
-              className="bg-gradient-accent hover:bg-accent/90 text-white px-6 py-2 font-semibold rounded-lg shadow-accent"
+              className="bg-gradient-accent hover:bg-accent/90 text-white font-semibold rounded-lg shadow-accent text-xs sm:text-sm px-3 py-1.5 sm:px-6 sm:py-2"
             >
-              Análisis Gratuito
+              <span className="hidden xs:inline">Análisis Gratuito</span>
+              <span className="xs:hidden">Análisis</span>
             </Button>
           </div>
         </div>
@@ -147,3 +149,4 @@ export function HeaderSection() {
     </header>
   );
 }
+

@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -10,7 +11,8 @@ import {
   Linkedin,
   ExternalLink,
   Star,
-  Shield
+  Shield,
+  Twitter
 } from "lucide-react";
 import { getAssetUrl, ASSETS } from "@/lib/storage";
 
@@ -51,17 +53,17 @@ export function FooterSection() {
               y garantizamos resultados reales en 90 días o te devolvemos tu dinero.
             </p>
 
-            {/* Alternative Domain */}
+            {/* Alternative Domain - Responsive text sizing */}
             <div className="mb-6 p-4 bg-slate-800 rounded-lg border border-slate-700">
               <p className="text-slate-300 text-sm mb-2">También nos encuentras en:</p>
               <a 
                 href="https://masclientesparaturestaurante.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-accent hover:text-accent/90 transition-colors font-semibold flex items-center gap-2 text-lg"
+                className="text-accent hover:text-accent/90 transition-colors font-semibold flex items-center gap-2 text-sm sm:text-base lg:text-lg break-all sm:break-normal"
               >
-                MasClientesParaTuRestaurante.com
-                <ExternalLink className="w-4 h-4" />
+                <span className="break-all">MasClientesParaTuRestaurante.com</span>
+                <ExternalLink className="w-4 h-4 flex-shrink-0" />
               </a>
             </div>
 
@@ -144,14 +146,14 @@ export function FooterSection() {
               </div>
             </div>
 
-            {/* Social Media */}
+            {/* Social Media - Improved contrast and added X */}
             <div className="mt-8">
               <h5 className="font-medium mb-4">Síguenos</h5>
               <div className="flex gap-3">
                 <Button
                   size="icon"
                   variant="outline"
-                  className="border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white"
+                  className="border-slate-600 text-slate-400 hover:bg-primary hover:border-primary hover:text-white transition-all duration-200"
                   onClick={() => window.open('https://instagram.com', '_blank')}
                 >
                   <Instagram className="w-4 h-4" />
@@ -159,7 +161,7 @@ export function FooterSection() {
                 <Button
                   size="icon"
                   variant="outline"
-                  className="border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white"
+                  className="border-slate-600 text-slate-400 hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all duration-200"
                   onClick={() => window.open('https://facebook.com', '_blank')}
                 >
                   <Facebook className="w-4 h-4" />
@@ -167,10 +169,18 @@ export function FooterSection() {
                 <Button
                   size="icon"
                   variant="outline"
-                  className="border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white"
+                  className="border-slate-600 text-slate-400 hover:bg-blue-700 hover:border-blue-700 hover:text-white transition-all duration-200"
                   onClick={() => window.open('https://linkedin.com', '_blank')}
                 >
                   <Linkedin className="w-4 h-4" />
+                </Button>
+                <Button
+                  size="icon"
+                  variant="outline"
+                  className="border-slate-600 text-slate-400 hover:bg-black hover:border-black hover:text-white transition-all duration-200"
+                  onClick={() => window.open('https://x.com', '_blank')}
+                >
+                  <Twitter className="w-4 h-4" />
                 </Button>
               </div>
             </div>
@@ -240,3 +250,4 @@ export function FooterSection() {
     </footer>
   );
 }
+
