@@ -51,6 +51,20 @@ export function FooterSection() {
               y garantizamos resultados reales en 90 días o te devolvemos tu dinero.
             </p>
 
+            {/* Alternative Domain */}
+            <div className="mb-6 p-4 bg-slate-800 rounded-lg border border-slate-700">
+              <p className="text-slate-300 text-sm mb-2">También nos encuentras en:</p>
+              <a 
+                href="https://masclientesparaturestaurante.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-accent hover:text-accent/90 transition-colors font-semibold flex items-center gap-2 text-lg"
+              >
+                MasClientesParaTuRestaurante.com
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
+
             <div className="flex flex-wrap gap-4 mb-8">
               <Badge className="bg-success text-white">
                 <Shield className="w-4 h-4 mr-2" />
