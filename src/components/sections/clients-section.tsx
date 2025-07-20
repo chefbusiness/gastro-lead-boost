@@ -107,7 +107,7 @@ export const ClientsSection = () => {
         </div>
 
         {/* Logos Grid - Optimized for transparent PNGs and perfect centering */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-6 md:gap-8 lg:gap-10 justify-items-center items-center max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-6 md:gap-8 lg:gap-10 justify-items-center items-center max-w-7xl mx-auto [&>:nth-last-child(-n+4)]:col-start-auto [&>:nth-last-child(-n+4)]:justify-self-center" style={{gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', justifyContent: 'center'}}>
           {clientLogos.map((client, index) => (
             <div
               key={client.name}
