@@ -19,9 +19,7 @@ export function getAssetUrl(path: string): string {
  * Get URL for client logos
  */
 export function getClientLogoUrl(path: string): string {
-  const url = getStorageUrl('client-logos', path);
-  console.log('Generated client logo URL:', url, 'for path:', path);
-  return url;
+  return getStorageUrl('client-logos', path);
 }
 
 /**
