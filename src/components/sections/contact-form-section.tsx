@@ -297,26 +297,30 @@ export function ContactFormSection() {
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
                             <SelectTrigger className="border-muted-foreground/20 focus:border-primary">
-                              <SelectValue placeholder="Selecciona el servicio que más te interesa" />
+                              <SelectValue placeholder="Selecciona el servicio que más te interesa">
+                                {field.value === "seo-organico" && "SEO Local Orgánico (Posicionamiento Natural)"}
+                                {field.value === "sem-pagado" && "SEM Local Pagado (Publicidad en Google Maps)"}
+                                {field.value === "ambas-soluciones" && "Ambas Soluciones Juntas (Recomendado)"}
+                              </SelectValue>
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
                             <SelectItem value="seo-organico">
                               <div className="flex flex-col items-start">
                                 <div className="font-medium">SEO Local Orgánico (Posicionamiento Natural)</div>
-                                <div className="text-sm text-muted-foreground">Creación de contenido para aparecer en Google Search y Google Maps de forma natural y sostenible</div>
+                                <div className="text-sm text-muted-foreground">Aparece en Google Search y Google Maps de forma natural y sostenible</div>
                               </div>
                             </SelectItem>
                             <SelectItem value="sem-pagado">
                               <div className="flex flex-col items-start">
-                                <div className="font-medium">SEM Local Pagado (Publicidad pagada en Google Maps)</div>
-                                <div className="text-sm text-muted-foreground">Anuncios para aparecer al instante cuando busquen restaurantes en tu zona</div>
+                                <div className="font-medium">SEM Local Pagado (Publicidad en Google Maps)</div>
+                                <div className="text-sm text-muted-foreground">Anuncios para aparecer al instante en búsquedas de tu zona</div>
                               </div>
                             </SelectItem>
                             <SelectItem value="ambas-soluciones">
                               <div className="flex flex-col items-start">
                                 <div className="font-medium">Ambas Soluciones Juntas (Recomendado)</div>
-                                <div className="text-sm text-muted-foreground">Resultados inmediatos + crecimiento sostenible a largo plazo</div>
+                                <div className="text-sm text-muted-foreground">Resultados inmediatos + crecimiento sostenible</div>
                               </div>
                             </SelectItem>
                           </SelectContent>
