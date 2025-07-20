@@ -1,80 +1,87 @@
+
 import { Badge } from "@/components/ui/badge";
 import { getClientLogoUrl } from "@/lib/storage";
 
 const clientLogos = [
   {
     name: "Cliente satisfecho 1",
-    url: getClientLogoUrl('07c0ddb6-8105-4821-bfb6-a567f72a7f41.png'),
+    url: getClientLogoUrl('logos clientes gastromapspro-1.png'),
     alt: "Cliente satisfecho 1"
   },
   {
-    name: "Fusion Kitchen",
-    url: getClientLogoUrl('e3a921c1-d701-452d-9e87-16517edeb0a9.png'),
-    alt: "Fusion Kitchen"
+    name: "Cliente satisfecho 2",
+    url: getClientLogoUrl('logos clientes gastromapspro-2.png'),
+    alt: "Cliente satisfecho 2"
   },
   {
-    name: "Green Leaf",
-    url: getClientLogoUrl('13ab0619-2f2f-4476-b6b9-5fde4161becc.png'),
-    alt: "Green Leaf"
+    name: "Cliente satisfecho 3",
+    url: getClientLogoUrl('logos clientes gastromapspro-3.png'),
+    alt: "Cliente satisfecho 3"
   },
   {
     name: "Cliente satisfecho 4",
-    url: getClientLogoUrl('fd30a53c-ff8d-41c5-a906-41d086fc7925.png'),
+    url: getClientLogoUrl('logos clientes gastromapspro-4.png'),
     alt: "Cliente satisfecho 4"
   },
   {
-    name: "Forno Antico",
-    url: getClientLogoUrl('fcb99d33-1190-48d2-b0b0-b3cdbb2944bd.png'),
-    alt: "Forno Antico"
+    name: "Cliente satisfecho 5",
+    url: getClientLogoUrl('logos clientes gastromapspro-5.png'),
+    alt: "Cliente satisfecho 5"
   },
   {
-    name: "Spice Temple",
-    url: getClientLogoUrl('9413a230-4612-4cf2-bff1-5ed1d78b212c.png'),
-    alt: "Spice Temple Thai Restaurant"
+    name: "Cliente satisfecho 6",
+    url: getClientLogoUrl('logos clientes gastromapspro-6.png'),
+    alt: "Cliente satisfecho 6"
   },
   {
     name: "Cliente satisfecho 7",
-    url: getClientLogoUrl('809e6747-5786-438e-97d8-5c591878981f.png'),
+    url: getClientLogoUrl('logos clientes gastromapspro-7.png'),
     alt: "Cliente satisfecho 7"
   },
   {
-    name: "Ocean Blue",
-    url: getClientLogoUrl('d88e2a83-7100-4592-bab4-a455fc88050b.png'),
-    alt: "Ocean Blue Seafood Shack"
+    name: "Cliente satisfecho 8",
+    url: getClientLogoUrl('logos clientes gastromapspro-8.png'),
+    alt: "Cliente satisfecho 8"
   },
   {
-    name: "Olive Garden",
-    url: getClientLogoUrl('e0be6d9f-0aa1-4b8a-a2cc-7b0e7eae1bb5.png'),
-    alt: "Olive Garden"
+    name: "Cliente satisfecho 9",
+    url: getClientLogoUrl('logos clientes gastromapspro-9.png'),
+    alt: "Cliente satisfecho 9"
   },
   {
-    name: "Burger Bros",
-    url: getClientLogoUrl('b3960b86-cac9-4d21-ac0c-68e0106f6eb0.png'),
-    alt: "Burger Bros"
+    name: "Cliente satisfecho 10",
+    url: getClientLogoUrl('logos clientes gastromapspro-10.png'),
+    alt: "Cliente satisfecho 10"
   },
   {
     name: "Cliente satisfecho 11",
-    url: getClientLogoUrl('2e62a6f2-a2d4-4b48-b363-3b48ddd77cd5.png'),
+    url: getClientLogoUrl('logos clientes gastromapspro-11.png'),
     alt: "Cliente satisfecho 11"
   },
   {
     name: "Cliente satisfecho 12",
-    url: getClientLogoUrl('3ef07def-0139-459f-9ad7-a4faa1806505.png'),
+    url: getClientLogoUrl('logos clientes gastromapspro-12.png'),
     alt: "Cliente satisfecho 12"
   },
   {
     name: "Cliente satisfecho 13",
-    url: getClientLogoUrl('3b2abae6-2734-41c3-8ddf-9cce241af058.png'),
+    url: getClientLogoUrl('logos clientes gastromapspro-13.png'),
     alt: "Cliente satisfecho 13"
   },
   {
     name: "Cliente satisfecho 14",
-    url: getClientLogoUrl('64d5abce-bba4-4ef0-ab13-d10436f3ed87.png'),
+    url: getClientLogoUrl('logos clientes gastromapspro-14.png'),
     alt: "Cliente satisfecho 14"
   }
 ];
 
 export const ClientsSection = () => {
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    const target = e.currentTarget;
+    target.style.display = 'none';
+    console.error('Error loading image:', target.src);
+  };
+
   return (
     <section className="py-16 bg-gray-900 relative overflow-hidden">
       {/* Background gradient */}
@@ -99,12 +106,12 @@ export const ClientsSection = () => {
           </p>
         </div>
 
-        {/* Logos Grid - Centered layout */}
-        <div className="flex flex-wrap justify-center gap-8 md:gap-12 items-center">
+        {/* Logos Grid - Better responsive grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8 lg:gap-10 justify-items-center items-center max-w-6xl mx-auto">
           {clientLogos.map((client, index) => (
             <div
               key={client.name}
-              className="flex items-center justify-center w-24 h-16 md:w-32 md:h-20 lg:w-36 lg:h-24 hover:scale-105 transition-transform duration-300 group"
+              className="flex items-center justify-center w-20 h-16 sm:w-24 sm:h-18 md:w-28 md:h-20 lg:w-32 lg:h-22 xl:w-36 xl:h-24 hover:scale-105 transition-transform duration-300 group"
               style={{
                 animationDelay: `${index * 100}ms`
               }}
@@ -114,6 +121,7 @@ export const ClientsSection = () => {
                 alt={client.alt}
                 className="max-w-full max-h-full w-auto h-auto object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity duration-300"
                 loading="lazy"
+                onError={handleImageError}
               />
             </div>
           ))}
