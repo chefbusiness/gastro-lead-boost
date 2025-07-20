@@ -1,23 +1,17 @@
-
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Star, TrendingUp, Shield } from "lucide-react";
 import { getAssetUrl, ASSETS } from "@/lib/storage";
-
 export function HeroSection() {
   const scrollToContact = () => {
-    document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('contact-form')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-20">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={getAssetUrl(ASSETS.hero.restaurant)}
-          alt="Restaurant success"
-          className="w-full h-full object-cover opacity-30"
-        />
+        <img src={getAssetUrl(ASSETS.hero.restaurant)} alt="Restaurant success" className="w-full h-full object-cover opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-slate-800/80 to-slate-900/90" />
       </div>
       
@@ -25,7 +19,7 @@ export function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 text-center">
         {/* Trust Badge */}
         <div className="flex justify-center mb-8 animate-fade-in">
-          <Badge variant="secondary" className="bg-white/90 text-primary border-0 px-6 py-2 text-sm font-semibold shadow-elegant">
+          <Badge variant="secondary" className="text-primary border-0 px-6 py-2 text-sm font-semibold shadow-elegant bg-yellow-100 rounded-sm">
             <Shield className="w-4 h-4 mr-2" />
             GARANTÍA DE RESULTADOS POR CONTRATO
           </Badge>
@@ -84,21 +78,14 @@ export function HeroSection() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center animate-fade-in-up delay-500 max-w-md sm:max-w-lg mx-auto px-4">
-          <Button
-            size="lg"
-            onClick={scrollToContact}
-            className="w-full bg-gradient-accent hover:bg-accent/90 text-white px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-xl shadow-accent animate-pulse-glow group"
-          >
+          <Button size="lg" onClick={scrollToContact} className="w-full bg-gradient-accent hover:bg-accent/90 text-white px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-xl shadow-accent animate-pulse-glow group">
             <span className="text-sm sm:text-base">SOLICITAR ANÁLISIS GRATUITO</span>
             <ArrowRight className="ml-2 w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
           
-          <Button
-            variant="outline"
-            size="lg"
-            onClick={() => document.getElementById('case-studies')?.scrollIntoView({ behavior: 'smooth' })}
-            className="w-full border-white/40 bg-white/10 text-white hover:bg-white/20 hover:text-white px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl backdrop-blur-sm"
-          >
+          <Button variant="outline" size="lg" onClick={() => document.getElementById('case-studies')?.scrollIntoView({
+          behavior: 'smooth'
+        })} className="w-full border-white/40 bg-white/10 text-white hover:bg-white/20 hover:text-white px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl backdrop-blur-sm">
             <span className="text-sm sm:text-base">Revisar Transformaciones</span>
             <TrendingUp className="ml-2 w-4 sm:w-5 h-4 sm:h-5" />
           </Button>
@@ -107,9 +94,7 @@ export function HeroSection() {
         {/* Trust Indicators */}
         <div className="flex justify-center items-center gap-2 mt-8 animate-fade-in-up delay-600">
           <div className="flex">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-            ))}
+            {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)}
           </div>
           <span className="text-white/80 ml-2">4.9/5 - Valoración de nuestros clientes</span>
         </div>
@@ -121,6 +106,5 @@ export function HeroSection() {
           <div className="w-2 h-3 bg-white/70 rounded-full mx-auto animate-pulse"></div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
