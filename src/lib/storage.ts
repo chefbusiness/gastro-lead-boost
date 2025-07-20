@@ -23,6 +23,13 @@ export function getClientLogoUrl(path: string): string {
 }
 
 /**
+ * Get URL for case studies images
+ */
+export function getCaseStudyImageUrl(path: string): string {
+  return getStorageUrl('case-studies-images', path);
+}
+
+/**
  * Asset paths for the application
  */
 export const ASSETS = {
@@ -56,5 +63,11 @@ export const ASSETS = {
     logo12: 'client-logos/logo-12.png',
     logo13: 'client-logos/logo-13.png',
     logo14: 'client-logos/logo-14.png',
+  },
+  caseStudies: {
+    mediterraneanRestaurant: 'restaurantemediterraneo-gastromapspro.jpeg',
+    tapasAndWine: 'tapasyvinos-gastromapspro.jpeg',
+    seafoodHouse: 'casamarisco-gastromapspro.jpeg',
+    gourmetBistro: 'bistrogourmet-gastromapspro.jpeg',
   },
 } as const;

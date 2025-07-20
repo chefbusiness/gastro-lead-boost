@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { TrendingUp, Euro, Calendar, Star, ArrowRight, MapPin } from "lucide-react";
+import { getCaseStudyImageUrl, ASSETS } from "@/lib/storage";
 const caseStudies = [{
   id: 1,
   restaurant: "Restaurante Mediterráneo",
@@ -13,7 +14,7 @@ const caseStudies = [{
   period: "60 días",
   rating: 4.8,
   highlight: "De 2 a 15 reservas diarias",
-  image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop"
+  image: getCaseStudyImageUrl(ASSETS.caseStudies.mediterraneanRestaurant)
 }, {
   id: 2,
   restaurant: "Tapas & Vinos",
@@ -25,7 +26,7 @@ const caseStudies = [{
   period: "75 días",
   rating: 4.9,
   highlight: "3x más clientes en fin de semana",
-  image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop"
+  image: getCaseStudyImageUrl(ASSETS.caseStudies.tapasAndWine)
 }, {
   id: 3,
   restaurant: "Bistró Gourmet",
@@ -37,7 +38,7 @@ const caseStudies = [{
   period: "45 días",
   rating: 4.7,
   highlight: "Lista de espera en horario pico",
-  image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop"
+  image: getCaseStudyImageUrl(ASSETS.caseStudies.gourmetBistro)
 }, {
   id: 4,
   restaurant: "Casa de Mariscos",
@@ -49,7 +50,7 @@ const caseStudies = [{
   period: "90 días",
   rating: 4.8,
   highlight: "Dobló su facturación mensual",
-  image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&h=400&fit=crop"
+  image: getCaseStudyImageUrl(ASSETS.caseStudies.seafoodHouse)
 }];
 export function CaseStudiesSection() {
   const scrollToContact = () => {
