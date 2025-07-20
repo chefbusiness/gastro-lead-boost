@@ -22,6 +22,7 @@ import {
   CheckCircle,
   Gift
 } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 // Form validation schema
 const formSchema = z.object({
@@ -37,9 +38,19 @@ const formSchema = z.object({
   restaurant: z.string()
     .min(2, "El nombre del restaurante debe tener al menos 2 caracteres")
     .max(100, "El nombre es demasiado largo"),
+  service: z.enum(["seo-organico", "sem-pagado", "ambas-soluciones"]).refine(
+    (value) => value !== undefined,
+    { message: "Por favor selecciona un servicio" }
+  ),
+  street_address: z.string()
+    .min(5, "La dirección debe tener al menos 5 caracteres")
+    .max(100, "La dirección es demasiado larga"),
   location: z.string()
     .min(2, "La ciudad debe tener al menos 2 caracteres")
     .max(50, "El nombre de la ciudad es demasiado largo"),
+  postal_code: z.string()
+    .min(4, "El código postal debe tener al menos 4 caracteres")
+    .max(10, "El código postal es demasiado largo"),
   message: z.string()
     .max(500, "El mensaje es demasiado largo")
     .optional(),
@@ -58,7 +69,10 @@ export function ContactFormSection() {
       email: "",
       phone: "",
       restaurant: "",
+      service: "ambas-soluciones" as const,
+      street_address: "",
       location: "",
+      postal_code: "",
       message: "",
     },
   });
@@ -75,7 +89,10 @@ export function ContactFormSection() {
           email: data.email,
           phone: data.phone,
           restaurant: data.restaurant,
+          service: data.service,
+          street_address: data.street_address,
           location: data.location,
+          postal_code: data.postal_code,
           message: data.message || null,
         }]);
 
@@ -91,7 +108,10 @@ export function ContactFormSection() {
             email: data.email,
             phone: data.phone,
             restaurant: data.restaurant,
+            service: data.service,
+            street_address: data.street_address,
             location: data.location,
+            postal_code: data.postal_code,
             message: data.message,
           },
         });
@@ -267,6 +287,88 @@ export function ContactFormSection() {
                       </FormItem>
                     )}
                   />
+
+                  <FormField
+                    control={form.control}
+                    name="service"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Servicio de Interés *</FormLabel>
+                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                          <FormControl>
+                            <SelectTrigger className="border-muted-foreground/20 focus:border-primary">
+                              <SelectValue placeholder="Selecciona el servicio que más te interesa" />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            <SelectItem value="seo-organico">
+                              <div className="flex flex-col items-start">
+                                <div className="font-medium">SEO Local Orgánico</div>
+                                <div className="text-sm text-muted-foreground">Visibilidad sostenible a largo plazo</div>
+                              </div>
+                            </SelectItem>
+                            <SelectItem value="sem-pagado">
+                              <div className="flex flex-col items-start">
+                                <div className="font-medium">SEM Local Pagado</div>
+                                <div className="text-sm text-muted-foreground">Resultados inmediatos con anuncios</div>
+                              </div>
+                            </SelectItem>
+                            <SelectItem value="ambas-soluciones">
+                              <div className="flex flex-col items-start">
+                                <div className="font-medium">Ambas Soluciones Juntas</div>
+                                <div className="text-sm text-muted-foreground">Estrategia completa y optimizada</div>
+                              </div>
+                            </SelectItem>
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="street_address"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Dirección del Restaurante *</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Calle, número, piso..."
+                            className="border-muted-foreground/20 focus:border-primary"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <FormField
+                      control={form.control}
+                      name="postal_code"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Código Postal *</FormLabel>
+                          <FormControl>
+                            <Input
+                              placeholder="28001, 08001, 46001..."
+                              className="border-muted-foreground/20 focus:border-primary"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <div className="flex items-end">
+                      <div className="text-sm text-muted-foreground p-3 bg-primary/5 rounded-lg border border-primary/10">
+                        <MapPin className="w-4 h-4 inline mr-1" />
+                        Esta información nos ayuda a hacer tu análisis más preciso
+                      </div>
+                    </div>
+                  </div>
 
                   <FormField
                     control={form.control}

@@ -24,8 +24,11 @@ export type Database = {
           name: string
           notes: string | null
           phone: string | null
+          postal_code: string | null
           restaurant: string | null
+          service: string | null
           status: string
+          street_address: string | null
         }
         Insert: {
           created_at?: string
@@ -36,8 +39,11 @@ export type Database = {
           name: string
           notes?: string | null
           phone?: string | null
+          postal_code?: string | null
           restaurant?: string | null
+          service?: string | null
           status?: string
+          street_address?: string | null
         }
         Update: {
           created_at?: string
@@ -48,8 +54,11 @@ export type Database = {
           name?: string
           notes?: string | null
           phone?: string | null
+          postal_code?: string | null
           restaurant?: string | null
+          service?: string | null
           status?: string
+          street_address?: string | null
         }
         Relationships: []
       }
