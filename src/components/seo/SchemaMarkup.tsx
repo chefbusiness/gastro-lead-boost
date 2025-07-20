@@ -11,13 +11,13 @@ export const SchemaMarkup = ({ schema, id = 'schema-markup' }: SchemaMarkupProps
     let schemaScript = document.querySelector(`#${id}`);
     
     if (!schemaScript) {
-      schemaScript = document.createElement('script');
+      schemaScript = document.createElement('script') as HTMLScriptElement;
       schemaScript.id = id;
-      schemaScript.type = 'application/ld+json';
+      (schemaScript as HTMLScriptElement).type = 'application/ld+json';
       document.head.appendChild(schemaScript);
     }
     
-    schemaScript.textContent = JSON.stringify(schema);
+    (schemaScript as HTMLScriptElement).textContent = JSON.stringify(schema);
 
     return () => {
       const existingScript = document.querySelector(`#${id}`);

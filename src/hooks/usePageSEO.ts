@@ -78,12 +78,12 @@ export const usePageSEO = (seoData?: Partial<SEOData>) => {
     if (finalSEO.schema) {
       let schemaScript = document.querySelector('#schema-markup');
       if (!schemaScript) {
-        schemaScript = document.createElement('script');
+        schemaScript = document.createElement('script') as HTMLScriptElement;
         schemaScript.id = 'schema-markup';
-        schemaScript.type = 'application/ld+json';
+        (schemaScript as HTMLScriptElement).type = 'application/ld+json';
         document.head.appendChild(schemaScript);
       }
-      schemaScript.textContent = JSON.stringify(finalSEO.schema);
+      (schemaScript as HTMLScriptElement).textContent = JSON.stringify(finalSEO.schema);
     }
 
   }, [seoData, location.pathname]);
