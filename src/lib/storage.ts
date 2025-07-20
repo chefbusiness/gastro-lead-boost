@@ -16,6 +16,13 @@ export function getAssetUrl(path: string): string {
 }
 
 /**
+ * Get URL for client logos
+ */
+export function getClientLogoUrl(path: string): string {
+  return getStorageUrl('client-logos', path);
+}
+
+/**
  * Asset paths for the application
  */
 export const ASSETS = {
@@ -33,5 +40,21 @@ export const ASSETS = {
   logos: {
     gastromapsFull: 'logos/gastromaps-full.png',
     gastromapsIcon: 'logos/gastromaps-icon-3d.png',
+  },
+  clients: {
+    logo1: 'client-logos/logo-1.png',
+    fusionKitchen: 'client-logos/fusion-kitchen.png',
+    greenLeaf: 'client-logos/green-leaf.png',
+    logo4: 'client-logos/logo-4.png',
+    fornoAntico: 'client-logos/forno-antico.png',
+    spiceTemple: 'client-logos/spice-temple.png',
+    logo7: 'client-logos/logo-7.png',
+    oceanBlue: 'client-logos/ocean-blue.png',
+    oliveGarden: 'client-logos/olive-garden.png',
+    burgerBros: 'client-logos/burger-bros.png',
+    logo11: 'client-logos/logo-11.png',
+    logo12: 'client-logos/logo-12.png',
+    logo13: 'client-logos/logo-13.png',
+    logo14: 'client-logos/logo-14.png',
   },
 } as const;
