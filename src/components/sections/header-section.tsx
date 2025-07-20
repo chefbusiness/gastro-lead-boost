@@ -1,5 +1,4 @@
 
-
 import { Button } from "@/components/ui/button";
 import { 
   DropdownMenu,
@@ -8,12 +7,13 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { User, Settings, LogOut } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 export function HeaderSection() {
   const navigate = useNavigate();
+  const location = useLocation();
   const { toast } = useToast();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [adminName, setAdminName] = useState("");
@@ -32,8 +32,34 @@ export function HeaderSection() {
     return () => window.removeEventListener('storage', checkAuthStatus);
   }, []);
 
+  // Handle navigation to sections with hash fragments
+  useEffect(() => {
+    if (location.pathname === '/' && location.hash) {
+      const sectionId = location.hash.replace('#', '');
+      const element = document.getElementById(sectionId);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location.pathname, location.hash]);
+
+  const navigateToSection = (sectionId: string) => {
+    if (location.pathname === '/') {
+      // Already on main page, just scroll
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Navigate to main page with hash fragment
+      navigate(`/#${sectionId}`);
+    }
+  };
+
   const scrollToContact = () => {
-    document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+    navigateToSection('contact-form');
   };
 
   const handleLogin = () => {
@@ -70,35 +96,40 @@ export function HeaderSection() {
                 e.currentTarget.src = '/placeholder.svg';
               }}
             />
-            <span className="text-xl font-bold text-primary">GastroMaps.pro</span>
+            <button
+              onClick={() => navigate('/')}
+              className="text-xl font-bold text-primary hover:text-primary/90 transition-colors"
+            >
+              GastroMaps.pro
+            </button>
           </div>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a
-              href="#case-studies"
+            <button
+              onClick={() => navigateToSection('case-studies')}
               className="text-muted-foreground hover:text-primary transition-colors story-link"
             >
               Casos de Éxito
-            </a>
-            <a
-              href="#solutions"
+            </button>
+            <button
+              onClick={() => navigateToSection('solutions')}
               className="text-muted-foreground hover:text-primary transition-colors story-link"
             >
               Soluciones
-            </a>
-            <a
-              href="#process"
+            </button>
+            <button
+              onClick={() => navigateToSection('process')}
               className="text-muted-foreground hover:text-primary transition-colors story-link"
             >
               Proceso
-            </a>
-            <a
-              href="#contact-form"
+            </button>
+            <button
+              onClick={() => navigateToSection('contact-form')}
               className="text-muted-foreground hover:text-primary transition-colors story-link"
             >
               Contacto
-            </a>
+            </button>
           </nav>
 
           {/* Right side buttons */}
@@ -149,4 +180,3 @@ export function HeaderSection() {
     </header>
   );
 }
-
