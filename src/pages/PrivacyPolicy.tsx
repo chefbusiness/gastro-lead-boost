@@ -22,7 +22,7 @@ const PrivacyPolicy = () => {
               <li><strong>Nombre:</strong> John Guerrero</li>
               <li><strong>NIE:</strong> X3655405S</li>
               <li><strong>Condición:</strong> Autónomo en España</li>
-              <li><strong>Email:</strong> hola@gastromaps.pro</li>
+              <li><strong>Email:</strong> info@gastromaps.pro</li>
               <li><strong>Teléfono:</strong> 0034 744 717 942</li>
             </ul>
           </div>
@@ -106,8 +106,8 @@ const PrivacyPolicy = () => {
           </ul>
           <p className="mt-4">
             Para ejercer estos derechos, contacta con nosotros en: 
-            <a href="mailto:hola@gastromaps.pro" className="text-primary hover:underline ml-1">
-              hola@gastromaps.pro
+            <a href="mailto:info@gastromaps.pro" className="text-primary hover:underline ml-1">
+              info@gastromaps.pro
             </a>
           </p>
         </section>
@@ -170,7 +170,7 @@ const PrivacyPolicy = () => {
           <div className="bg-blue-50 p-4 rounded-lg">
             <h3 className="font-semibold mb-2">Para cualquier consulta sobre esta política:</h3>
             <ul className="space-y-1 text-sm">
-              <li><strong>Email:</strong> hola@gastromaps.pro</li>
+              <li><strong>Email:</strong> info@gastromaps.pro</li>
               <li><strong>Teléfono:</strong> 0034 744 717 942</li>
               <li><strong>Horario:</strong> Lunes a Viernes, 9:00-19:00</li>
             </ul>

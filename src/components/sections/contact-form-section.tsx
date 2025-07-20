@@ -488,7 +488,7 @@ export function ContactFormSection() {
                     <Mail className="w-6 h-6 text-primary" />
                     <div>
                       <div className="font-semibold">Email</div>
-                      <div className="text-primary font-bold">hola@gastromaps.pro</div>
+                      <div className="text-primary font-bold">info@gastromaps.pro</div>
                     </div>
                   </div>
 

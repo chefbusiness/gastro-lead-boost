@@ -212,7 +212,7 @@ const CookiesPolicy = () => {
           <div className="bg-blue-50 p-4 rounded-lg">
             <h3 className="font-semibold mb-2">Para consultas sobre cookies:</h3>
             <ul className="space-y-1 text-sm">
-              <li><strong>Email:</strong> hola@gastromaps.pro</li>
+              <li><strong>Email:</strong> info@gastromaps.pro</li>
               <li><strong>Teléfono:</strong> 0034 744 717 942</li>
               <li><strong>Horario:</strong> Lunes a Viernes, 9:00-19:00</li>
             </ul>

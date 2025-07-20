@@ -143,7 +143,7 @@ export function FaqSection() {
               <div className="hidden sm:block w-px h-6 bg-muted-foreground/20"></div>
               <div className="flex items-center gap-2 text-primary font-semibold">
                 <span>✉️</span>
-                <span>hola@gastromaps.pro</span>
+                <span>info@gastromaps.pro</span>
               </div>
             </div>
           </div>
