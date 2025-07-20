@@ -105,8 +105,8 @@ export function SolutionSection() {
 
             <div className="relative">
               <img
-                src="/google-maps-optimization.jpg"
-                alt="Google Maps optimization"
+                src={getAssetUrl(ASSETS.solutions.googleMyBusiness)}
+                alt="Google My Business optimization mobile"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent to-primary/20" />
@@ -119,8 +119,8 @@ export function SolutionSection() {
           <div className="grid lg:grid-cols-2 gap-0">
             <div className="relative order-2 lg:order-1">
               <img
-                src="/geo-targeted-advertising.jpg"
-                alt="Geo-targeted advertising"
+                src={getAssetUrl(ASSETS.solutions.geoTargeting)}
+                alt="Google Ads geo-targeted advertising"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-l from-transparent to-accent/20" />

@@ -24,6 +24,8 @@ export const ASSETS = {
   },
   solutions: {
     googleMaps: 'solutions/google-maps-mockup.jpg',
+    googleMyBusiness: 'solutions/google-my-business-mobile.png',
+    geoTargeting: 'solutions/google-ads-geo-targeting.png',
   },
   testimonials: {
     chef: 'testimonials/chef-testimonial.jpg',
