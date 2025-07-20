@@ -58,7 +58,7 @@ export default function AdminLogin() {
               <Input
                 id="username"
                 type="email"
-                placeholder="john@chefbusiness.co"
+                placeholder="tu@email.com"
                 value={credentials.username}
                 onChange={(e) => setCredentials({ ...credentials, username: e.target.value })}
                 required
@@ -77,9 +77,6 @@ export default function AdminLogin() {
             <Button type="submit" className="w-full" disabled={isLoading}>
               {isLoading ? "Verificando acceso..." : "Acceder al Panel"}
             </Button>
-            <div className="text-center text-xs text-muted-foreground mt-4">
-              Credenciales: john@chefbusiness.co / ChefBusiness2024!
-            </div>
           </form>
         </CardContent>
       </Card>
