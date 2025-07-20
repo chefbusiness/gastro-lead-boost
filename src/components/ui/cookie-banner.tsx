@@ -71,61 +71,66 @@ export function CookieBanner() {
   if (!showBanner) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-4">
-      <Card className="max-w-4xl mx-auto bg-white border border-gray-200 shadow-lg">
-        <div className="p-6">
-          <div className="flex items-start gap-4">
-            <Cookie className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
+    <div className="fixed bottom-4 left-4 right-4 z-50 sm:left-6 sm:right-6">
+      <Card className="max-w-md mx-auto sm:max-w-lg bg-white/95 backdrop-blur-sm border border-gray-200 shadow-lg">
+        <div className="p-4">
+          <div className="flex items-start gap-3">
+            <Cookie className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
             
-            <div className="flex-1">
-              <h3 className="text-lg font-semibold mb-2">
+            <div className="flex-1 min-w-0">
+              <h3 className="text-sm font-semibold mb-1">
                 🍪 Configuración de Cookies
               </h3>
-              <p className="text-gray-600 mb-4">
-                Utilizamos cookies para mejorar tu experiencia en GastroMaps.pro. 
-                Las cookies necesarias son esenciales para el funcionamiento del sitio, 
-                mientras que otras nos ayudan a analizar el tráfico y personalizar el contenido.
+              <p className="text-xs text-gray-600 mb-3 leading-relaxed">
+                Utilizamos cookies para mejorar tu experiencia. Las necesarias son esenciales, 
+                otras nos ayudan a analizar el tráfico.
               </p>
               
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2">
                 <Button 
                   onClick={acceptAll}
-                  className="bg-primary hover:bg-primary/90 text-white"
+                  size="sm"
+                  className="bg-primary hover:bg-primary/90 text-white text-xs px-3 py-1.5 h-auto"
                 >
-                  <Check className="w-4 h-4 mr-2" />
+                  <Check className="w-3 h-3 mr-1" />
                   Aceptar Todas
                 </Button>
                 
                 <Button 
                   onClick={acceptNecessary}
                   variant="outline"
+                  size="sm"
+                  className="text-xs px-3 py-1.5 h-auto"
                 >
-                  <X className="w-4 h-4 mr-2" />
                   Solo Necesarias
                 </Button>
 
                 <Dialog open={showPreferences} onOpenChange={setShowPreferences}>
                   <DialogTrigger asChild>
-                    <Button variant="outline">
-                      <Settings className="w-4 h-4 mr-2" />
+                    <Button 
+                      variant="ghost" 
+                      size="sm"
+                      className="text-xs px-2 py-1.5 h-auto text-gray-600 hover:text-gray-900"
+                    >
+                      <Settings className="w-3 h-3 mr-1" />
                       Personalizar
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="max-w-2xl">
+                  <DialogContent className="max-w-lg">
                     <DialogHeader>
-                      <DialogTitle>Preferencias de Cookies</DialogTitle>
+                      <DialogTitle className="text-lg">Preferencias de Cookies</DialogTitle>
                     </DialogHeader>
                     
-                    <div className="space-y-6">
+                    <div className="space-y-4">
                       {/* Necessary Cookies */}
                       <div className="flex items-start justify-between">
-                        <div className="flex-1">
-                          <h4 className="font-medium">Cookies Necesarias</h4>
-                          <p className="text-sm text-gray-600 mt-1">
+                        <div className="flex-1 pr-4">
+                          <h4 className="font-medium text-sm">Cookies Necesarias</h4>
+                          <p className="text-xs text-gray-600 mt-0.5">
                             Esenciales para el funcionamiento básico del sitio web.
                           </p>
                         </div>
-                        <div className="ml-4">
+                        <div className="flex-shrink-0">
                           <input 
                             type="checkbox" 
                             checked={true} 
@@ -139,13 +144,13 @@ export function CookieBanner() {
 
                       {/* Analytics Cookies */}
                       <div className="flex items-start justify-between">
-                        <div className="flex-1">
-                          <h4 className="font-medium">Cookies de Análisis</h4>
-                          <p className="text-sm text-gray-600 mt-1">
+                        <div className="flex-1 pr-4">
+                          <h4 className="font-medium text-sm">Cookies de Análisis</h4>
+                          <p className="text-xs text-gray-600 mt-0.5">
                             Nos ayudan a entender cómo interactúas con el sitio web.
                           </p>
                         </div>
-                        <div className="ml-4">
+                        <div className="flex-shrink-0">
                           <input 
                             type="checkbox" 
                             checked={preferences.analytics}
@@ -159,13 +164,13 @@ export function CookieBanner() {
 
                       {/* Marketing Cookies */}
                       <div className="flex items-start justify-between">
-                        <div className="flex-1">
-                          <h4 className="font-medium">Cookies de Marketing</h4>
-                          <p className="text-sm text-gray-600 mt-1">
+                        <div className="flex-1 pr-4">
+                          <h4 className="font-medium text-sm">Cookies de Marketing</h4>
+                          <p className="text-xs text-gray-600 mt-0.5">
                             Utilizadas para mostrar anuncios relevantes y medir campañas.
                           </p>
                         </div>
-                        <div className="ml-4">
+                        <div className="flex-shrink-0">
                           <input 
                             type="checkbox" 
                             checked={preferences.marketing}
@@ -179,13 +184,13 @@ export function CookieBanner() {
 
                       {/* Functional Cookies */}
                       <div className="flex items-start justify-between">
-                        <div className="flex-1">
-                          <h4 className="font-medium">Cookies Funcionales</h4>
-                          <p className="text-sm text-gray-600 mt-1">
+                        <div className="flex-1 pr-4">
+                          <h4 className="font-medium text-sm">Cookies Funcionales</h4>
+                          <p className="text-xs text-gray-600 mt-0.5">
                             Permiten funcionalidades mejoradas y personalización.
                           </p>
                         </div>
-                        <div className="ml-4">
+                        <div className="flex-shrink-0">
                           <input 
                             type="checkbox" 
                             checked={preferences.functional}
@@ -195,16 +200,19 @@ export function CookieBanner() {
                         </div>
                       </div>
 
-                      <div className="flex gap-3 pt-4">
+                      <div className="flex gap-2 pt-3">
                         <Button 
                           onClick={() => savePreferences(preferences)}
-                          className="flex-1"
+                          size="sm"
+                          className="flex-1 text-sm"
                         >
                           Guardar Preferencias
                         </Button>
                         <Button 
                           variant="outline" 
+                          size="sm"
                           onClick={() => setShowPreferences(false)}
+                          className="text-sm"
                         >
                           Cancelar
                         </Button>
@@ -214,8 +222,8 @@ export function CookieBanner() {
                 </Dialog>
               </div>
 
-              <p className="text-xs text-gray-500 mt-3">
-                Para más información, consulta nuestra{" "}
+              <p className="text-xs text-gray-500 mt-2 leading-tight">
+                Consulta nuestra{" "}
                 <a href="/cookies" className="text-primary hover:underline">
                   Política de Cookies
                 </a>{" "}
