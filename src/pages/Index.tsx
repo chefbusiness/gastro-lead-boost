@@ -10,10 +10,35 @@ import { ContactFormSection } from "@/components/sections/contact-form-section";
 import { FooterSection } from "@/components/sections/footer-section";
 import { FloatingCTA } from "@/components/ui/floating-cta";
 import { CookieBanner } from "@/components/ui/cookie-banner";
+import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
+import { usePageSEO } from "@/hooks/usePageSEO";
+import { 
+  getLocalBusinessSchema, 
+  getOrganizationSchema, 
+  getServiceSchema, 
+  getFAQSchema,
+  getHowToSchema 
+} from "@/lib/schema";
 
 const Index = () => {
+  usePageSEO({
+    title: "GastroMaps.pro - Te Traemos Más Clientes o Te Devolvemos El Dinero",
+    description: "Especialistas en marketing digital para restaurantes. Garantizamos +40% más reservas en 90 días o te devolvemos tu dinero. Resultados reales, no promesas.",
+    keywords: "marketing restaurantes, google my business, publicidad restaurantes, más clientes restaurante, reservas restaurante, SEO local restaurantes, SEM restaurantes, marketing digital gastronomía",
+    ogTitle: "GastroMaps.pro - Llenamos tu Restaurante de Clientes",
+    ogDescription: "Especialistas en marketing digital para restaurantes. Garantía de resultados en 90 días o devolución del dinero. +247% ROI promedio.",
+    ogType: "website"
+  });
+
   return (
     <div className="min-h-screen">
+      {/* Schema Markup for SEO */}
+      <SchemaMarkup schema={getLocalBusinessSchema()} id="local-business-schema" />
+      <SchemaMarkup schema={getOrganizationSchema()} id="organization-schema" />
+      <SchemaMarkup schema={getServiceSchema()} id="service-schema" />
+      <SchemaMarkup schema={getFAQSchema()} id="faq-schema" />
+      <SchemaMarkup schema={getHowToSchema()} id="howto-schema" />
+      
       <HeaderSection />
       <HeroSection />
       <TestimonialSection />

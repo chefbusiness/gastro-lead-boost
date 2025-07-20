@@ -1,0 +1,11 @@
+
+# Netlify redirects for SPA routing
+/*    /index.html   200
+
+# Security redirects
+/wp-admin/*  https://gastromaps.pro/  301!
+/wp-login.php  https://gastromaps.pro/  301!
+/admin.php  https://gastromaps.pro/  301!
+
+# Canonical domain redirect (uncomment when ready)
+# https://www.gastromaps.pro/*  https://gastromaps.pro/:splat  301!

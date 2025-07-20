@@ -1,232 +1,203 @@
-
 import { LegalLayout } from "@/components/layout/legal-layout";
+import { usePageSEO } from "@/hooks/usePageSEO";
+import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
+import { getBreadcrumbSchema } from "@/lib/schema";
 
 const CookiesPolicy = () => {
+  usePageSEO({
+    title: "Política de Cookies - GastroMaps.pro",
+    description: "Información sobre el uso de cookies en GastroMaps.pro. Tipos de cookies, finalidad y cómo gestionar tus preferencias.",
+    keywords: "política cookies, cookies técnicas, privacidad web, GastroMaps cookies, gestión cookies",
+    canonical: "https://gastromaps.pro/cookies"
+  });
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Inicio", url: "https://gastromaps.pro/" },
+    { name: "Política de Cookies", url: "https://gastromaps.pro/cookies" }
+  ]);
+
   return (
     <LegalLayout 
       title="Política de Cookies" 
-      description="Información detallada sobre el uso de cookies en GastroMaps.pro"
+      description="Información sobre cómo utilizamos las cookies en nuestro sitio web"
     >
+      <SchemaMarkup schema={breadcrumbSchema} id="breadcrumb-cookies" />
+      
       <div className="space-y-8">
         <section>
-          <h2 className="text-2xl font-bold mb-4">1. ¿Qué son las Cookies?</h2>
-          <p className="mb-4">
-            Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo 
-            (ordenador, tablet o móvil) cuando visitas un sitio web. Estas cookies permiten 
-            que el sitio web reconozca tu dispositivo y recuerde información sobre tu visita.
+          <h2 className="text-2xl font-semibold mb-4">¿Qué son las cookies?</h2>
+          <p>
+            Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando 
+            visitas un sitio web. Nos ayudan a hacer que tu experiencia en nuestro sitio sea mejor, 
+            más rápida y segura.
           </p>
-          <div className="bg-blue-50 p-4 rounded-lg">
-            <p className="text-blue-800">
-              <strong>En GastroMaps.pro utilizamos cookies para mejorar tu experiencia, 
-              analizar el tráfico web y personalizar el contenido según tus preferencias.</strong>
-            </p>
-          </div>
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold mb-4">2. Tipos de Cookies que Utilizamos</h2>
+          <h2 className="text-2xl font-semibold mb-4">¿Cómo utilizamos las cookies?</h2>
+          <p>
+            En GastroMaps.pro utilizamos cookies únicamente para fines esenciales y mejorar 
+            tu experiencia de navegación:
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold mb-4">Tipos de cookies que utilizamos</h2>
           
           <div className="space-y-6">
             <div className="border border-gray-200 rounded-lg p-4">
-              <h3 className="text-lg font-semibold mb-3 text-green-700">🔒 Cookies Necesarias (Siempre Activas)</h3>
-              <p className="mb-3">
-                Estas cookies son esenciales para el funcionamiento del sitio web y no pueden ser desactivadas.
+              <h3 className="text-lg font-semibold mb-2 text-green-700">Cookies técnicas (Esenciales)</h3>
+              <p className="text-gray-700 mb-2">
+                Son imprescindibles para el funcionamiento del sitio web y no se pueden desactivar.
               </p>
-              <div className="bg-gray-50 p-3 rounded text-sm">
-                <p><strong>Ejemplos:</strong></p>
-                <ul className="mt-2 space-y-1">
-                  <li>• <strong>cookieConsent:</strong> Recuerda tus preferencias de cookies</li>
-                  <li>• <strong>sessionId:</strong> Mantiene tu sesión activa durante la navegación</li>
-                  <li>• <strong>security_token:</strong> Protege contra ataques de seguridad</li>
-                </ul>
-                <p className="mt-2"><strong>Duración:</strong> Sesión del navegador o hasta 1 año</p>
-              </div>
+              <ul className="list-disc pl-6 text-sm space-y-1">
+                <li>Gestión de sesiones de usuario</li>
+                <li>Recordar preferencias de idioma</li>
+                <li>Funcionalidad del formulario de contacto</li>
+                <li>Seguridad y prevención de ataques</li>
+              </ul>
+              <p className="text-xs text-gray-500 mt-2">Duración: Sesión</p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h3 className="text-lg font-semibold mb-3 text-blue-700">📊 Cookies de Análisis</h3>
-              <p className="mb-3">
-                Nos ayudan a entender cómo interactúas con nuestro sitio web para mejorarlo.
+              <h3 className="text-lg font-semibold mb-2 text-blue-700">Cookies de funcionalidad</h3>
+              <p className="text-gray-700 mb-2">
+                Permiten recordar tus preferencias para mejorar tu experiencia.
               </p>
-              <div className="bg-gray-50 p-3 rounded text-sm">
-                <p><strong>Google Analytics:</strong></p>
-                <ul className="mt-2 space-y-1">
-                  <li>• <strong>_ga:</strong> Identifica usuarios únicos</li>
-                  <li>• <strong>_ga_*:</strong> Mantiene el estado de la sesión</li>
-                  <li>• <strong>_gid:</strong> Identifica usuarios únicos (24 horas)</li>
-                </ul>
-                <p className="mt-2"><strong>Proveedor:</strong> Google LLC</p>
-                <p><strong>Duración:</strong> Entre 24 horas y 2 años</p>
-                <p><strong>Propósito:</strong> Estadísticas de tráfico, páginas más visitadas, tiempo de permanencia</p>
-              </div>
+              <ul className="list-disc pl-6 text-sm space-y-1">
+                <li>Preferencias de cookies aceptadas</li>
+                <li>Estado de elementos colapsables</li>
+                <li>Configuración de interfaz</li>
+              </ul>
+              <p className="text-xs text-gray-500 mt-2">Duración: 30 días</p>
             </div>
 
-            <div className="border border-gray-200 rounded-lg p-4">
-              <h3 className="text-lg font-semibold mb-3 text-purple-700">🎯 Cookies de Marketing</h3>
-              <p className="mb-3">
-                Utilizadas para mostrar anuncios relevantes y medir la efectividad de nuestras campañas.
+            <div className="border border-gray-200 rounded-lg p-4 bg-gray-50">
+              <h3 className="text-lg font-semibold mb-2 text-gray-700">Cookies de análisis</h3>
+              <p className="text-gray-700 mb-2">
+                <strong>Actualmente NO utilizamos</strong> cookies de análisis o seguimiento. 
+                Si en el futuro decidimos implementarlas, solicitaremos tu consentimiento explícito.
               </p>
-              <div className="bg-gray-50 p-3 rounded text-sm">
-                <p><strong>Google Ads:</strong></p>
-                <ul className="mt-2 space-y-1">
-                  <li>• <strong>_gcl_au:</strong> Mide conversiones de Google Ads</li>
-                  <li>• <strong>_gac_*:</strong> Datos de campañas de Google Ads</li>
-                </ul>
-                <p className="mt-2"><strong>Facebook Pixel:</strong></p>
-                <ul className="mt-2 space-y-1">
-                  <li>• <strong>_fbp:</strong> Identifica navegadores para publicidad</li>
-                  <li>• <strong>_fbc:</strong> Almacena información de clics</li>
-                </ul>
-                <p className="mt-2"><strong>Duración:</strong> Entre 3 meses y 2 años</p>
-                <p><strong>Propósito:</strong> Remarketing, medición de conversiones, optimización de anuncios</p>
-              </div>
             </div>
 
-            <div className="border border-gray-200 rounded-lg p-4">
-              <h3 className="text-lg font-semibold mb-3 text-orange-700">⚙️ Cookies Funcionales</h3>
-              <p className="mb-3">
-                Permiten funcionalidades mejoradas y personalización del sitio.
+            <div className="border border-gray-200 rounded-lg p-4 bg-gray-50">
+              <h3 className="text-lg font-semibold mb-2 text-gray-700">Cookies publicitarias</h3>
+              <p className="text-gray-700">
+                <strong>NO utilizamos</strong> cookies publicitarias ni de terceros para rastrearte 
+                o mostrarte publicidad personalizada.
               </p>
-              <div className="bg-gray-50 p-3 rounded text-sm">
-                <p><strong>Ejemplos:</strong></p>
-                <ul className="mt-2 space-y-1">
-                  <li>• <strong>language_preference:</strong> Recuerda tu idioma preferido</li>
-                  <li>• <strong>form_data:</strong> Guarda temporalmente datos de formularios</li>
-                  <li>• <strong>chat_history:</strong> Mantiene historial de conversaciones de soporte</li>
-                </ul>
-                <p className="mt-2"><strong>Duración:</strong> Entre 30 días y 1 año</p>
-                <p><strong>Propósito:</strong> Mejorar la experiencia del usuario</p>
-              </div>
             </div>
           </div>
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold mb-4">3. Cookies de Terceros</h2>
+          <h2 className="text-2xl font-semibold mb-4">Gestión de cookies</h2>
           <p className="mb-4">
-            Algunos servicios externos que utilizamos pueden establecer sus propias cookies:
+            Puedes gestionar las cookies de varias maneras:
           </p>
           
-          <div className="space-y-4">
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <h3 className="font-semibold mb-2">🔍 Google (Analytics y Ads)</h3>
-              <ul className="text-sm space-y-1">
-                <li><strong>Propósito:</strong> Análisis de tráfico y publicidad segmentada</li>
-                <li><strong>Política:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Google Privacy Policy</a></li>
-                <li><strong>Opt-out:</strong> <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Google Analytics Opt-out</a></li>
-              </ul>
-            </div>
-
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <h3 className="font-semibold mb-2">📘 Facebook/Meta</h3>
-              <ul className="text-sm space-y-1">
-                <li><strong>Propósito:</strong> Remarketing y medición de campañas sociales</li>
-                <li><strong>Política:</strong> <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Facebook Privacy Policy</a></li>
-                <li><strong>Configuración:</strong> <a href="https://www.facebook.com/settings?tab=ads" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Facebook Ad Settings</a></li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mb-4">4. Gestión de tus Preferencias de Cookies</h2>
-          
-          <div className="space-y-4">
-            <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-              <h3 className="font-semibold text-green-800 mb-2">✅ Panel de Preferencias</h3>
-              <p className="text-green-700 mb-3">
-                Puedes gestionar tus preferencias de cookies en cualquier momento usando 
-                nuestro panel de configuración.
-              </p>
-              <button 
-                onClick={() => {
-                  // This would trigger the cookie banner to show again
-                  localStorage.removeItem('cookieConsent');
-                  window.location.reload();
-                }}
-                className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 text-sm"
-              >
-                Abrir Configuración de Cookies
-              </button>
-            </div>
-
-            <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-              <h3 className="font-semibold text-blue-800 mb-2">🌐 Configuración del Navegador</h3>
-              <p className="text-blue-700 mb-3">
-                También puedes gestionar cookies directamente desde tu navegador:
-              </p>
-              <ul className="text-sm text-blue-700 space-y-1">
-                <li>• <strong>Chrome:</strong> Configuración → Privacidad y seguridad → Cookies</li>
-                <li>• <strong>Firefox:</strong> Opciones → Privacidad y seguridad → Cookies</li>
-                <li>• <strong>Safari:</strong> Preferencias → Privacidad → Cookies</li>
-                <li>• <strong>Edge:</strong> Configuración → Cookies y permisos del sitio</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mb-4">5. Impacto de Desactivar Cookies</h2>
-          
-          <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
-            <h3 className="font-semibold text-yellow-800 mb-2">⚠️ Importante</h3>
-            <p className="text-yellow-700 mb-3">
-              Desactivar ciertas cookies puede afectar tu experiencia en nuestro sitio:
+          <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg mb-4">
+            <h3 className="font-semibold text-blue-800 mb-2">Banner de cookies</h3>
+            <p className="text-blue-700">
+              Al visitar nuestro sitio por primera vez, aparece un banner donde puedes aceptar 
+              o configurar tus preferencias de cookies.
             </p>
-            <ul className="text-sm text-yellow-700 space-y-1">
-              <li>• <strong>Cookies necesarias:</strong> El sitio puede no funcionar correctamente</li>
-              <li>• <strong>Cookies de análisis:</strong> No podremos mejorar el sitio basándome en tu uso</li>
-              <li>• <strong>Cookies de marketing:</strong> Recibirás anuncios menos relevantes</li>
-              <li>• <strong>Cookies funcionales:</strong> Perderás personalizaciones y preferencias</li>
+          </div>
+
+          <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-lg">
+            <h3 className="font-semibold text-yellow-800 mb-2">Configuración del navegador</h3>
+            <p className="text-yellow-700 mb-2">
+              También puedes configurar tu navegador para:
+            </p>
+            <ul className="list-disc pl-6 text-sm space-y-1 text-yellow-700">
+              <li>Rechazar todas las cookies</li>
+              <li>Aceptar solo cookies de sitios específicos</li>
+              <li>Eliminar cookies al cerrar el navegador</li>
+              <li>Recibir avisos antes de aceptar cookies</li>
             </ul>
           </div>
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold mb-4">6. Actualizaciones de esta Política</h2>
-          <p className="mb-4">
-            Esta política de cookies puede actualizarse ocasionalmente para reflejar 
-            cambios en nuestras prácticas o por motivos legales. Te notificaremos sobre 
-            cambios significativos mediante nuestro banner de cookies o por email.
-          </p>
-          <p className="mb-4">
-            Te recomendamos revisar esta página periódicamente para estar informado 
-            sobre cómo utilizamos las cookies.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mb-4">7. Base Legal</h2>
-          <p className="mb-4">
-            El uso de cookies se basa en tu consentimiento, según lo requerido por:
-          </p>
-          <ul className="list-disc pl-6 space-y-1">
-            <li>Reglamento General de Protección de Datos (GDPR)</li>
-            <li>Ley de Servicios de la Sociedad de la Información (LSSI-CE)</li>
-            <li>Directiva ePrivacy de la UE</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold mb-4">8. Contacto</h2>
-          <div className="bg-blue-50 p-4 rounded-lg">
-            <h3 className="font-semibold mb-2">Para consultas sobre cookies:</h3>
-            <ul className="space-y-1 text-sm">
-              <li><strong>Email:</strong> info@gastromaps.pro</li>
-              <li><strong>Teléfono:</strong> 0034 744 717 942</li>
-              <li><strong>Horario:</strong> Lunes a Viernes, 9:00-19:00</li>
-            </ul>
-            <p className="text-sm text-gray-600 mt-3">
-              Responderemos a tu consulta en un plazo máximo de 48 horas.
-            </p>
+          <h2 className="text-2xl font-semibold mb-4">Configuración por navegador</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold mb-2">Google Chrome</h3>
+              <p className="text-sm text-gray-600">
+                Configuración → Privacidad y seguridad → Cookies y otros datos de sitios
+              </p>
+            </div>
+            
+            <div className="border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold mb-2">Mozilla Firefox</h3>
+              <p className="text-sm text-gray-600">
+                Opciones → Privacidad y seguridad → Cookies y datos del sitio
+              </p>
+            </div>
+            
+            <div className="border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold mb-2">Safari</h3>
+              <p className="text-sm text-gray-600">
+                Preferencias → Privacidad → Gestión de datos de sitios web
+              </p>
+            </div>
+            
+            <div className="border border-gray-200 rounded-lg p-4">
+              <h3 className="font-semibold mb-2">Microsoft Edge</h3>
+              <p className="text-sm text-gray-600">
+                Configuración → Cookies y permisos de sitio → Cookies y datos del sitio
+              </p>
+            </div>
           </div>
         </section>
 
-        <div className="border-t pt-8 mt-12">
-          <p className="text-sm text-gray-500">
-            <strong>Última actualización:</strong> Julio 2025
+        <section>
+          <h2 className="text-2xl font-semibold mb-4">Impacto de desactivar cookies</h2>
+          <div className="bg-orange-50 border border-orange-200 p-4 rounded-lg">
+            <p className="text-orange-700">
+              Si desactivas las cookies esenciales, algunas funcionalidades del sitio web 
+              podrían no funcionar correctamente:
+            </p>
+            <ul className="list-disc pl-6 mt-2 text-sm space-y-1 text-orange-700">
+              <li>El formulario de contacto podría no enviarse correctamente</li>
+              <li>Tus preferencias no se recordarán entre sesiones</li>
+              <li>Algunos elementos interactivos podrían no funcionar</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold mb-4">Actualizaciones de esta política</h2>
+          <p>
+            Esta política de cookies puede actualizarse ocasionalmente. Te recomendamos 
+            revisarla periódicamente para estar informado de cualquier cambio.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold mb-4">Contacto</h2>
+          <p>
+            Si tienes preguntas sobre nuestra política de cookies, puedes contactarnos:
+          </p>
+          <div className="mt-4 p-4 bg-gray-50 rounded-lg">
+            <p><strong>GastroMaps.pro</strong></p>
+            <p>Email: info@gastromaps.pro</p>
+            <p>Teléfono: +34 744 717 942</p>
+          </div>
+        </section>
+
+        <div className="bg-green-50 border border-green-200 p-6 rounded-lg">
+          <h2 className="text-xl font-semibold mb-3 text-green-800">Compromiso con tu privacidad</h2>
+          <p className="text-green-700">
+            En GastroMaps.pro respetamos tu privacidad. Solo utilizamos las cookies estrictamente 
+            necesarias para ofrecerte el mejor servicio posible, sin rastrearte ni comprometer 
+            tu información personal.
           </p>
         </div>
+
+        <p className="text-sm text-gray-600 mt-8">
+          Última actualización: 20 de enero de 2025
+        </p>
       </div>
     </LegalLayout>
   );
