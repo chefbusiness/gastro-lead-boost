@@ -106,12 +106,12 @@ export const ClientsSection = () => {
           </p>
         </div>
 
-        {/* Logos Grid - Better responsive grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8 lg:gap-10 justify-items-center items-center max-w-6xl mx-auto">
+        {/* Logos Grid - Optimized for transparent PNGs and perfect centering */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-6 md:gap-8 lg:gap-10 justify-items-center items-center max-w-7xl mx-auto">
           {clientLogos.map((client, index) => (
             <div
               key={client.name}
-              className="flex items-center justify-center w-20 h-16 sm:w-24 sm:h-18 md:w-28 md:h-20 lg:w-32 lg:h-22 xl:w-36 xl:h-24 hover:scale-105 transition-transform duration-300 group"
+              className="flex items-center justify-center w-24 h-20 sm:w-28 sm:h-22 md:w-32 md:h-24 lg:w-36 lg:h-28 xl:w-40 xl:h-32 hover:scale-110 transition-all duration-300 group"
               style={{
                 animationDelay: `${index * 100}ms`
               }}
@@ -119,7 +119,7 @@ export const ClientsSection = () => {
               <img
                 src={client.url}
                 alt={client.alt}
-                className="max-w-full max-h-full w-auto h-auto object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                className="max-w-full max-h-full w-auto h-auto object-contain opacity-75 contrast-125 brightness-110 saturate-110 group-hover:opacity-100 group-hover:contrast-150 group-hover:brightness-125 group-hover:saturate-125 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all duration-300"
                 loading="lazy"
                 onError={handleImageError}
               />
