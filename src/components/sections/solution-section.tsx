@@ -105,7 +105,7 @@ export function SolutionSection() {
 
             <div className="relative">
               <img
-                src={getAssetUrl(ASSETS.solutions.googleMyBusiness)}
+                src="/lovable-uploads/4dd5d96a-2de5-41e9-bd17-e9a95f1d0d08.png"
                 alt="Google My Business optimization mobile"
                 className="w-full h-full object-cover"
               />
@@ -119,7 +119,7 @@ export function SolutionSection() {
           <div className="grid lg:grid-cols-2 gap-0">
             <div className="relative order-2 lg:order-1">
               <img
-                src={getAssetUrl(ASSETS.solutions.geoTargeting)}
+                src="/lovable-uploads/2db80d38-a0c5-4f0a-a259-25c45b087dd1.png"
                 alt="Google Ads geo-targeted advertising"
                 className="w-full h-full object-cover"
               />
