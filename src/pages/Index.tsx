@@ -5,6 +5,7 @@ import { TestimonialSection } from "@/components/sections/testimonial-section";
 import { SolutionSection } from "@/components/sections/solution-section";
 import { CaseStudiesSection } from "@/components/sections/case-studies-section";
 import { ProcessSection } from "@/components/sections/process-section";
+import { FaqSection } from "@/components/sections/faq-section";
 import { ContactFormSection } from "@/components/sections/contact-form-section";
 import { FooterSection } from "@/components/sections/footer-section";
 import { FloatingCTA } from "@/components/ui/floating-cta";
@@ -19,6 +20,7 @@ const Index = () => {
       <SolutionSection />
       <CaseStudiesSection />
       <ProcessSection />
+      <FaqSection />
       <ContactFormSection />
       <FooterSection />
       <FloatingCTA />
