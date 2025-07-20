@@ -3,73 +3,73 @@ import { getClientLogoUrl } from "@/lib/storage";
 
 const clientLogos = [
   {
-    name: "Restaurant Logo 1",
-    url: getClientLogoUrl('logo-1.png'),
+    name: "Cliente satisfecho 1",
+    url: getClientLogoUrl('07c0ddb6-8105-4821-bfb6-a567f72a7f41.png'),
     alt: "Cliente satisfecho 1"
   },
   {
     name: "Fusion Kitchen",
-    url: getClientLogoUrl('fusion-kitchen.png'),
+    url: getClientLogoUrl('e3a921c1-d701-452d-9e87-16517edeb0a9.png'),
     alt: "Fusion Kitchen"
   },
   {
     name: "Green Leaf",
-    url: getClientLogoUrl('green-leaf.png'),
+    url: getClientLogoUrl('13ab0619-2f2f-4476-b6b9-5fde4161becc.png'),
     alt: "Green Leaf"
   },
   {
-    name: "Restaurant Logo 4",
-    url: getClientLogoUrl('logo-4.png'),
+    name: "Cliente satisfecho 4",
+    url: getClientLogoUrl('fd30a53c-ff8d-41c5-a906-41d086fc7925.png'),
     alt: "Cliente satisfecho 4"
   },
   {
     name: "Forno Antico",
-    url: getClientLogoUrl('forno-antico.png'),
+    url: getClientLogoUrl('fcb99d33-1190-48d2-b0b0-b3cdbb2944bd.png'),
     alt: "Forno Antico"
   },
   {
     name: "Spice Temple",
-    url: getClientLogoUrl('spice-temple.png'),
+    url: getClientLogoUrl('9413a230-4612-4cf2-bff1-5ed1d78b212c.png'),
     alt: "Spice Temple Thai Restaurant"
   },
   {
-    name: "Restaurant Logo 7",
-    url: getClientLogoUrl('logo-7.png'),
+    name: "Cliente satisfecho 7",
+    url: getClientLogoUrl('809e6747-5786-438e-97d8-5c591878981f.png'),
     alt: "Cliente satisfecho 7"
   },
   {
     name: "Ocean Blue",
-    url: getClientLogoUrl('ocean-blue.png'),
+    url: getClientLogoUrl('d88e2a83-7100-4592-bab4-a455fc88050b.png'),
     alt: "Ocean Blue Seafood Shack"
   },
   {
     name: "Olive Garden",
-    url: getClientLogoUrl('olive-garden.png'),
+    url: getClientLogoUrl('e0be6d9f-0aa1-4b8a-a2cc-7b0e7eae1bb5.png'),
     alt: "Olive Garden"
   },
   {
     name: "Burger Bros",
-    url: getClientLogoUrl('burger-bros.png'),
+    url: getClientLogoUrl('b3960b86-cac9-4d21-ac0c-68e0106f6eb0.png'),
     alt: "Burger Bros"
   },
   {
-    name: "Restaurant Logo 11",
-    url: getClientLogoUrl('logo-11.png'),
+    name: "Cliente satisfecho 11",
+    url: getClientLogoUrl('2e62a6f2-a2d4-4b48-b363-3b48ddd77cd5.png'),
     alt: "Cliente satisfecho 11"
   },
   {
-    name: "Restaurant Logo 12",
-    url: getClientLogoUrl('logo-12.png'),
+    name: "Cliente satisfecho 12",
+    url: getClientLogoUrl('3ef07def-0139-459f-9ad7-a4faa1806505.png'),
     alt: "Cliente satisfecho 12"
   },
   {
-    name: "Restaurant Logo 13",
-    url: getClientLogoUrl('logo-13.png'),
+    name: "Cliente satisfecho 13",
+    url: getClientLogoUrl('3b2abae6-2734-41c3-8ddf-9cce241af058.png'),
     alt: "Cliente satisfecho 13"
   },
   {
-    name: "Restaurant Logo 14",
-    url: getClientLogoUrl('logo-14.png'),
+    name: "Cliente satisfecho 14",
+    url: getClientLogoUrl('64d5abce-bba4-4ef0-ab13-d10436f3ed87.png'),
     alt: "Cliente satisfecho 14"
   }
 ];
