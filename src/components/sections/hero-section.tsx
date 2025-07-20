@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Star, TrendingUp, Shield } from "lucide-react";
@@ -32,10 +33,10 @@ export function HeroSection() {
 
         {/* Main Headline */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight animate-fade-in-up px-2">
-          DUPLICAMOS TUS
+          MÁS CLIENTES PARA TU
           <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
-            RESERVAS
+            RESTAURANTE
           </span>
           {" "}O NO
           <br />
