@@ -61,7 +61,7 @@ export function TestimonialSection() {
                 <blockquote className="text-lg md:text-xl text-foreground mb-6 leading-relaxed">
                   "Invertí <span className="font-bold text-primary">"Invertí 650€ y generé 16.250€ en reservas. No hay ningún otro proveedor en mi restaurante que me dé ese retorno. Solo GastroMaps."</span> y generé{" "}
                   <span className="font-bold text-success">13.590€</span> en reservas. 
-                  No hay ningún proveedor en mi restaurante que me dé ese retorno. 
+                  No hay ningún otro proveedor en mi restaurante que me dé ese retorno. 
                   <span className="font-bold text-accent"> Solo GastroMaps.</span>"
                 </blockquote>
 
