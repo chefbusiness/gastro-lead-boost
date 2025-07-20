@@ -303,20 +303,20 @@ export function ContactFormSection() {
                           <SelectContent>
                             <SelectItem value="seo-organico">
                               <div className="flex flex-col items-start">
-                                <div className="font-medium">SEO Local Orgánico</div>
-                                <div className="text-sm text-muted-foreground">Visibilidad sostenible a largo plazo</div>
+                                <div className="font-medium">SEO Local Orgánico (Posicionamiento Natural)</div>
+                                <div className="text-sm text-muted-foreground">Creación de contenido para aparecer en Google Search y Google Maps de forma natural y sostenible</div>
                               </div>
                             </SelectItem>
                             <SelectItem value="sem-pagado">
                               <div className="flex flex-col items-start">
-                                <div className="font-medium">SEM Local Pagado</div>
-                                <div className="text-sm text-muted-foreground">Resultados inmediatos con anuncios</div>
+                                <div className="font-medium">SEM Local Pagado (Publicidad pagada en Google Maps)</div>
+                                <div className="text-sm text-muted-foreground">Anuncios para aparecer al instante cuando busquen restaurantes en tu zona</div>
                               </div>
                             </SelectItem>
                             <SelectItem value="ambas-soluciones">
                               <div className="flex flex-col items-start">
-                                <div className="font-medium">Ambas Soluciones Juntas</div>
-                                <div className="text-sm text-muted-foreground">Estrategia completa y optimizada</div>
+                                <div className="font-medium">Ambas Soluciones Juntas (Recomendado)</div>
+                                <div className="text-sm text-muted-foreground">Resultados inmediatos + crecimiento sostenible a largo plazo</div>
                               </div>
                             </SelectItem>
                           </SelectContent>
