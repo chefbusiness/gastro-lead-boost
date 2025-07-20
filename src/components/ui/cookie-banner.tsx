@@ -71,8 +71,8 @@ export function CookieBanner() {
   if (!showBanner) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 z-50 sm:left-6 sm:right-6">
-      <Card className="max-w-md mx-auto sm:max-w-lg bg-white/95 backdrop-blur-sm border border-gray-200 shadow-lg">
+    <div className="fixed bottom-4 left-4 z-50 w-full max-w-sm sm:max-w-md">
+      <Card className="bg-white/95 backdrop-blur-sm border border-gray-200 shadow-lg">
         <div className="p-4">
           <div className="flex items-start gap-3">
             <Cookie className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
