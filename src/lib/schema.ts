@@ -14,6 +14,8 @@ export const getLocalBusinessSchema = () => ({
   "priceRange": "€€",
   "currenciesAccepted": "EUR",
   "paymentAccepted": "Credit Card, Bank Transfer",
+  "image": "https://yparqvwqryaxpdyzlpif.supabase.co/storage/v1/object/public/gastromaps-assets/hero/restaurant-hero.jpg",
+  "logo": "https://gastromaps.pro/lovable-uploads/ed10ffb2-7da6-4633-ac13-3c28ae97ac92.png",
   "address": {
     "@type": "PostalAddress",
     "addressCountry": "ES",
@@ -96,6 +98,7 @@ export const getOrganizationSchema = () => ({
     "width": 512,
     "height": 512
   },
+  "image": "https://yparqvwqryaxpdyzlpif.supabase.co/storage/v1/object/public/gastromaps-assets/hero/restaurant-hero.jpg",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+34744717942",
@@ -105,7 +108,15 @@ export const getOrganizationSchema = () => ({
   },
   "foundingDate": "2023",
   "numberOfEmployees": "5-10",
-  "slogan": "Te Traemos Más Clientes o Te Devolvemos El Dinero"
+  "slogan": "Te Traemos Más Clientes o Te Devolvemos El Dinero",
+  "description": "Especialistas en marketing digital para restaurantes con garantía de resultados en 90 días",
+  "knowsAbout": [
+    "SEO Local para Restaurantes",
+    "Google My Business",
+    "Marketing Digital",
+    "SEM Local",
+    "Publicidad Geo-localizada"
+  ]
 });
 
 export const getServiceSchema = () => ({
@@ -120,6 +131,8 @@ export const getServiceSchema = () => ({
     "@type": "Country",
     "name": "España"
   },
+  "category": "Marketing Digital",
+  "serviceType": "SEO Local y SEM para Restaurantes",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Servicios GastroMaps.pro",
@@ -189,6 +202,22 @@ export const getFAQSchema = () => ({
         "@type": "Answer",
         "text": "Somos la única agencia especializada exclusivamente en restaurantes que ofrece garantía de resultados por contrato con devolución del 100% del dinero si no cumplimos."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Incluye el servicio la gestión de Google My Business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, optimizamos completamente tu perfil de Google My Business incluyendo fotos, horarios, reseñas, posts regulares y gestión de preguntas y respuestas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Ofrecéis informes de resultados?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Proporcionamos informes detallados cada 15 días con métricas específicas: nuevas reservas, llamadas telefónicas, visitas al local y ROI detallado."
+      }
     }
   ]
 });
@@ -209,30 +238,35 @@ export const getHowToSchema = () => ({
   "@type": "HowTo",
   "name": "Cómo conseguir más clientes para tu restaurante",
   "description": "Proceso paso a paso para aumentar las reservas de tu restaurante con marketing digital",
+  "image": "https://yparqvwqryaxpdyzlpif.supabase.co/storage/v1/object/public/gastromaps-assets/hero/restaurant-hero.jpg",
   "step": [
     {
       "@type": "HowToStep",
       "name": "Análisis Inicial",
       "text": "Realizamos una auditoría completa de tu presencia digital actual y analizamos a tu competencia local.",
-      "position": 1
+      "position": 1,
+      "url": "https://gastromaps.pro/#process"
     },
     {
       "@type": "HowToStep", 
       "name": "Estrategia Personalizada",
       "text": "Diseñamos un plan específico combinando SEO local y publicidad geo-localizada según tus objetivos.",
-      "position": 2
+      "position": 2,
+      "url": "https://gastromaps.pro/#process"
     },
     {
       "@type": "HowToStep",
       "name": "Implementación",
       "text": "Ejecutamos la estrategia optimizando tu Google My Business, creando contenido y lanzando campañas publicitarias.",
-      "position": 3
+      "position": 3,
+      "url": "https://gastromaps.pro/#process"
     },
     {
       "@type": "HowToStep",
       "name": "Seguimiento",
       "text": "Monitorizamos resultados diariamente y ajustamos la estrategia para maximizar el retorno de inversión.",
-      "position": 4
+      "position": 4,
+      "url": "https://gastromaps.pro/#process"
     }
   ],
   "totalTime": "P90D",
@@ -242,4 +276,54 @@ export const getHowToSchema = () => ({
       "name": "Presencia digital del restaurante"
     }
   ]
+});
+
+// Article Schema for Blog Posts/Case Studies
+export const getArticleSchema = (title: string, description: string, publishDate: string, author = "GastroMaps.pro") => ({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "image": "https://yparqvwqryaxpdyzlpif.supabase.co/storage/v1/object/public/gastromaps-assets/hero/restaurant-hero.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": author,
+    "url": "https://gastromaps.pro"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "GastroMaps.pro",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://gastromaps.pro/lovable-uploads/ed10ffb2-7da6-4633-ac13-3c28ae97ac92.png"
+    }
+  },
+  "datePublished": publishDate,
+  "dateModified": publishDate,
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://gastromaps.pro/"
+  }
+});
+
+// Website Schema
+export const getWebsiteSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "GastroMaps.pro",
+  "alternateName": "GastroMaps",
+  "url": "https://gastromaps.pro",
+  "description": "Especialistas en marketing digital para restaurantes con garantía de resultados",
+  "publisher": {
+    "@id": "https://gastromaps.pro/#organization"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://gastromaps.pro/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  },
+  "inLanguage": "es-ES"
 });

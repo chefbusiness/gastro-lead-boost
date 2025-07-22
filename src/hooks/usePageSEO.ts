@@ -12,6 +12,10 @@ interface SEOData {
   ogType?: string;
   keywords?: string;
   schema?: object;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
 }
 
 const DEFAULT_SEO: SEOData = {
@@ -19,7 +23,8 @@ const DEFAULT_SEO: SEOData = {
   description: "Especialistas en marketing digital para restaurantes. Garantizamos +40% más reservas en 90 días o te devolvemos tu dinero. Resultados reales, no promesas.",
   ogImage: "https://yparqvwqryaxpdyzlpif.supabase.co/storage/v1/object/public/gastromaps-assets/hero/restaurant-hero.jpg",
   ogType: "website",
-  keywords: "marketing restaurantes, google my business, publicidad restaurantes, más clientes restaurante, reservas restaurante, SEO local restaurantes"
+  keywords: "marketing restaurantes, google my business, publicidad restaurantes, más clientes restaurante, reservas restaurante, SEO local restaurantes, SEM restaurantes, marketing digital gastronomía",
+  twitterCard: "summary_large_image"
 };
 
 export const usePageSEO = (seoData?: Partial<SEOData>) => {
@@ -50,20 +55,33 @@ export const usePageSEO = (seoData?: Partial<SEOData>) => {
     // Basic meta tags
     updateMetaTag('description', finalSEO.description);
     updateMetaTag('keywords', finalSEO.keywords || DEFAULT_SEO.keywords!);
+    updateMetaTag('robots', 'index, follow');
 
     // Open Graph tags
     updateMetaTag('og:title', finalSEO.ogTitle || finalSEO.title, true);
     updateMetaTag('og:description', finalSEO.ogDescription || finalSEO.description, true);
     updateMetaTag('og:image', finalSEO.ogImage || DEFAULT_SEO.ogImage!, true);
+    updateMetaTag('og:image:width', '1200', true);
+    updateMetaTag('og:image:height', '630', true);
+    updateMetaTag('og:image:type', 'image/jpeg', true);
+    updateMetaTag('og:image:alt', 'GastroMaps.pro - Marketing Digital para Restaurantes', true);
     updateMetaTag('og:url', canonical, true);
     updateMetaTag('og:type', finalSEO.ogType || 'website', true);
     updateMetaTag('og:site_name', 'GastroMaps.pro', true);
+    updateMetaTag('og:locale', 'es_ES', true);
 
     // Twitter Card tags
-    updateMetaTag('twitter:card', 'summary_large_image');
-    updateMetaTag('twitter:title', finalSEO.ogTitle || finalSEO.title);
-    updateMetaTag('twitter:description', finalSEO.ogDescription || finalSEO.description);
-    updateMetaTag('twitter:image', finalSEO.ogImage || DEFAULT_SEO.ogImage!);
+    updateMetaTag('twitter:card', finalSEO.twitterCard || 'summary_large_image');
+    updateMetaTag('twitter:site', '@gastromapspro');
+    updateMetaTag('twitter:creator', '@gastromapspro');
+    updateMetaTag('twitter:title', finalSEO.twitterTitle || finalSEO.ogTitle || finalSEO.title);
+    updateMetaTag('twitter:description', finalSEO.twitterDescription || finalSEO.ogDescription || finalSEO.description);
+    updateMetaTag('twitter:image', finalSEO.twitterImage || finalSEO.ogImage || DEFAULT_SEO.ogImage!);
+    updateMetaTag('twitter:image:alt', 'GastroMaps.pro - Marketing Digital para Restaurantes');
+
+    // Additional social media tags
+    updateMetaTag('pinterest:site_name', 'GastroMaps.pro');
+    updateMetaTag('pinterest:description', 'Especialistas en marketing digital para restaurantes con garantía de resultados');
 
     // Canonical URL
     let canonical_link = document.querySelector('link[rel="canonical"]');

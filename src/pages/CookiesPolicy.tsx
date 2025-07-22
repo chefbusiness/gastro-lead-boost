@@ -7,8 +7,11 @@ const CookiesPolicy = () => {
   usePageSEO({
     title: "Política de Cookies - GastroMaps.pro",
     description: "Información sobre el uso de cookies en GastroMaps.pro. Tipos de cookies, finalidad y cómo gestionar tus preferencias.",
-    keywords: "política cookies, cookies técnicas, privacidad web, GastroMaps cookies, gestión cookies",
-    canonical: "https://gastromaps.pro/cookies"
+    keywords: "política cookies, cookies técnicas, privacidad web, GastroMaps cookies, gestión cookies, RGPD cookies, consentimiento cookies",
+    canonical: "https://gastromaps.pro/cookies",
+    ogTitle: "Política de Cookies - GastroMaps.pro",
+    ogDescription: "Transparencia total sobre el uso de cookies. Solo utilizamos cookies esenciales para tu mejor experiencia.",
+    ogType: "article"
   });
 
   const breadcrumbSchema = getBreadcrumbSchema([
