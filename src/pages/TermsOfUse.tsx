@@ -150,7 +150,7 @@ const TermsOfUse = () => {
           </p>
           <div className="mt-4 p-4 bg-gray-50 rounded-lg">
             <p><strong>GastroMaps.pro</strong></p>
-            <p>Email: info@gastromaps.pro</p>
+            <p>Email: local@gastroseo.com</p>
             <p>Teléfono: +34 744 717 942</p>
           </div>
         </section>
