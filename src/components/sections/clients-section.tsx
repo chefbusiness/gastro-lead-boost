@@ -120,7 +120,7 @@ export const ClientsSection = () => {
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
             <div className="text-3xl md:text-4xl font-bold text-white mb-2">124+</div>
-            <div className="text-gray-300">Restaurantes Satisfechos</div>
+            <div className="text-gray-300">Restaurantes Satisfechos desde 2023</div>
           </div>
           <div className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
             <div className="text-3xl md:text-4xl font-bold text-white mb-2">2.5M+</div>
