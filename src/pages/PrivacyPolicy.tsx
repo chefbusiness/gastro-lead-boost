@@ -7,8 +7,11 @@ const PrivacyPolicy = () => {
   usePageSEO({
     title: "Política de Privacidad - GastroMaps.pro",
     description: "Política de privacidad y protección de datos de GastroMaps.pro. Conoce cómo tratamos y protegemos tu información personal según el RGPD.",
-    keywords: "política privacidad, protección datos, RGPD, GastroMaps, privacidad restaurantes",
-    canonical: "https://gastromaps.pro/privacidad"
+    keywords: "política privacidad, protección datos, RGPD, GastroMaps, privacidad restaurantes, tratamiento datos personales, derechos usuario",
+    canonical: "https://gastromaps.pro/privacidad",
+    ogTitle: "Política de Privacidad - GastroMaps.pro",
+    ogDescription: "Conoce cómo protegemos tu información personal. Política de privacidad transparente y conforme al RGPD.",
+    ogType: "article"
   });
 
   const breadcrumbSchema = getBreadcrumbSchema([

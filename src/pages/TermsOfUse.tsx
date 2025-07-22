@@ -7,8 +7,11 @@ const TermsOfUse = () => {
   usePageSEO({
     title: "Términos y Condiciones - GastroMaps.pro",
     description: "Términos y condiciones de uso de los servicios de GastroMaps.pro. Condiciones generales, garantías y política de reembolso para restaurantes.",
-    keywords: "términos condiciones, garantía resultados, reembolso, condiciones servicio, GastroMaps restaurantes",
-    canonical: "https://gastromaps.pro/terminos"
+    keywords: "términos condiciones, garantía resultados, reembolso, condiciones servicio, GastroMaps restaurantes, contrato marketing digital, garantía 90 días",
+    canonical: "https://gastromaps.pro/terminos",
+    ogTitle: "Términos y Condiciones - GastroMaps.pro",
+    ogDescription: "Garantía de resultados en 90 días o devolución del dinero. Conoce nuestras condiciones de servicio transparentes.",
+    ogType: "article"
   });
 
   const breadcrumbSchema = getBreadcrumbSchema([
