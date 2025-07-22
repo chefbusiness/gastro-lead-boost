@@ -86,7 +86,7 @@ const PrivacyPolicy = () => {
             <li>Oposición al tratamiento</li>
           </ul>
           <p className="mt-4">
-            Para ejercer estos derechos, contacta con nosotros en: <strong>info@gastromaps.pro</strong>
+            Para ejercer estos derechos, contacta con nosotros en: <strong>local@gastroseo.com</strong>
           </p>
         </section>
 
@@ -121,7 +121,7 @@ const PrivacyPolicy = () => {
           </p>
           <div className="mt-4 p-4 bg-gray-50 rounded-lg">
             <p><strong>GastroMaps.pro</strong></p>
-            <p>Email: info@gastromaps.pro</p>
+            <p>Email: local@gastroseo.com</p>
             <p>Teléfono: +34 744 717 942</p>
           </div>
         </section>

@@ -10,7 +10,7 @@ export const getLocalBusinessSchema = () => ({
   "description": "Especialistas en marketing digital para restaurantes. Garantizamos más clientes o devolvemos el dinero.",
   "url": "https://gastromaps.pro",
   "telephone": "+34744717942",
-  "email": "info@gastromaps.pro",
+  "email": "local@gastroseo.com",
   "priceRange": "€€",
   "currenciesAccepted": "EUR",
   "paymentAccepted": "Credit Card, Bank Transfer",
@@ -100,7 +100,7 @@ export const getOrganizationSchema = () => ({
     "@type": "ContactPoint",
     "telephone": "+34744717942",
     "contactType": "customer service",
-    "email": "info@gastromaps.pro",
+    "email": "local@gastroseo.com",
     "availableLanguage": ["Spanish", "English"]
   },
   "foundingDate": "2023",

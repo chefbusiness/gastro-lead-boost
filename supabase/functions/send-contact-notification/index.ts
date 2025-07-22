@@ -1,3 +1,4 @@
+
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "npm:resend@2.0.0";
 
@@ -28,8 +29,8 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send notification to the business
     const businessNotification = await resend.emails.send({
-      from: "GastroMaps <hola@gastromaps.pro>",
-      to: ["hola@gastromaps.pro"],
+      from: "GastroMaps <local@gastroseo.com>",
+      to: ["local@gastroseo.com"],
       subject: `🎯 Nueva consulta de ${restaurant} - ${location}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -56,7 +57,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send confirmation to the client
     const clientConfirmation = await resend.emails.send({
-      from: "GastroMaps <hola@gastromaps.pro>",
+      from: "GastroMaps <local@gastroseo.com>",
       to: [email],
       subject: `✅ Hemos recibido tu solicitud - ${restaurant}`,
       html: `
@@ -87,7 +88,7 @@ const handler = async (req: Request): Promise<Response> => {
           <div style="text-align: center; color: #64748b;">
             <p><strong>GastroMaps.pro</strong></p>
             <p>📱 WhatsApp: <a href="https://wa.me/34744717942">744 717 942</a></p>
-            <p>📧 Email: <a href="mailto:hola@gastromaps.pro">hola@gastromaps.pro</a></p>
+            <p>📧 Email: <a href="mailto:local@gastroseo.com">local@gastroseo.com</a></p>
           </div>
         </div>
       `,
