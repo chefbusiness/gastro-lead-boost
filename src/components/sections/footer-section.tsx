@@ -129,7 +129,7 @@ export function FooterSection() {
                 <Button size="icon" variant="outline" className="border-slate-600 text-slate-400 hover:bg-primary hover:border-primary hover:text-white transition-all duration-200" onClick={() => window.open('https://instagram.com', '_blank')}>
                   <Instagram className="w-4 h-4" />
                 </Button>
-                <Button size="icon" variant="outline" className="border-slate-600 text-slate-400 hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all duration-200" onClick={() => window.open('https://facebook.com', '_blank')}>
+                <Button size="icon" variant="outline" className="border-slate-600 text-slate-400 hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all duration-200" onClick={() => window.open('https://www.facebook.com/people/GastroMapspro/61578616179680/', '_blank')}>
                   <Facebook className="w-4 h-4" />
                 </Button>
                 <Button size="icon" variant="outline" className="border-slate-600 text-slate-400 hover:bg-blue-700 hover:border-blue-700 hover:text-white transition-all duration-200" onClick={() => window.open('https://linkedin.com', '_blank')}>
