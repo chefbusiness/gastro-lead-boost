@@ -74,6 +74,10 @@ export function FooterSection() {
           <div>
             <h4 className="text-lg font-semibold mb-6">Enlaces Rápidos</h4>
             <div className="space-y-3">
+              <a href="https://blog.gastromaps.pro" target="_blank" rel="noopener noreferrer" className="block text-slate-300 hover:text-white transition-colors flex items-center gap-2">
+                Blog
+                <ExternalLink className="w-3 h-3" />
+              </a>
               <button onClick={() => navigateToSection('case-studies')} className="block text-slate-300 hover:text-white transition-colors">
                 Casos de Éxito
               </button>
