@@ -26,6 +26,8 @@ interface ContactSubmission {
   phone: string | null;
   restaurant: string | null;
   location: string | null;
+  street_address: string | null;
+  postal_code: string | null;
   message: string | null;
   status: string;
   notes: string | null;
@@ -138,6 +140,20 @@ export function ContactSubmissionItem({ submission, onStatusUpdate }: ContactSub
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-muted-foreground" />
                 <span>{submission.location}</span>
+              </div>
+            )}
+            
+            {submission.street_address && (
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-muted-foreground" />
+                <span>{submission.street_address}</span>
+              </div>
+            )}
+            
+            {submission.postal_code && (
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-muted-foreground" />
+                <span>CP: {submission.postal_code}</span>
               </div>
             )}
           </div>

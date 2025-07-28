@@ -15,6 +15,8 @@ interface ContactSubmission {
   phone: string | null;
   restaurant: string | null;
   location: string | null;
+  street_address: string | null;
+  postal_code: string | null;
   message: string | null;
   status: string;
   notes: string | null;
