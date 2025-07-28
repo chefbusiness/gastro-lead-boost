@@ -100,30 +100,7 @@ export function ContactFormSection() {
         throw error;
       }
 
-      // Send notification emails
-      try {
-        const { error: emailError } = await supabase.functions.invoke('send-contact-notification', {
-          body: {
-            name: data.name,
-            email: data.email,
-            phone: data.phone,
-            restaurant: data.restaurant,
-            service: data.service,
-            street_address: data.street_address,
-            location: data.location,
-            postal_code: data.postal_code,
-            message: data.message,
-          },
-        });
-
-        if (emailError) {
-          console.error('Error sending notification emails:', emailError);
-          // Don't fail the form submission if email fails
-        }
-      } catch (emailError) {
-        console.error('Error calling email function:', emailError);
-        // Don't fail the form submission if email fails
-      }
+      // Email functionality removed - data is saved in database for admin review
 
       toast({
         title: "¡Solicitud enviada correctamente!",
