@@ -27,7 +27,7 @@ export function HeatmapProofSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-foreground">Así Se Ve</span>
             <br />
-            <span className="bg-gradient-to-r from-success to-primary bg-clip-text text-transparent">El Dominio Local Total en Tu Área de Influencia</span>
+            <span className="bg-gradient-to-r from-success to-primary bg-clip-text text-transparent">El Dominio Total en Tu Área de Influencia Local</span>
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
