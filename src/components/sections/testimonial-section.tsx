@@ -27,7 +27,7 @@ export function TestimonialSection() {
             <div className="grid md:grid-cols-2 gap-0">
               {/* Image Side */}
               <div className="relative">
-                <img src="/chef-mexican-tacos.jpg" alt="Chef de cocina mexicana con tacos creativos" className="w-full h-full object-cover rounded-l-lg" />
+                <img src="/chef-mexican-tacos.jpg?v=2" alt="Chef de cocina mexicana con tacos creativos" className="w-full h-full object-cover rounded-l-lg" />
                 <div className="absolute top-4 left-4">
                   <Badge className="bg-success text-white">
                     <MapPin className="w-3 h-3 mr-1" />
