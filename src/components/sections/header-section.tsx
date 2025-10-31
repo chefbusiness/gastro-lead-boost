@@ -10,26 +10,40 @@ import { User, Settings, LogOut } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 export function HeaderSection() {
   const navigate = useNavigate();
   const location = useLocation();
   const { toast } = useToast();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [adminName, setAdminName] = useState("");
+  const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
-    const checkAuthStatus = () => {
-      const auth = localStorage.getItem("admin_authenticated");
-      const name = localStorage.getItem("admin_name") || "Admin";
-      setIsLoggedIn(!!auth);
-      setAdminName(name);
+    const checkAuthStatus = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      
+      if (session) {
+        setIsLoggedIn(true);
+        // Check admin role
+        const { data: roleData } = await supabase.rpc('is_admin', { 
+          _user_id: session.user.id 
+        });
+        setIsAdmin(!!roleData);
+      } else {
+        setIsLoggedIn(false);
+        setIsAdmin(false);
+      }
     };
 
     checkAuthStatus();
-    // Check auth status when localStorage changes
-    window.addEventListener('storage', checkAuthStatus);
-    return () => window.removeEventListener('storage', checkAuthStatus);
+
+    // Listen for auth changes
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(() => {
+      checkAuthStatus();
+    });
+
+    return () => subscription.unsubscribe();
   }, []);
 
   // Handle navigation to sections with hash fragments
@@ -70,13 +84,12 @@ export function HeaderSection() {
     navigate('/admin');
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem("admin_authenticated");
-    localStorage.removeItem("admin_name");
-    localStorage.removeItem("admin_email");
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
     setIsLoggedIn(false);
+    setIsAdmin(false);
     toast({
-      title: "Hasta luego John",
+      title: "Sesión cerrada",
       description: "Has cerrado sesión correctamente",
     });
   };
@@ -135,12 +148,12 @@ export function HeaderSection() {
           {/* Right side buttons */}
           <div className="flex items-center space-x-2 sm:space-x-3">
             {/* Admin Access */}
-            {isLoggedIn ? (
+            {isLoggedIn && isAdmin ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" size="sm" className="flex items-center space-x-2">
                     <Settings className="h-4 w-4" />
-                    <span className="hidden sm:inline">{adminName}</span>
+                    <span className="hidden sm:inline">Admin</span>
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="w-48">
