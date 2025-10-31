@@ -2,6 +2,7 @@
 import { HeaderSection } from "@/components/sections/header-section";
 import { HeroSection } from "@/components/sections/hero-section";
 import { TestimonialSection } from "@/components/sections/testimonial-section";
+import { HeatmapProofSection } from "@/components/sections/heatmap-proof-section";
 import { SolutionSection } from "@/components/sections/solution-section";
 import { CaseStudiesSection } from "@/components/sections/case-studies-section";
 import { ClientsSection } from "@/components/sections/clients-section";
@@ -50,6 +51,7 @@ const Index = () => {
       <HeaderSection />
       <HeroSection />
       <TestimonialSection />
+      <HeatmapProofSection />
       <SolutionSection />
       <CaseStudiesSection />
       <ClientsSection />
