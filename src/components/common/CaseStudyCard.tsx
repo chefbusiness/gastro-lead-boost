@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, TrendingUp, Euro } from "lucide-react";
-import { getCaseStudyImageUrl } from "@/lib/storage";
+import { getCaseStudyImageUrl, ASSETS } from "@/lib/storage";
 import { CaseStudy } from "@/lib/types";
 
 type CaseStudyCardProps = {
@@ -13,7 +13,7 @@ export function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
     <Card className="overflow-hidden border-0 bg-card hover:shadow-elegant transition-all duration-300 hover:scale-105">
       <div className="relative h-64 overflow-hidden">
         <img 
-          src={getCaseStudyImageUrl(caseStudy.imageKey)}
+          src={getCaseStudyImageUrl(ASSETS.caseStudies[caseStudy.imageKey])}
           alt={caseStudy.restaurant}
           className="w-full h-full object-cover"
         />
