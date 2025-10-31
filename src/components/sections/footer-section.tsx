@@ -40,10 +40,7 @@ export function FooterSection() {
               </div>
             </div>
             
-            <p className="text-slate-300 mb-6 text-lg leading-relaxed">
-              Somos especialistas en marketing digital para restaurantes. Convertimos búsquedas en clientes 
-              y garantizamos resultados reales en 90 días o te devolvemos tu dinero.
-            </p>
+            <p className="text-slate-300 mb-6 text-lg leading-relaxed">Somos especialistas en Google Maps, Google Ads y marketing digital para restaurantes. Convertimos búsquedas en clientes y garantizamos resultados reales en 90 días o te devolvemos tu dinero.</p>
 
             {/* Alternative Domain - Responsive text sizing */}
             <div className="mb-6 p-4 bg-slate-800 rounded-lg border border-slate-700">
