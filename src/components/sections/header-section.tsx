@@ -6,7 +6,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { User, Settings, LogOut } from "lucide-react";
+import { User, Settings, LogOut, ExternalLink } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -137,6 +137,15 @@ export function HeaderSection() {
             >
               Proceso
             </button>
+            <a
+              href="https://blog.gastrolocal.pro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors story-link flex items-center gap-1"
+            >
+              Blog
+              <ExternalLink className="w-3 h-3" />
+            </a>
             <button
               onClick={() => navigateToSection('contact-form')}
               className="text-muted-foreground hover:text-primary transition-colors story-link"
