@@ -68,7 +68,7 @@ export const SEO_DEFAULTS = {
   siteName: 'GastroLocal.pro',
   defaultTitle: 'GastroLocal.pro - Marketing Digital para Restaurantes',
   defaultDescription: 'Transformamos restaurantes vacíos en espacios llenos con estrategias de marketing digital garantizadas.',
-  ogImage: '/gastromaps-logo-full.png'
+  ogImage: '/gastrolocal-logo-full.png'
 } as const;
 
 export const SERVICE_OPTIONS = {

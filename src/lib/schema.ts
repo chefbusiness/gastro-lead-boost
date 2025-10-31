@@ -14,7 +14,7 @@ export const getLocalBusinessSchema = () => ({
   "priceRange": "€€",
   "currenciesAccepted": "EUR",
   "paymentAccepted": "Credit Card, Bank Transfer",
-  "image": "https://yparqvwqryaxpdyzlpif.supabase.co/storage/v1/object/public/gastromaps-assets/hero/restaurant-hero.jpg",
+  "image": "https://yparqvwqryaxpdyzlpif.supabase.co/storage/v1/object/public/gastrolocal-assets/hero/restaurant-hero.jpg",
   "logo": "https://gastrolocal.pro/lovable-uploads/ed10ffb2-7da6-4633-ac13-3c28ae97ac92.png",
   "address": {
     "@type": "PostalAddress",
@@ -98,7 +98,7 @@ export const getOrganizationSchema = () => ({
     "width": 512,
     "height": 512
   },
-  "image": "https://yparqvwqryaxpdyzlpif.supabase.co/storage/v1/object/public/gastromaps-assets/hero/restaurant-hero.jpg",
+  "image": "https://yparqvwqryaxpdyzlpif.supabase.co/storage/v1/object/public/gastrolocal-assets/hero/restaurant-hero.jpg",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+34744717942",
@@ -238,7 +238,7 @@ export const getHowToSchema = () => ({
   "@type": "HowTo",
   "name": "Cómo conseguir más clientes para tu restaurante",
   "description": "Proceso paso a paso para aumentar las reservas de tu restaurante con marketing digital",
-  "image": "https://yparqvwqryaxpdyzlpif.supabase.co/storage/v1/object/public/gastromaps-assets/hero/restaurant-hero.jpg",
+  "image": "https://yparqvwqryaxpdyzlpif.supabase.co/storage/v1/object/public/gastrolocal-assets/hero/restaurant-hero.jpg",
   "step": [
     {
       "@type": "HowToStep",
@@ -284,7 +284,7 @@ export const getArticleSchema = (title: string, description: string, publishDate
   "@type": "Article",
   "headline": title,
   "description": description,
-  "image": "https://yparqvwqryaxpdyzlpif.supabase.co/storage/v1/object/public/gastromaps-assets/hero/restaurant-hero.jpg",
+  "image": "https://yparqvwqryaxpdyzlpif.supabase.co/storage/v1/object/public/gastrolocal-assets/hero/restaurant-hero.jpg",
   "author": {
     "@type": "Organization",
     "name": author,

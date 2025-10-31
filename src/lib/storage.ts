@@ -12,7 +12,7 @@ export function getStorageUrl(bucketName: string, filePath: string): string {
  * Get URL for GastroLocal assets
  */
 export function getAssetUrl(path: string): string {
-  return getStorageUrl('gastromaps-assets', path);
+  return getStorageUrl('gastrolocal-assets', path);
 }
 
 /**
@@ -45,8 +45,8 @@ export const ASSETS = {
     chef: 'testimonials/chef-testimonial.jpg',
   },
   logos: {
-    gastrolocalFull: 'logos/gastromaps-full.png',
-    gastrolocalIcon: 'logos/gastromaps-icon-3d.png',
+    gastrolocalFull: 'logos/gastrolocal-full.png',
+    gastrolocalIcon: 'logos/gastrolocal-icon-3d.png',
   },
   clients: {
     logo1: 'client-logos/logo-1.png',
@@ -65,9 +65,9 @@ export const ASSETS = {
     logo14: 'client-logos/logo-14.png',
   },
   caseStudies: {
-    mediterraneanRestaurant: 'restaurantemediterraneo-gastromapspro.jpeg',
-    tapasAndWine: 'tapasyvinos-gastromapspro.jpeg',
-    seafoodHouse: 'casamarisco-gastromapspro.jpeg',
-    gourmetBistro: 'bistrogourmet-gastromapspro.jpeg',
+    mediterraneanRestaurant: 'restaurantemediterraneo-gastrolocal.jpeg',
+    tapasAndWine: 'tapasyvinos-gastrolocal.jpeg',
+    seafoodHouse: 'casamarisco-gastrolocal.jpeg',
+    gourmetBistro: 'bistrogourmet-gastrolocal.jpeg',
   },
 } as const;
