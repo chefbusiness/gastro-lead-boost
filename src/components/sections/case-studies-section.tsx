@@ -62,9 +62,10 @@ export const CaseStudiesSection = () => {
             <p className="text-xl mb-6 text-white/90 max-w-2xl mx-auto">
               No esperes más. Cada día que pasa es dinero que dejas sobre la mesa.
             </p>
-            <Button size="lg" onClick={scrollToContact} className="bg-white text-primary hover:bg-white/90 px-8 py-4 text-lg font-bold rounded-xl group">
-              SÍ, QUIERO SER EL SIGUIENTE
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <Button size="lg" onClick={scrollToContact} className="bg-white text-primary hover:bg-white/90 px-4 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-xl group">
+              <span className="hidden sm:inline">SÍ, QUIERO SER EL SIGUIENTE</span>
+              <span className="sm:hidden">Quiero ser el siguiente</span>
+              <ArrowRight className="ml-2 w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </CardContent>
         </Card>
