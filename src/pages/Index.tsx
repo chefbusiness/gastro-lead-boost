@@ -39,7 +39,7 @@ const Index = () => {
   });
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       {/* Schema Markup for SEO */}
       <SchemaMarkup schema={getWebsiteSchema()} id="website-schema" />
       <SchemaMarkup schema={getLocalBusinessSchema()} id="local-business-schema" />

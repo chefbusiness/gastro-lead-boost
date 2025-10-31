@@ -7,7 +7,7 @@ import { BADGES, HERO_STATS, CTA_TEXTS } from "@/lib/constants";
 
 export function HeroSection() {
   const { scrollToContact, scrollToCaseStudies } = useScrollTo();
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-20">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-24 md:pt-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img src={getAssetUrl(ASSETS.hero.restaurant)} alt="Restaurant success" className="w-full h-full object-cover opacity-30" />
@@ -15,7 +15,7 @@ export function HeroSection() {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-12 sm:py-16 md:py-20 text-center">
         {/* Trust Badge */}
         <div className="flex justify-center mb-8 animate-fade-in">
           <Badge variant="secondary" className="text-primary border-0 px-6 py-2 text-sm font-semibold shadow-elegant bg-yellow-100">
