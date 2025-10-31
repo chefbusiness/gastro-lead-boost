@@ -59,11 +59,11 @@ export function TestimonialSection() {
                 </div>
 
                 <blockquote className="text-lg md:text-xl text-foreground mb-6 leading-relaxed">
-                  "En solo 4 meses, GastroMaps transformó nuestro neo gastro bar. Invertimos{" "}
+                  "En solo 4 meses, GastroLocal transformó nuestro neo gastro bar. Invertimos{" "}
                   <span className="font-bold text-primary">€745</span> y generamos{" "}
                   <span className="font-bold text-success">€18,920</span> en reservas verificadas. 
                   La cocina mexicana creativa ahora tiene el reconocimiento que merece en Barcelona.{" "}
-                  <span className="font-bold text-accent">GastroMaps hizo que fuéramos visibles.</span>"
+                  <span className="font-bold text-accent">GastroLocal hizo que fuéramos visibles.</span>"
                 </blockquote>
 
                 <div className="flex items-center">

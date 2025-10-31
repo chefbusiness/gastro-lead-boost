@@ -5,42 +5,42 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   
   <url>
-    <loc>https://gastromaps.pro/</loc>
+    <loc>https://gastrolocal.pro/</loc>
     <lastmod>2025-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://gastromaps.pro/admin</loc>
+    <loc>https://gastrolocal.pro/admin</loc>
     <lastmod>2025-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
-    <loc>https://gastromaps.pro/admin/login</loc>
+    <loc>https://gastrolocal.pro/admin/login</loc>
     <lastmod>2025-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
-    <loc>https://gastromaps.pro/privacidad</loc>
+    <loc>https://gastrolocal.pro/privacidad</loc>
     <lastmod>2025-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   
   <url>
-    <loc>https://gastromaps.pro/terminos</loc>
+    <loc>https://gastrolocal.pro/terminos</loc>
     <lastmod>2025-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   
   <url>
-    <loc>https://gastromaps.pro/cookies</loc>
+    <loc>https://gastrolocal.pro/cookies</loc>
     <lastmod>2025-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>

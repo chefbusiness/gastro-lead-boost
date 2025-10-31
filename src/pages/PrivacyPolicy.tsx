@@ -5,18 +5,18 @@ import { getBreadcrumbSchema } from "@/lib/schema";
 
 const PrivacyPolicy = () => {
   usePageSEO({
-    title: "Política de Privacidad - GastroMaps.pro",
-    description: "Política de privacidad y protección de datos de GastroMaps.pro. Conoce cómo tratamos y protegemos tu información personal según el RGPD.",
-    keywords: "política privacidad, protección datos, RGPD, GastroMaps, privacidad restaurantes, tratamiento datos personales, derechos usuario",
-    canonical: "https://gastromaps.pro/privacidad",
-    ogTitle: "Política de Privacidad - GastroMaps.pro",
+    title: "Política de Privacidad - GastroLocal.pro",
+    description: "Política de privacidad y protección de datos de GastroLocal.pro. Conoce cómo tratamos y protegemos tu información personal según el RGPD.",
+    keywords: "política privacidad, protección datos, RGPD, GastroLocal, privacidad restaurantes, tratamiento datos personales, derechos usuario",
+    canonical: "https://gastrolocal.pro/privacidad",
+    ogTitle: "Política de Privacidad - GastroLocal.pro",
     ogDescription: "Conoce cómo protegemos tu información personal. Política de privacidad transparente y conforme al RGPD.",
     ogType: "article"
   });
 
   const breadcrumbSchema = getBreadcrumbSchema([
-    { name: "Inicio", url: "https://gastromaps.pro/" },
-    { name: "Política de Privacidad", url: "https://gastromaps.pro/privacidad" }
+    { name: "Inicio", url: "https://gastrolocal.pro/" },
+    { name: "Política de Privacidad", url: "https://gastrolocal.pro/privacidad" }
   ]);
 
   return (
@@ -31,7 +31,7 @@ const PrivacyPolicy = () => {
         <section>
           <h2 className="text-2xl font-semibold mb-4">1. Información que recopilamos</h2>
           <p>
-            En GastroMaps.pro recopilamos únicamente la información necesaria para proporcionarte nuestros servicios:
+            En GastroLocal.pro recopilamos únicamente la información necesaria para proporcionarte nuestros servicios:
           </p>
           <ul className="list-disc pl-6 mt-2 space-y-1">
             <li>Datos de contacto (nombre, email, teléfono)</li>
@@ -123,7 +123,7 @@ const PrivacyPolicy = () => {
             Para cualquier consulta sobre esta política de privacidad, puedes contactarnos:
           </p>
           <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-            <p><strong>GastroMaps.pro</strong></p>
+            <p><strong>GastroLocal.pro</strong></p>
             <p>Email: local@gastroseo.com</p>
             <p>Teléfono: +34 744 717 942</p>
           </div>

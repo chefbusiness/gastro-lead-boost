@@ -47,7 +47,7 @@ export default function AdminLogin() {
       if (data.session) {
         toast({
           title: "¡Bienvenido!",
-          description: "Has accedido al panel de administración de GastroMaps",
+          description: "Has accedido al panel de administración de GastroLocal",
         });
         navigate("/admin");
       }

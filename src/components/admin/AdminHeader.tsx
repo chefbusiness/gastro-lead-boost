@@ -37,7 +37,7 @@ export function AdminHeader() {
           </div>
           <div>
             <h1 className="text-xl font-bold">Panel de Administración</h1>
-            <p className="text-sm text-muted-foreground">GastroMaps - Admin</p>
+            <p className="text-sm text-muted-foreground">GastroLocal - Admin</p>
           </div>
         </div>
 

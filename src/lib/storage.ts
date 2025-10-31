@@ -9,7 +9,7 @@ export function getStorageUrl(bucketName: string, filePath: string): string {
 }
 
 /**
- * Get URL for GastroMaps assets
+ * Get URL for GastroLocal assets
  */
 export function getAssetUrl(path: string): string {
   return getStorageUrl('gastromaps-assets', path);
@@ -45,8 +45,8 @@ export const ASSETS = {
     chef: 'testimonials/chef-testimonial.jpg',
   },
   logos: {
-    gastromapsFull: 'logos/gastromaps-full.png',
-    gastromapsIcon: 'logos/gastromaps-icon-3d.png',
+    gastrolocalFull: 'logos/gastromaps-full.png',
+    gastrolocalIcon: 'logos/gastromaps-icon-3d.png',
   },
   clients: {
     logo1: 'client-logos/logo-1.png',
