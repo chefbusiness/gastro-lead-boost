@@ -3,17 +3,26 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LogOut, Settings, User } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { useEffect, useState } from "react";
 
 export function AdminHeader() {
   const navigate = useNavigate();
   const { toast } = useToast();
+  const [userEmail, setUserEmail] = useState("");
 
-  const handleLogout = () => {
-    localStorage.removeItem("admin_authenticated");
-    localStorage.removeItem("admin_name");
-    localStorage.removeItem("admin_email");
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session?.user.email) {
+        setUserEmail(session.user.email);
+      }
+    });
+  }, []);
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
     toast({
-      title: "Hasta luego John",
+      title: "Sesión cerrada",
       description: "Has cerrado sesión correctamente",
     });
     navigate("/admin/login");
@@ -28,14 +37,14 @@ export function AdminHeader() {
           </div>
           <div>
             <h1 className="text-xl font-bold">Panel de Administración</h1>
-            <p className="text-sm text-muted-foreground">GastroMaps - Bienvenido John Guerrero</p>
+            <p className="text-sm text-muted-foreground">GastroMaps - Admin</p>
           </div>
         </div>
 
         <div className="flex items-center gap-4">
           <div className="text-right hidden sm:block">
-            <p className="text-sm font-medium">John Guerrero</p>
-            <p className="text-xs text-muted-foreground">john@chefbusiness.co</p>
+            <p className="text-sm font-medium">Admin</p>
+            <p className="text-xs text-muted-foreground">{userEmail}</p>
           </div>
           <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
             <User className="w-4 h-4 text-white" />

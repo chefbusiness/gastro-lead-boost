@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -7,31 +7,54 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Shield } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 export default function AdminLogin() {
-  const [credentials, setCredentials] = useState({ username: "", password: "" });
+  const [credentials, setCredentials] = useState({ email: "", password: "" });
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const { toast } = useToast();
+
+  useEffect(() => {
+    // Check if already logged in
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session) {
+        navigate("/admin");
+      }
+    });
+  }, [navigate]);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 
-    // Personalized authentication for John Guerrero
-    if (credentials.username === "john@chefbusiness.co" && credentials.password === "ChefBusiness2024!") {
-      localStorage.setItem("admin_authenticated", "true");
-      localStorage.setItem("admin_name", "John Guerrero");
-      localStorage.setItem("admin_email", "john@chefbusiness.co");
-      toast({
-        title: "¡Bienvenido John!",
-        description: "Has accedido al panel de administración de GastroMaps",
+    try {
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email: credentials.email,
+        password: credentials.password,
       });
-      navigate("/admin");
-    } else {
+
+      if (error) {
+        toast({
+          title: "Error de autenticación",
+          description: error.message,
+          variant: "destructive",
+        });
+        setIsLoading(false);
+        return;
+      }
+
+      if (data.session) {
+        toast({
+          title: "¡Bienvenido!",
+          description: "Has accedido al panel de administración de GastroMaps",
+        });
+        navigate("/admin");
+      }
+    } catch (error) {
       toast({
-        title: "Credenciales incorrectas",
-        description: "Email o contraseña incorrectos",
+        title: "Error",
+        description: "Ocurrió un error inesperado",
         variant: "destructive",
       });
     }
@@ -54,13 +77,13 @@ export default function AdminLogin() {
         <CardContent>
           <form onSubmit={handleLogin} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="username">Email</Label>
+              <Label htmlFor="email">Email</Label>
               <Input
-                id="username"
+                id="email"
                 type="email"
                 placeholder="tu@email.com"
-                value={credentials.username}
-                onChange={(e) => setCredentials({ ...credentials, username: e.target.value })}
+                value={credentials.email}
+                onChange={(e) => setCredentials({ ...credentials, email: e.target.value })}
                 required
               />
             </div>
