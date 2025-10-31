@@ -5,18 +5,18 @@ import { getBreadcrumbSchema } from "@/lib/schema";
 
 const TermsOfUse = () => {
   usePageSEO({
-    title: "Términos y Condiciones - GastroMaps.pro",
-    description: "Términos y condiciones de uso de los servicios de GastroMaps.pro. Condiciones generales, garantías y política de reembolso para restaurantes.",
-    keywords: "términos condiciones, garantía resultados, reembolso, condiciones servicio, GastroMaps restaurantes, contrato marketing digital, garantía 90 días",
-    canonical: "https://gastromaps.pro/terminos",
-    ogTitle: "Términos y Condiciones - GastroMaps.pro",
+    title: "Términos y Condiciones - GastroLocal.pro",
+    description: "Términos y condiciones de uso de los servicios de GastroLocal.pro. Condiciones generales, garantías y política de reembolso para restaurantes.",
+    keywords: "términos condiciones, garantía resultados, reembolso, condiciones servicio, GastroLocal restaurantes, contrato marketing digital, garantía 90 días",
+    canonical: "https://gastrolocal.pro/terminos",
+    ogTitle: "Términos y Condiciones - GastroLocal.pro",
     ogDescription: "Garantía de resultados en 90 días o devolución del dinero. Conoce nuestras condiciones de servicio transparentes.",
     ogType: "article"
   });
 
   const breadcrumbSchema = getBreadcrumbSchema([
-    { name: "Inicio", url: "https://gastromaps.pro/" },
-    { name: "Términos y Condiciones", url: "https://gastromaps.pro/terminos" }
+    { name: "Inicio", url: "https://gastrolocal.pro/" },
+    { name: "Términos y Condiciones", url: "https://gastrolocal.pro/terminos" }
   ]);
 
   return (
@@ -30,7 +30,7 @@ const TermsOfUse = () => {
         <section>
           <h2 className="text-2xl font-semibold mb-4">1. Aceptación de términos</h2>
           <p>
-            Al acceder y utilizar los servicios de GastroMaps.pro, aceptas estar sujeto a estos términos 
+            Al acceder y utilizar los servicios de GastroLocal.pro, aceptas estar sujeto a estos términos 
             y condiciones. Si no estás de acuerdo con alguna parte de estos términos, no debes utilizar 
             nuestros servicios.
           </p>
@@ -39,7 +39,7 @@ const TermsOfUse = () => {
         <section>
           <h2 className="text-2xl font-semibold mb-4">2. Descripción del servicio</h2>
           <p>
-            GastroMaps.pro ofrece servicios especializados de marketing digital para restaurantes, incluyendo:
+            GastroLocal.pro ofrece servicios especializados de marketing digital para restaurantes, incluyendo:
           </p>
           <ul className="list-disc pl-6 mt-2 space-y-1">
             <li>SEO Local y optimización de Google My Business</li>
@@ -106,7 +106,7 @@ const TermsOfUse = () => {
         <section>
           <h2 className="text-2xl font-semibold mb-4">7. Limitación de responsabilidad</h2>
           <p>
-            GastroMaps.pro no será responsable de daños indirectos, pérdida de beneficios, 
+            GastroLocal.pro no será responsable de daños indirectos, pérdida de beneficios, 
             o consecuencias derivadas de factores externos al marketing digital (crisis económicas, 
             pandemias, cambios regulatorios, etc.).
           </p>
@@ -115,7 +115,7 @@ const TermsOfUse = () => {
         <section>
           <h2 className="text-2xl font-semibold mb-4">8. Propiedad intelectual</h2>
           <p>
-            Todos los materiales, estrategias y metodologías desarrolladas por GastroMaps.pro 
+            Todos los materiales, estrategias y metodologías desarrolladas por GastroLocal.pro 
             son de nuestra propiedad exclusiva. El cliente recibe una licencia de uso limitada 
             durante la vigencia del contrato.
           </p>
@@ -132,7 +132,7 @@ const TermsOfUse = () => {
         <section>
           <h2 className="text-2xl font-semibold mb-4">10. Modificaciones</h2>
           <p>
-            GastroMaps.pro se reserva el derecho a modificar estos términos y condiciones. 
+            GastroLocal.pro se reserva el derecho a modificar estos términos y condiciones. 
             Los cambios serán comunicados con al menos 30 días de antelación y entrarán 
             en vigor para nuevos contratos.
           </p>
@@ -152,7 +152,7 @@ const TermsOfUse = () => {
             Para cualquier consulta sobre estos términos y condiciones:
           </p>
           <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-            <p><strong>GastroMaps.pro</strong></p>
+            <p><strong>GastroLocal.pro</strong></p>
             <p>Email: local@gastroseo.com</p>
             <p>Teléfono: +34 744 717 942</p>
           </div>

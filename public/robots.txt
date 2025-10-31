@@ -22,7 +22,7 @@ Disallow: /admin/
 Disallow: /admin/*
 
 # Sitemap location
-Sitemap: https://gastromaps.pro/sitemap.xml
+Sitemap: https://gastrolocal.pro/sitemap.xml
 
 # Block malicious bots
 User-agent: SemrushBot

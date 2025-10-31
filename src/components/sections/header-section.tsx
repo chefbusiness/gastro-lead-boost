@@ -102,7 +102,7 @@ export function HeaderSection() {
           <div className="flex items-center space-x-3">
             <img
               src="/lovable-uploads/ed10ffb2-7da6-4633-ac13-3c28ae97ac92.png"
-              alt="GastroMaps Icon"
+              alt="GastroLocal Icon"
               className="h-10 w-10"
               onError={(e) => {
                 console.log('Error loading header logo');
@@ -113,7 +113,7 @@ export function HeaderSection() {
               onClick={() => navigate('/')}
               className="text-xl font-bold text-primary hover:text-primary/90 transition-colors"
             >
-              GastroMaps.pro
+              GastroLocal.pro
             </button>
           </div>
 

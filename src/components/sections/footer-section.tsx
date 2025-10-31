@@ -30,12 +30,12 @@ export function FooterSection() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <img src="/lovable-uploads/ed10ffb2-7da6-4633-ac13-3c28ae97ac92.png" alt="GastroMaps Icon" className="w-10 h-10" onError={e => {
+              <img src="/lovable-uploads/ed10ffb2-7da6-4633-ac13-3c28ae97ac92.png" alt="GastroLocal Icon" className="w-10 h-10" onError={e => {
               console.log('Error loading footer logo');
               e.currentTarget.src = '/placeholder.svg';
             }} />
               <div>
-                <h3 className="text-2xl font-bold">GastroMaps.pro</h3>
+                <h3 className="text-2xl font-bold">GastroLocal.pro</h3>
                 <p className="text-slate-300 text-sm">Llenamos tu restaurante de clientes</p>
               </div>
             </div>
@@ -74,7 +74,7 @@ export function FooterSection() {
           <div>
             <h4 className="text-lg font-semibold mb-6">Enlaces Rápidos</h4>
             <div className="space-y-3">
-              <a href="https://blog.gastromaps.pro" target="_blank" rel="noopener noreferrer" className="block text-slate-300 hover:text-white transition-colors flex items-center gap-2">
+              <a href="https://blog.gastrolocal.pro" target="_blank" rel="noopener noreferrer" className="block text-slate-300 hover:text-white transition-colors flex items-center gap-2">
                 Blog
                 <ExternalLink className="w-3 h-3" />
               </a>
@@ -129,7 +129,7 @@ export function FooterSection() {
                 <Button size="icon" variant="outline" className="border-slate-600 text-slate-400 hover:bg-primary hover:border-primary hover:text-white transition-all duration-200" onClick={() => window.open('https://instagram.com', '_blank')}>
                   <Instagram className="w-4 h-4" />
                 </Button>
-                <Button size="icon" variant="outline" className="border-slate-600 text-slate-400 hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all duration-200" onClick={() => window.open('https://www.facebook.com/people/GastroMapspro/61578616179680/', '_blank')}>
+                <Button size="icon" variant="outline" className="border-slate-600 text-slate-400 hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all duration-200" onClick={() => window.open('https://www.facebook.com/GastroLocalpro/', '_blank')}>
                   <Facebook className="w-4 h-4" />
                 </Button>
                 <Button size="icon" variant="outline" className="border-slate-600 text-slate-400 hover:bg-blue-700 hover:border-blue-700 hover:text-white transition-all duration-200" onClick={() => window.open('https://linkedin.com', '_blank')}>
@@ -150,7 +150,7 @@ export function FooterSection() {
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
           <div className="text-center lg:text-left">
-            <p className="text-slate-300 mb-2">© 2023 - 2025 GastroMaps.pro - Todos los derechos reservados</p>
+            <p className="text-slate-300 mb-2">© 2023 - 2025 GastroLocal.pro - Todos los derechos reservados</p>
             <div className="flex flex-col sm:flex-row items-center gap-4 text-sm text-slate-400">
               <span>Una marca filial de</span>
               <div className="flex items-center gap-2">

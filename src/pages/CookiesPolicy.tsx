@@ -5,18 +5,18 @@ import { getBreadcrumbSchema } from "@/lib/schema";
 
 const CookiesPolicy = () => {
   usePageSEO({
-    title: "Política de Cookies - GastroMaps.pro",
-    description: "Información sobre el uso de cookies en GastroMaps.pro. Tipos de cookies, finalidad y cómo gestionar tus preferencias.",
-    keywords: "política cookies, cookies técnicas, privacidad web, GastroMaps cookies, gestión cookies, RGPD cookies, consentimiento cookies",
-    canonical: "https://gastromaps.pro/cookies",
-    ogTitle: "Política de Cookies - GastroMaps.pro",
+    title: "Política de Cookies - GastroLocal.pro",
+    description: "Información sobre el uso de cookies en GastroLocal.pro. Tipos de cookies, finalidad y cómo gestionar tus preferencias.",
+    keywords: "política cookies, cookies técnicas, privacidad web, GastroLocal cookies, gestión cookies, RGPD cookies, consentimiento cookies",
+    canonical: "https://gastrolocal.pro/cookies",
+    ogTitle: "Política de Cookies - GastroLocal.pro",
     ogDescription: "Transparencia total sobre el uso de cookies. Solo utilizamos cookies esenciales para tu mejor experiencia.",
     ogType: "article"
   });
 
   const breadcrumbSchema = getBreadcrumbSchema([
-    { name: "Inicio", url: "https://gastromaps.pro/" },
-    { name: "Política de Cookies", url: "https://gastromaps.pro/cookies" }
+    { name: "Inicio", url: "https://gastrolocal.pro/" },
+    { name: "Política de Cookies", url: "https://gastrolocal.pro/cookies" }
   ]);
 
   return (
@@ -39,7 +39,7 @@ const CookiesPolicy = () => {
         <section>
           <h2 className="text-2xl font-semibold mb-4">¿Cómo utilizamos las cookies?</h2>
           <p>
-            En GastroMaps.pro utilizamos cookies únicamente para fines esenciales y mejorar 
+            En GastroLocal.pro utilizamos cookies únicamente para fines esenciales y mejorar 
             tu experiencia de navegación:
           </p>
         </section>
@@ -183,7 +183,7 @@ const CookiesPolicy = () => {
             Si tienes preguntas sobre nuestra política de cookies, puedes contactarnos:
           </p>
           <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-            <p><strong>GastroMaps.pro</strong></p>
+            <p><strong>GastroLocal.pro</strong></p>
             <p>Email: local@gastroseo.com</p>
             <p>Teléfono: +34 744 717 942</p>
           </div>
@@ -192,7 +192,7 @@ const CookiesPolicy = () => {
         <div className="bg-green-50 border border-green-200 p-6 rounded-lg">
           <h2 className="text-xl font-semibold mb-3 text-green-800">Compromiso con tu privacidad</h2>
           <p className="text-green-700">
-            En GastroMaps.pro respetamos tu privacidad. Solo utilizamos las cookies estrictamente 
+            En GastroLocal.pro respetamos tu privacidad. Solo utilizamos las cookies estrictamente 
             necesarias para ofrecerte el mejor servicio posible, sin rastrearte ni comprometer 
             tu información personal.
           </p>

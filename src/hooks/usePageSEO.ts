@@ -19,7 +19,7 @@ interface SEOData {
 }
 
 const DEFAULT_SEO: SEOData = {
-  title: "GastroMaps.pro - Te Traemos Más Clientes o Te Devolvemos El Dinero",
+  title: "GastroLocal.pro - Te Traemos Más Clientes o Te Devolvemos El Dinero",
   description: "Especialistas en marketing digital para restaurantes. Garantizamos +40% más reservas en 90 días o te devolvemos tu dinero. Resultados reales, no promesas.",
   ogImage: "https://yparqvwqryaxpdyzlpif.supabase.co/storage/v1/object/public/gastromaps-assets/hero/restaurant-hero.jpg",
   ogType: "website",
@@ -32,7 +32,7 @@ export const usePageSEO = (seoData?: Partial<SEOData>) => {
   
   useEffect(() => {
     const finalSEO = { ...DEFAULT_SEO, ...seoData };
-    const baseUrl = "https://gastromaps.pro";
+    const baseUrl = "https://gastrolocal.pro";
     const canonical = finalSEO.canonical || `${baseUrl}${location.pathname}`;
 
     // Update title
@@ -64,23 +64,23 @@ export const usePageSEO = (seoData?: Partial<SEOData>) => {
     updateMetaTag('og:image:width', '1200', true);
     updateMetaTag('og:image:height', '630', true);
     updateMetaTag('og:image:type', 'image/jpeg', true);
-    updateMetaTag('og:image:alt', 'GastroMaps.pro - Marketing Digital para Restaurantes', true);
+    updateMetaTag('og:image:alt', 'GastroLocal.pro - Marketing Digital para Restaurantes', true);
     updateMetaTag('og:url', canonical, true);
     updateMetaTag('og:type', finalSEO.ogType || 'website', true);
-    updateMetaTag('og:site_name', 'GastroMaps.pro', true);
+    updateMetaTag('og:site_name', 'GastroLocal.pro', true);
     updateMetaTag('og:locale', 'es_ES', true);
 
     // Twitter Card tags
     updateMetaTag('twitter:card', finalSEO.twitterCard || 'summary_large_image');
-    updateMetaTag('twitter:site', '@gastromapspro');
-    updateMetaTag('twitter:creator', '@gastromapspro');
+    updateMetaTag('twitter:site', '@gastrolocalpro');
+    updateMetaTag('twitter:creator', '@gastrolocalpro');
     updateMetaTag('twitter:title', finalSEO.twitterTitle || finalSEO.ogTitle || finalSEO.title);
     updateMetaTag('twitter:description', finalSEO.twitterDescription || finalSEO.ogDescription || finalSEO.description);
     updateMetaTag('twitter:image', finalSEO.twitterImage || finalSEO.ogImage || DEFAULT_SEO.ogImage!);
-    updateMetaTag('twitter:image:alt', 'GastroMaps.pro - Marketing Digital para Restaurantes');
+    updateMetaTag('twitter:image:alt', 'GastroLocal.pro - Marketing Digital para Restaurantes');
 
     // Additional social media tags
-    updateMetaTag('pinterest:site_name', 'GastroMaps.pro');
+    updateMetaTag('pinterest:site_name', 'GastroLocal.pro');
     updateMetaTag('pinterest:description', 'Especialistas en marketing digital para restaurantes con garantía de resultados');
 
     // Canonical URL

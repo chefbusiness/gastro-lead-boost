@@ -1,21 +1,21 @@
 
-// Schema.org markup generators for GastroMaps.pro
+// Schema.org markup generators for GastroLocal.pro
 
 export const getLocalBusinessSchema = () => ({
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://gastromaps.pro/#organization",
-  "name": "GastroMaps.pro",
-  "alternateName": "GastroMaps",
+  "@id": "https://gastrolocal.pro/#organization",
+  "name": "GastroLocal.pro",
+  "alternateName": "GastroLocal",
   "description": "Especialistas en marketing digital para restaurantes. Garantizamos más clientes o devolvemos el dinero.",
-  "url": "https://gastromaps.pro",
+  "url": "https://gastrolocal.pro",
   "telephone": "+34744717942",
   "email": "local@gastroseo.com",
   "priceRange": "€€",
   "currenciesAccepted": "EUR",
   "paymentAccepted": "Credit Card, Bank Transfer",
   "image": "https://yparqvwqryaxpdyzlpif.supabase.co/storage/v1/object/public/gastromaps-assets/hero/restaurant-hero.jpg",
-  "logo": "https://gastromaps.pro/lovable-uploads/ed10ffb2-7da6-4633-ac13-3c28ae97ac92.png",
+  "logo": "https://gastrolocal.pro/lovable-uploads/ed10ffb2-7da6-4633-ac13-3c28ae97ac92.png",
   "address": {
     "@type": "PostalAddress",
     "addressCountry": "ES",
@@ -81,20 +81,20 @@ export const getLocalBusinessSchema = () => ({
     }
   ],
   "sameAs": [
-    "https://www.linkedin.com/company/gastromaps-pro",
-    "https://www.facebook.com/gastromaps.pro"
+    "https://www.linkedin.com/company/gastrolocal-pro",
+    "https://www.facebook.com/gastrolocal.pro"
   ]
 });
 
 export const getOrganizationSchema = () => ({
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://gastromaps.pro/#organization",
-  "name": "GastroMaps.pro",
-  "url": "https://gastromaps.pro",
+  "@id": "https://gastrolocal.pro/#organization",
+  "name": "GastroLocal.pro",
+  "url": "https://gastrolocal.pro",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://gastromaps.pro/lovable-uploads/ed10ffb2-7da6-4633-ac13-3c28ae97ac92.png",
+    "url": "https://gastrolocal.pro/lovable-uploads/ed10ffb2-7da6-4633-ac13-3c28ae97ac92.png",
     "width": 512,
     "height": 512
   },
@@ -125,7 +125,7 @@ export const getServiceSchema = () => ({
   "name": "Marketing Digital para Restaurantes",
   "description": "Servicios especializados de SEO y SEM local para restaurantes con garantía de resultados",
   "provider": {
-    "@id": "https://gastromaps.pro/#organization"
+    "@id": "https://gastrolocal.pro/#organization"
   },
   "areaServed": {
     "@type": "Country",
@@ -135,7 +135,7 @@ export const getServiceSchema = () => ({
   "serviceType": "SEO Local y SEM para Restaurantes",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Servicios GastroMaps.pro",
+    "name": "Servicios GastroLocal.pro",
     "itemListElement": [
       {
         "@type": "Offer",
@@ -197,7 +197,7 @@ export const getFAQSchema = () => ({
     },
     {
       "@type": "Question",
-      "name": "¿Qué diferencia a GastroMaps de otras agencias?",
+      "name": "¿Qué diferencia a GastroLocal de otras agencias?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Somos la única agencia especializada exclusivamente en restaurantes que ofrece garantía de resultados por contrato con devolución del 100% del dinero si no cumplimos."
@@ -245,28 +245,28 @@ export const getHowToSchema = () => ({
       "name": "Análisis Inicial",
       "text": "Realizamos una auditoría completa de tu presencia digital actual y analizamos a tu competencia local.",
       "position": 1,
-      "url": "https://gastromaps.pro/#process"
+      "url": "https://gastrolocal.pro/#process"
     },
     {
       "@type": "HowToStep", 
       "name": "Estrategia Personalizada",
       "text": "Diseñamos un plan específico combinando SEO local y publicidad geo-localizada según tus objetivos.",
       "position": 2,
-      "url": "https://gastromaps.pro/#process"
+      "url": "https://gastrolocal.pro/#process"
     },
     {
       "@type": "HowToStep",
       "name": "Implementación",
       "text": "Ejecutamos la estrategia optimizando tu Google My Business, creando contenido y lanzando campañas publicitarias.",
       "position": 3,
-      "url": "https://gastromaps.pro/#process"
+      "url": "https://gastrolocal.pro/#process"
     },
     {
       "@type": "HowToStep",
       "name": "Seguimiento",
       "text": "Monitorizamos resultados diariamente y ajustamos la estrategia para maximizar el retorno de inversión.",
       "position": 4,
-      "url": "https://gastromaps.pro/#process"
+      "url": "https://gastrolocal.pro/#process"
     }
   ],
   "totalTime": "P90D",
@@ -279,7 +279,7 @@ export const getHowToSchema = () => ({
 });
 
 // Article Schema for Blog Posts/Case Studies
-export const getArticleSchema = (title: string, description: string, publishDate: string, author = "GastroMaps.pro") => ({
+export const getArticleSchema = (title: string, description: string, publishDate: string, author = "GastroLocal.pro") => ({
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": title,
@@ -288,21 +288,21 @@ export const getArticleSchema = (title: string, description: string, publishDate
   "author": {
     "@type": "Organization",
     "name": author,
-    "url": "https://gastromaps.pro"
+    "url": "https://gastrolocal.pro"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "GastroMaps.pro",
+    "name": "GastroLocal.pro",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://gastromaps.pro/lovable-uploads/ed10ffb2-7da6-4633-ac13-3c28ae97ac92.png"
+      "url": "https://gastrolocal.pro/lovable-uploads/ed10ffb2-7da6-4633-ac13-3c28ae97ac92.png"
     }
   },
   "datePublished": publishDate,
   "dateModified": publishDate,
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://gastromaps.pro/"
+    "@id": "https://gastrolocal.pro/"
   }
 });
 
@@ -310,18 +310,18 @@ export const getArticleSchema = (title: string, description: string, publishDate
 export const getWebsiteSchema = () => ({
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "GastroMaps.pro",
-  "alternateName": "GastroMaps",
-  "url": "https://gastromaps.pro",
+  "name": "GastroLocal.pro",
+  "alternateName": "GastroLocal",
+  "url": "https://gastrolocal.pro",
   "description": "Especialistas en marketing digital para restaurantes con garantía de resultados",
   "publisher": {
-    "@id": "https://gastromaps.pro/#organization"
+    "@id": "https://gastrolocal.pro/#organization"
   },
   "potentialAction": {
     "@type": "SearchAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://gastromaps.pro/?q={search_term_string}"
+      "urlTemplate": "https://gastrolocal.pro/?q={search_term_string}"
     },
     "query-input": "required name=search_term_string"
   },

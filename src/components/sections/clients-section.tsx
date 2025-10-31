@@ -2,59 +2,59 @@ import { Badge } from "@/components/ui/badge";
 import { getClientLogoUrl } from "@/lib/storage";
 const clientLogos = [{
   name: "Cliente satisfecho 1",
-  url: getClientLogoUrl('logos-clientes-gastromapspro-1-2.png'),
+  url: getClientLogoUrl('logos-clientes-gastrolocalpro-1-2.png'),
   alt: "Cliente satisfecho 1"
 }, {
   name: "Cliente satisfecho 2",
-  url: getClientLogoUrl('logos-clientes-gastromapspro-2-2.png'),
+  url: getClientLogoUrl('logos-clientes-gastrolocalpro-2-2.png'),
   alt: "Cliente satisfecho 2"
 }, {
   name: "Cliente satisfecho 3",
-  url: getClientLogoUrl('logos-clientes-gastromapspro-3-2.png'),
+  url: getClientLogoUrl('logos-clientes-gastrolocalpro-3-2.png'),
   alt: "Cliente satisfecho 3"
 }, {
   name: "Cliente satisfecho 4",
-  url: getClientLogoUrl('logos-clientes-gastromapspro-4-2.png'),
+  url: getClientLogoUrl('logos-clientes-gastrolocalpro-4-2.png'),
   alt: "Cliente satisfecho 4"
 }, {
   name: "Cliente satisfecho 5",
-  url: getClientLogoUrl('logos-clientes-gastromapspro-5-2.png'),
+  url: getClientLogoUrl('logos-clientes-gastrolocalpro-5-2.png'),
   alt: "Cliente satisfecho 5"
 }, {
   name: "Cliente satisfecho 6",
-  url: getClientLogoUrl('logos-clientes-gastromapspro-6-2.png'),
+  url: getClientLogoUrl('logos-clientes-gastrolocalpro-6-2.png'),
   alt: "Cliente satisfecho 6"
 }, {
   name: "Cliente satisfecho 7",
-  url: getClientLogoUrl('logos-clientes-gastromapspro-7-2.png'),
+  url: getClientLogoUrl('logos-clientes-gastrolocalpro-7-2.png'),
   alt: "Cliente satisfecho 7"
 }, {
   name: "Cliente satisfecho 8",
-  url: getClientLogoUrl('logos-clientes-gastromapspro-8-2.png'),
+  url: getClientLogoUrl('logos-clientes-gastrolocalpro-8-2.png'),
   alt: "Cliente satisfecho 8"
 }, {
   name: "Cliente satisfecho 9",
-  url: getClientLogoUrl('logos-clientes-gastromapspro-9-2.png'),
+  url: getClientLogoUrl('logos-clientes-gastrolocalpro-9-2.png'),
   alt: "Cliente satisfecho 9"
 }, {
   name: "Cliente satisfecho 10",
-  url: getClientLogoUrl('logos-clientes-gastromapspro-10-2.png'),
+  url: getClientLogoUrl('logos-clientes-gastrolocalpro-10-2.png'),
   alt: "Cliente satisfecho 10"
 }, {
   name: "Cliente satisfecho 11",
-  url: getClientLogoUrl('logos-clientes-gastromapspro-11-2.png'),
+  url: getClientLogoUrl('logos-clientes-gastrolocalpro-11-2.png'),
   alt: "Cliente satisfecho 11"
 }, {
   name: "Cliente satisfecho 12",
-  url: getClientLogoUrl('logos-clientes-gastromapspro-12-2.png'),
+  url: getClientLogoUrl('logos-clientes-gastrolocalpro-12-2.png'),
   alt: "Cliente satisfecho 12"
 }, {
   name: "Cliente satisfecho 13",
-  url: getClientLogoUrl('logos-clientes-gastromapspro-13-2.png'),
+  url: getClientLogoUrl('logos-clientes-gastrolocalpro-13-2.png'),
   alt: "Cliente satisfecho 13"
 }, {
   name: "Cliente satisfecho 14",
-  url: getClientLogoUrl('logos-clientes-gastromapspro-14-2.png'),
+  url: getClientLogoUrl('logos-clientes-gastrolocalpro-14-2.png'),
   alt: "Cliente satisfecho 14"
 }];
 export const ClientsSection = () => {
@@ -135,7 +135,7 @@ export const ClientsSection = () => {
         {/* Testimonial Quote */}
         <div className="mt-16 text-center">
           <blockquote className="text-xl md:text-2xl text-gray-200 italic max-w-4xl mx-auto">
-            "GastroMaps nos ayudó a aumentar nuestras reservas en un 180% en solo 3 meses. 
+            "GastroLocal nos ayudó a aumentar nuestras reservas en un 180% en solo 3 meses. 
             Su estrategia de marketing digital es realmente efectiva."
           </blockquote>
           <cite className="block mt-4 text-gray-400">
