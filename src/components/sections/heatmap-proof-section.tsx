@@ -1,20 +1,15 @@
 import { useState } from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { 
-  Dialog, 
-  DialogContent, 
-  DialogTrigger 
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { MapPin, TrendingUp, ZoomIn, ArrowRight } from "lucide-react";
 import { useScrollTo } from "@/hooks/useScrollTo";
-
 export function HeatmapProofSection() {
   const [isOpen, setIsOpen] = useState(false);
-  const { scrollToContact } = useScrollTo();
-
-  return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden">
+  const {
+    scrollToContact
+  } = useScrollTo();
+  return <section className="py-24 bg-slate-50 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-success rounded-full blur-3xl"></div>
@@ -32,9 +27,7 @@ export function HeatmapProofSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-foreground">Así Se Ve</span>
             <br />
-            <span className="bg-gradient-to-r from-success to-primary bg-clip-text text-transparent">
-              El Dominio Local Real
-            </span>
+            <span className="bg-gradient-to-r from-success to-primary bg-clip-text text-transparent">El Dominio Total en Tu Área de Influencia Local</span>
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -47,11 +40,7 @@ export function HeatmapProofSection() {
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
           <DialogTrigger asChild>
             <div className="relative group cursor-pointer animate-fade-in">
-              <img
-                src="/case-studies/heatmap-pistacho.jpg"
-                alt="Heatmap de ranking en Google Maps - Pistacho Coffee Brunch"
-                className="w-full rounded-2xl shadow-elegant border-4 border-white transition-transform duration-300 group-hover:scale-[1.02]"
-              />
+              <img src="/case-studies/heatmap-pistacho.jpg" alt="Heatmap de ranking en Google Maps - Pistacho Coffee Brunch" className="w-full rounded-2xl shadow-elegant border-4 border-white transition-transform duration-300 group-hover:scale-[1.02]" />
               
               {/* Hover Overlay */}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 rounded-2xl flex items-center justify-center">
@@ -70,11 +59,7 @@ export function HeatmapProofSection() {
 
           <DialogContent className="max-w-7xl w-full h-[90vh] p-0 bg-black/95">
             <div className="w-full h-full flex items-center justify-center p-4">
-              <img
-                src="/case-studies/heatmap-pistacho.jpg"
-                alt="Heatmap de ranking en Google Maps - Pistacho Coffee Brunch (ampliado)"
-                className="max-w-full max-h-full object-contain rounded-lg"
-              />
+              <img src="/case-studies/heatmap-pistacho.jpg" alt="Heatmap de ranking en Google Maps - Pistacho Coffee Brunch (ampliado)" className="max-w-full max-h-full object-contain rounded-lg" />
             </div>
           </DialogContent>
         </Dialog>
@@ -130,17 +115,12 @@ export function HeatmapProofSection() {
               para búsquedas como <span className="font-semibold">"brunch los cristianos"</span>, <span className="font-semibold">"desayuno tenerife"</span>, etc.
             </p>
             
-            <Button
-              size="lg"
-              onClick={scrollToContact}
-              className="bg-gradient-accent hover:bg-accent/90 text-white px-8 py-4 text-lg font-bold rounded-xl group"
-            >
+            <Button size="lg" onClick={scrollToContact} className="bg-gradient-accent hover:bg-accent/90 text-white px-8 py-4 text-lg font-bold rounded-xl group">
               Quiero Dominar Mi Zona Así
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
