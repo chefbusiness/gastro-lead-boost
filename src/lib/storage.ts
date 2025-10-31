@@ -45,7 +45,7 @@ export const ASSETS = {
     chef: 'testimonials/chef-testimonial.jpg',
   },
   logos: {
-    gastrolocalFull: 'logos/gastromaps-full.png',
+    gastrolocalFull: 'logos/gastromaps-logo-full.png',
     gastrolocalIcon: 'logos/gastromaps-icon-3d.png',
   },
   clients: {
