@@ -32,13 +32,13 @@ export function FloatingCTA() {
 
   return (
     <div className={cn(
-      "fixed bottom-4 right-4 z-50 transition-all duration-500 ease-bounce",
+      "fixed bottom-2 right-2 z-50 transition-all duration-500 ease-bounce",
       "sm:bottom-6 sm:right-6",
-      "w-fit"
+      "w-fit max-w-[calc(100vw-16px)]"
     )}>
       <div className="flex flex-col gap-2 sm:gap-3">
         {isExpanded && (
-          <div className="bg-white rounded-lg shadow-elegant p-3 sm:p-4 max-w-[250px] sm:max-w-[280px] animate-fade-in border border-primary/20">
+          <div className="bg-white rounded-lg shadow-elegant p-3 sm:p-4 max-w-[220px] sm:max-w-[280px] animate-fade-in border border-primary/20">
             <div className="flex items-start justify-between mb-2">
               <div className="w-6 h-6 sm:w-7 sm:h-7 bg-gradient-primary rounded-full flex items-center justify-center">
                 <MessageCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white" />
@@ -68,7 +68,7 @@ export function FloatingCTA() {
         <div className="flex gap-2 justify-end">
           <Button
             size="icon"
-            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-success hover:bg-success/90 shadow-accent transition-all hover:scale-105"
+            className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-success hover:bg-success/90 shadow-accent transition-all sm:hover:scale-105"
             onClick={() => {
               window.open('https://wa.me/34744717942?text=Hola%2C%20me%20interesa%20el%20an%C3%A1lisis%20gratuito%20para%20mi%20restaurante', '_blank');
               handleExpand();
@@ -80,7 +80,7 @@ export function FloatingCTA() {
           
           <Button
             size="icon"
-            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-primary hover:bg-primary-dark shadow-primary transition-all hover:scale-105"
+            className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gradient-primary hover:bg-primary-dark shadow-primary transition-all sm:hover:scale-105"
             onClick={() => {
               window.open('tel:+34744717942', '_blank');
               handleExpand();
