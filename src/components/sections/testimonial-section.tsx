@@ -45,30 +45,31 @@ export function TestimonialSection() {
               {/* Content Side */}
               <div className="p-8 md:p-12 flex flex-col justify-center">
 
-                <h3 className="text-2xl md:text-3xl font-bold mb-2 text-foreground">Restaurante Japonés Sakura</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-2 text-foreground">Mexicali - Neo Gastro Bar</h3>
 
                 <div className="mb-6">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="bg-gradient-success text-white px-4 py-2 rounded-lg font-bold text-lg">
-                      ROI: +2,771%
+                      ROI: +2,440%
                     </div>
                     <div className="text-2xl font-bold text-accent">
-                      €13,590
+                      €18,920
                     </div>
                   </div>
                 </div>
 
                 <blockquote className="text-lg md:text-xl text-foreground mb-6 leading-relaxed">
-                  "Invertí <span className="font-bold text-primary">"Invertí 650€ y generé 16.250€ en reservas. No hay ningún otro proveedor en mi restaurante que me dé ese retorno. Solo GastroMaps."</span> y generé{" "}
-                  <span className="font-bold text-success">13.590€</span> en reservas. 
-                  No hay ningún otro proveedor en mi restaurante que me dé ese retorno. 
-                  <span className="font-bold text-accent"> Solo GastroMaps.</span>"
+                  "En solo 4 meses, GastroMaps transformó nuestro neo gastro bar. Invertimos{" "}
+                  <span className="font-bold text-primary">€745</span> y generamos{" "}
+                  <span className="font-bold text-success">€18,920</span> en reservas verificadas. 
+                  La cocina mexicana creativa ahora tiene el reconocimiento que merece en Barcelona.{" "}
+                  <span className="font-bold text-accent">GastroMaps hizo que fuéramos visibles.</span>"
                 </blockquote>
 
                 <div className="flex items-center">
                   <div>
-                    <div className="font-bold text-lg">Takeshi Sato</div>
-                    <div className="text-muted-foreground">Propietario, Restaurante Sakura</div>
+                    <div className="font-bold text-lg">Carlos Mendoza</div>
+                    <div className="text-muted-foreground">Chef-Propietario, Mexicali</div>
                   </div>
                 </div>
 
@@ -76,11 +77,11 @@ export function TestimonialSection() {
                 <div className="mt-8 p-4 bg-gradient-to-r from-primary/10 to-accent/10 rounded-lg border border-primary/20">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <div className="text-2xl font-bold text-primary">490€</div>
+                      <div className="text-2xl font-bold text-primary">745€</div>
                       <div className="text-sm text-muted-foreground">Inversión inicial</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-success">13,590€</div>
+                      <div className="text-2xl font-bold text-success">18,920€</div>
                       <div className="text-sm text-muted-foreground">Ingresos generados</div>
                     </div>
                   </div>
