@@ -100,7 +100,7 @@ export function HeroSection() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-32 sm:bottom-28 md:bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce-gentle">
+      <div className="absolute bottom-24 sm:bottom-20 md:bottom-16 left-1/2 transform -translate-x-1/2 animate-bounce-gentle">
         <div className="w-6 h-10 border-2 border-white/50 rounded-full p-1">
           <div className="w-2 h-3 bg-white/70 rounded-full mx-auto animate-pulse"></div>
         </div>
