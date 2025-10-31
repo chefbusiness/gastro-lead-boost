@@ -65,9 +65,9 @@ export const ASSETS = {
     logo14: 'client-logos/logo-14.png',
   },
   caseStudies: {
-    mediterraneanRestaurant: 'restaurantemediterraneo-gastrolocalpro.jpeg',
-    tapasAndWine: 'tapasyvinos-gastrolocalpro.jpeg',
-    seafoodHouse: 'casamarisco-gastrolocalpro.jpeg',
-    gourmetBistro: 'bistrogourmet-gastrolocalpro.jpeg',
+    mediterraneanRestaurant: 'restaurantemediterraneo-gastromapspro.jpeg',
+    tapasAndWine: 'tapasyvinos-gastromapspro.jpeg',
+    seafoodHouse: 'casamarisco-gastromapspro.jpeg',
+    gourmetBistro: 'bistrogourmet-gastromapspro.jpeg',
   },
 } as const;
