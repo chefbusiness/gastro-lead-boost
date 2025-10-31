@@ -8,6 +8,7 @@ import { ClientsSection } from "@/components/sections/clients-section";
 import { ProcessSection } from "@/components/sections/process-section";
 import { FaqSection } from "@/components/sections/faq-section";
 import { ContactFormSection } from "@/components/sections/contact-form-section";
+import { GlobalPresenceSection } from "@/components/sections/global-presence-section";
 import { FooterSection } from "@/components/sections/footer-section";
 import { FloatingCTA } from "@/components/ui/floating-cta";
 import { CookieBanner } from "@/components/ui/cookie-banner";
@@ -55,6 +56,7 @@ const Index = () => {
       <ProcessSection />
       <FaqSection />
       <ContactFormSection />
+      <GlobalPresenceSection />
       <FooterSection />
       <FloatingCTA />
       <CookieBanner />
