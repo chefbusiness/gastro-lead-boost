@@ -2,12 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Star, TrendingUp, Shield } from "lucide-react";
 import { getAssetUrl, ASSETS } from "@/lib/storage";
+import { useScrollTo } from "@/hooks/useScrollTo";
+import { BADGES, HERO_STATS, CTA_TEXTS } from "@/lib/constants";
+
 export function HeroSection() {
-  const scrollToContact = () => {
-    document.getElementById('contact-form')?.scrollIntoView({
-      behavior: 'smooth'
-    });
-  };
+  const { scrollToContact, scrollToCaseStudies } = useScrollTo();
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
