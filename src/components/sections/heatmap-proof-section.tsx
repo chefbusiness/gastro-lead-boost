@@ -115,9 +115,10 @@ export function HeatmapProofSection() {
               para búsquedas como <span className="font-semibold">"brunch los cristianos"</span>, <span className="font-semibold">"desayuno tenerife"</span>, etc.
             </p>
             
-            <Button size="lg" onClick={scrollToContact} className="bg-gradient-accent hover:bg-accent/90 text-white px-8 py-4 text-lg font-bold rounded-xl group">
-              Quiero Dominar Mi Zona Así
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <Button size="lg" onClick={scrollToContact} className="bg-gradient-accent hover:bg-accent/90 text-white px-4 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-xl group">
+              <span className="hidden sm:inline">Quiero Dominar Mi Zona Así</span>
+              <span className="sm:hidden">Dominar mi zona</span>
+              <ArrowRight className="ml-2 w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
         </div>

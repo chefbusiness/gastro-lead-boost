@@ -70,9 +70,10 @@ export const ProcessSection = () => {
         </Card>
 
         <div className="text-center">
-          <Button size="lg" onClick={scrollToContact} className="bg-gradient-primary hover:bg-primary-dark px-12 py-4 text-lg font-bold rounded-xl shadow-primary group">
-            {CTA_TEXTS.primary}
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          <Button size="lg" onClick={scrollToContact} className="bg-gradient-primary hover:bg-primary-dark px-6 sm:px-12 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-xl shadow-primary group">
+            <span className="hidden sm:inline">{CTA_TEXTS.primary}</span>
+            <span className="sm:hidden">Empezar</span>
+            <ArrowRight className="ml-2 w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
       </div>

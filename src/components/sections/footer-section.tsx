@@ -62,8 +62,9 @@ export function FooterSection() {
               </Badge>
             </div>
 
-            <Button onClick={scrollToContact} className="bg-gradient-accent hover:bg-accent/90 text-white font-bold">
-              Empezar Ahora
+            <Button onClick={scrollToContact} className="bg-gradient-accent hover:bg-accent/90 text-white font-bold px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base">
+              <span className="hidden sm:inline">Solicitar Análisis Gratuito</span>
+              <span className="sm:hidden">Análisis Gratis</span>
             </Button>
           </div>
 
