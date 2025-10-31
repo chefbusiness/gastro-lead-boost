@@ -135,7 +135,7 @@ export function HeatmapProofSection() {
               onClick={scrollToContact}
               className="bg-gradient-accent hover:bg-accent/90 text-white px-8 py-4 text-lg font-bold rounded-xl group"
             >
-              Quiero Mi Mapa de Calor Gratuito
+              Quiero Dominar Mi Zona Así
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
