@@ -91,7 +91,7 @@ export function HeroSection() {
         </div>
 
         {/* Trust Indicators */}
-        <div className="flex justify-center items-center gap-2 mt-8 animate-fade-in-up delay-600">
+        <div className="flex justify-center items-center gap-2 mt-8 mb-16 sm:mb-12 md:mb-8 animate-fade-in-up delay-600">
           <div className="flex">
             {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)}
           </div>
@@ -100,7 +100,7 @@ export function HeroSection() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-16 sm:bottom-12 md:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-gentle">
+      <div className="absolute bottom-20 sm:bottom-16 md:bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce-gentle">
         <div className="w-6 h-10 border-2 border-white/50 rounded-full p-1">
           <div className="w-2 h-3 bg-white/70 rounded-full mx-auto animate-pulse"></div>
         </div>
