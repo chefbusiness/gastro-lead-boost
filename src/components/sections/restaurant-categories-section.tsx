@@ -11,7 +11,7 @@ export const RestaurantCategoriesSection = () => {
       <div className="max-w-7xl mx-auto px-4">
         <SectionHeader
           badge={{ icon: Tag, text: "Categorías de Negocio" }}
-          title={["¿En Qué Tipo de Restaurante", "Especializa Tu Negocio?"]}
+          title={["¿En Qué Tipo de Restaurante", "Se Especializa Tu Negocio?"]}
           subtitle="Optimizamos tu Google Maps según tu categoría específica - Noviembre 2025"
           titleGradient={true}
         />
