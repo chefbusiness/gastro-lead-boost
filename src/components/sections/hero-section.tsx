@@ -4,9 +4,11 @@ import { ArrowRight, Star, TrendingUp, Shield } from "lucide-react";
 import { getAssetUrl, ASSETS } from "@/lib/storage";
 import { useScrollTo } from "@/hooks/useScrollTo";
 import { BADGES, HERO_STATS, CTA_TEXTS } from "@/lib/constants";
-
 export function HeroSection() {
-  const { scrollToContact, scrollToCaseStudies } = useScrollTo();
+  const {
+    scrollToContact,
+    scrollToCaseStudies
+  } = useScrollTo();
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-24 md:pt-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
@@ -42,7 +44,7 @@ export function HeroSection() {
         <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto font-medium animate-fade-in-up delay-200 px-4">
           Transformamos restaurantes vacíos en espacios llenos con Google Maps, tu Google Business Profile y estrategias geolocalizadas.
           <br className="hidden sm:block" />
-          <span className="text-yellow-300">Compromiso blindado de 90 días</span> con garantía total de reembolso.
+          <span className="text-yellow-300"> Compromiso blindado de 90 días</span> con garantía total de reembolso.
         </p>
 
         {/* Pain Point */}
