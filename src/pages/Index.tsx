@@ -27,7 +27,7 @@ import {
 
 const Index = () => {
   usePageSEO({
-    title: "GastroLocal.pro - Te Traemos Más Clientes o Te Devolvemos El Dinero",
+    title: "Llenamos Tu Restaurante de Clientes con Google Maps | Marketing Gastronómico",
     description: "Especialistas en marketing digital para restaurantes. Garantizamos +40% más reservas en 90 días o te devolvemos tu dinero. Resultados reales, no promesas.",
     keywords: "marketing restaurantes, google my business, publicidad restaurantes, más clientes restaurante, reservas restaurante, SEO local restaurantes, SEM restaurantes, marketing digital gastronomía, aumentar ventas restaurante, posicionamiento google maps",
     ogTitle: "GastroLocal.pro - Llenamos tu Restaurante de Clientes",

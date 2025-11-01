@@ -19,7 +19,7 @@ interface SEOData {
 }
 
 const DEFAULT_SEO: SEOData = {
-  title: "GastroLocal.pro - Te Traemos Más Clientes o Te Devolvemos El Dinero",
+  title: "Llenamos Tu Restaurante de Clientes con Google Maps | Marketing Gastronómico",
   description: "Especialistas en marketing digital para restaurantes. Garantizamos +40% más reservas en 90 días o te devolvemos tu dinero. Resultados reales, no promesas.",
   ogImage: "https://yparqvwqryaxpdyzlpif.supabase.co/storage/v1/object/public/gastromaps-assets/hero/restaurant-hero.jpg",
   ogType: "website",
