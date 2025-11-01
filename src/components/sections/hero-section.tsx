@@ -40,7 +40,7 @@ export function HeroSection() {
 
         {/* Subtitle */}
         <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto font-medium animate-fade-in-up delay-200 px-4">
-          Transformamos restaurantes vacíos en espacios llenos de vida usando Google Maps y tu ficha de Google Business Profile con una estrategia de hipersegmentación geolocalizada.
+          Transformamos restaurantes vacíos en espacios llenos con Google Maps, tu Google Business Profile y estrategias geolocalizadas.
           <br className="hidden sm:block" />
           <span className="text-yellow-300">Compromiso blindado de 90 días</span> con garantía total de reembolso.
         </p>
