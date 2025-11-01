@@ -10,6 +10,7 @@ import { ProcessSection } from "@/components/sections/process-section";
 import { FaqSection } from "@/components/sections/faq-section";
 import { ContactFormSection } from "@/components/sections/contact-form-section";
 import { GlobalPresenceSection } from "@/components/sections/global-presence-section";
+import { RestaurantCategoriesSection } from "@/components/sections/restaurant-categories-section";
 import { FooterSection } from "@/components/sections/footer-section";
 import { FloatingCTA } from "@/components/ui/floating-cta";
 import { CookieBanner } from "@/components/ui/cookie-banner";
@@ -59,6 +60,7 @@ const Index = () => {
       <FaqSection />
       <ContactFormSection />
       <GlobalPresenceSection />
+      <RestaurantCategoriesSection />
       <FooterSection />
       <FloatingCTA />
       <CookieBanner />
