@@ -62,6 +62,7 @@ export default function AdminLogin() {
     setIsLoading(false);
   };
 
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 to-accent/5 flex items-center justify-center p-4">
       <Card className="w-full max-w-md">
@@ -98,7 +99,7 @@ export default function AdminLogin() {
               />
             </div>
             <Button type="submit" className="w-full" disabled={isLoading}>
-              {isLoading ? "Verificando acceso..." : "Acceder al Panel"}
+              {isLoading ? "Procesando..." : "Acceder al Panel"}
             </Button>
           </form>
         </CardContent>
