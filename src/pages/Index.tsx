@@ -57,10 +57,10 @@ const Index = () => {
       <CaseStudiesSection />
       <ClientsSection />
       <ProcessSection />
+      <RestaurantCategoriesSection />
       <FaqSection />
       <ContactFormSection />
       <GlobalPresenceSection />
-      <RestaurantCategoriesSection />
       <FooterSection />
       <FloatingCTA />
       <CookieBanner />
